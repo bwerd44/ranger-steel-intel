@@ -38,10 +38,45 @@
         "url": "https://www.steelmarketupdate.com/category/sheet/",
         "evidence_date": "2026-10-27"
       }
+    },
+    {
+      "metric": "demand",
+      "condition": "Strengthening",
+      "scope": "discrete_plate",
+      "verified": true,
+      "evidence_date": "2026-09-22",
+      "max_age_days": 60,
+      "confidence": "Low",
+      "period": "September 2026",
+      "basis": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
+      "limitation": "Low confidence: qualitative analyst assessment from September, not a current plate-specific demand series. Supply restrictions can magnify apparent demand strength.",
+      "verification": "Published plate-specific industry analysis explicitly attributes the squeeze to improved demand.",
+      "source": {
+        "publisher": "Steel Market Update",
+        "title": "Plate feels the squeeze, outages well underway",
+        "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
+        "evidence_date": "2026-09-22"
+      }
     }
   ],
   "quarterly_outcomes": [],
-  "market_developments": [],
+  "market_developments": [
+    {
+      "event_id": "cut-length-plate-august-2026-permits",
+      "verified": true,
+      "evidence_date": "2026-09-10",
+      "max_age_days": 90,
+      "category": "Import context",
+      "summary": "AISI reported August cut-length plate import permits rose 72% versus July final imports. Permits are intended tonnage, not confirmed arrivals or currently available plate. September broad steel imports do not establish a later cut-length plate trend.",
+      "limitation": "Do not infer import availability is improving from permits alone; check subsequent cut-length plate arrivals and comparable permit data.",
+      "source": {
+        "publisher": "American Iron and Steel Institute",
+        "title": "AISI Releases August SIMA Imports Data",
+        "url": "https://www.steel.org/2026/09/aisi-releases-august-sima-imports-data-7/",
+        "evidence_date": "2026-09-10"
+      }
+    }
+  ],
   "mill_developments": [
     {
       "event_id": "jsw-baytown-september-2026-plan",
