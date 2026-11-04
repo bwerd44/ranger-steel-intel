@@ -14,6 +14,7 @@ on:
     paths:
       - 'collect.py'
       - 'discover_prospects.py'
+      - 'qualify_prospects.py'
       - 'data/prospect-profile.json'
       - 'forecast.py'
       - 'intelligence.py'
