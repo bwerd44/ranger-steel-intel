@@ -147,8 +147,16 @@ def mill_tracker(data, reviewed, now, offline=False):
             anchor=event.get('verification_anchor')
             event['access']='Primary statement rechecked this collection' if anchor and anchor.lower() in text.lower() else 'Dated reviewed development; not freshly reverified'
         events.sort(key=lambda x:x['evidence_date'],reverse=True)
-        rows.append(dict(mill,condition='Current status unverified',color='gray',arrow='—',confidence='Not rated',checked_at=now.isoformat(),source_access=status,developments=events[:2],limitations='Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date.'))
+        rows.append(dict(mill,last_confirmed_date=events[0]['evidence_date'] if events else None,days_since_confirmation=(day-date_of(events[0]['evidence_date'])).days if events else None,condition='Current status unverified',color='gray',arrow='—',confidence='Not rated',checked_at=now.isoformat(),source_access=status,developments=events[:2],limitations='Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date.'))
     return rows
+
+
+def import_intelligence(reviewed, now):
+    """Dated cut-length plate trade context, not a fabricated import-availability trend."""
+    day=now.astimezone(ZoneInfo('America/Chicago')).date()
+    events=[copy.deepcopy(e) for e in reviewed.get('market_developments',[]) if e.get('category')=='Import context' and usable(e,day,120) and e.get('source',{}).get('url','').startswith('https://')]
+    events.sort(key=lambda e:e['evidence_date'],reverse=True)
+    return {'condition':'Direction not independently verified','product':'Cut-length carbon steel plate (not aggregate steel imports)','developments':events[:3],'method':'Licenses and permits indicate potential incoming volume, not landed inventory. Compare the same plate product definition across successive months and distinguish preliminary licenses from final Census arrivals. No directional conclusion is drawn from one month or from all-steel totals.','sources_to_monitor':[{'name':'U.S. Commerce Steel Import Monitoring and Analysis','url':'https://www.trade.gov/steel-import-monitoring-and-analysis-sima-system'},{'name':'AISI steel import releases','url':'https://www.steel.org/industry-data/'}]}
 
 
 def demand_drivers(context, now):
@@ -220,7 +228,7 @@ def build(data, reviewed, context, forecasts, history, now, offline=False):
     clean['content_hash']=digest({k:v for k,v in clean.items() if k!='content_hash'})
     if not same:new_history['snapshots'].append(clean)
     validate_history(new_history)
-    return {'schema_version':1,'updated_at':now.isoformat(),'pulse':presentation['readings'],'weekly':comparison,'mills':presentation['mills'],'demand_drivers':demand_drivers(context,now),'accuracy':accuracy(forecasts,reviewed.get('quarterly_outcomes',[]),day),'recent_history':[{'as_of':h['as_of'],'readings':[{'label':r['label'],'condition':r['condition'],'evidence_date':r.get('evidence_date')} for r in h['readings']]} for h in new_history['snapshots'][-30:]],'history_count':len(new_history['snapshots']),'history_started':new_history['snapshots'][0]['as_of'] if new_history['snapshots'] else day.isoformat(),'rules':[
+    return {'schema_version':1,'updated_at':now.isoformat(),'pulse':presentation['readings'],'weekly':comparison,'mills':presentation['mills'],'imports_detail':import_intelligence(reviewed,now),'demand_drivers':demand_drivers(context,now),'accuracy':accuracy(forecasts,reviewed.get('quarterly_outcomes',[]),day),'recent_history':[{'as_of':h['as_of'],'readings':[{'label':r['label'],'condition':r['condition'],'evidence_date':r.get('evidence_date')} for r in h['readings']]} for h in new_history['snapshots'][-30:]],'history_count':len(new_history['snapshots']),'history_started':new_history['snapshots'][0]['as_of'] if new_history['snapshots'] else day.isoformat(),'rules':[
         'Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.',
         'Only explicit dated discrete-plate directional observations qualify. Low inventories, strong demand levels, all-steel production and aggregate imports cannot establish a change in plate supply or demand.',
         'Recognized producer quarterly plate-price direction is eligible for 45 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.',
