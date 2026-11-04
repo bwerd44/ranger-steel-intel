@@ -14,6 +14,8 @@ on:
     paths:
       - 'collect.py'
       - 'forecast.py'
+      - 'intelligence.py'
+      - 'data/market-evidence.json'
       - 'test_*.py'
       - 'index.html'
       - 'sw.js'
@@ -64,14 +66,17 @@ jobs:
           else
             python forecast.py
           fi
+      - name: Update Market Pulse and preserve weekly observations
+        if: steps.clock.outputs.run == 'true'
+        run: python intelligence.py
       - name: Commit generated report
         if: steps.clock.outputs.run == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json data/forecasts.json
+          git add data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update plate briefing and preserve monthly forecast editions'
+            git commit -m 'Update plate intelligence and preserve observation history'
             git push
           fi
       # GITHUB_TOKEN commits do not trigger another Pages branch build.
@@ -81,7 +86,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/latest.json data/forecasts.json _site/data/
+          cp data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
