@@ -112,6 +112,62 @@
         "Plate fabrication",
         "Heavy industrial ductwork"
       ]
+    },
+    {
+      "name": "Prostar Manufacturing Inc.",
+      "city": "Pasadena",
+      "state": "TX",
+      "website": "https://prostarmfg.us/",
+      "source_url": "https://prostarmfg.us/our-capabilities/",
+      "category": "ASME vessel and heavy plate fabricator",
+      "why": "Published capabilities include two 12 × 20 ft CNC plasma tables, plate rolling, waterjet cutting to 8 inches, ASME fabrication, and 30-ton lifting.",
+      "signals": [
+        "CNC plasma cutting",
+        "Plate rolling",
+        "ASME pressure vessels"
+      ]
+    },
+    {
+      "name": "Northstar Industries",
+      "city": "Houston",
+      "state": "TX",
+      "website": "https://www.northstarind.net/",
+      "source_url": "https://www.northstarind.net/fabrication-machining",
+      "category": "Pressure vessel and heat exchanger fabricator",
+      "why": "Company lists ASME U/R fabrication, CNC plasma/flame cutting, plate rolling, and pressure vessel and heat exchanger production.",
+      "signals": [
+        "Pressure vessels and heat exchangers",
+        "Plate rolling",
+        "CNC plasma and flame cutting"
+      ]
+    },
+    {
+      "name": "BWFS Industries LLC",
+      "city": "Houston",
+      "state": "TX",
+      "website": "https://www.butcherweldfab.com/",
+      "source_url": "https://www.butcherweldfab.com/service.html",
+      "category": "Heavy pressure-vessel plate fabricator",
+      "why": "Company reports a 12-foot-wide plate roll handling 1-3/8-inch vessel-quality plate, 5-axis plate cutting and substantial annual plate purchasing history.",
+      "signals": [
+        "Plate rolling up to 1-3/8 inches",
+        "5-axis plate cutting",
+        "Reported large annual plate purchases"
+      ]
+    },
+    {
+      "name": "Haven Steel Products",
+      "city": "Haven",
+      "state": "KS",
+      "website": "https://havensteel.com/",
+      "source_url": "https://havensteel.com/",
+      "category": "Industrial steel manufacturing",
+      "why": "Company describes in-house forging, hot forming and fiber laser cutting up to 2-inch carbon steel. Confirm whether it purchases discrete mother plate rather than other steel forms.",
+      "signals": [
+        "Carbon steel laser cutting to 2 inches",
+        "In-house steel manufacturing",
+        "Agricultural and construction components"
+      ]
     }
   ]
 }
