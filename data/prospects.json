@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T20:52:52.673425+00:00",
+  "updated_at": "2026-11-04T20:56:33.948100+00:00",
   "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.",
   "checks": [
     {
@@ -31,6 +31,16 @@
     {
       "market": "Little Rock web search",
       "status": "ok",
+      "new": 0
+    },
+    {
+      "market": "Little Rock geographic directory",
+      "status": "ok",
+      "new": 0
+    },
+    {
+      "market": "Little Rock search API",
+      "status": "not_configured",
       "new": 0
     }
   ],

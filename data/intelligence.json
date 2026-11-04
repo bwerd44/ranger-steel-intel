@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T20:53:25.316557+00:00",
+  "updated_at": "2026-11-04T20:57:09.120650+00:00",
   "pulse": [
     {
       "id": "pricing",
@@ -29,7 +29,7 @@
             "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
             "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
           },
-          "retrieved_at": "2026-11-04T20:52:51.470848+00:00",
+          "retrieved_at": "2026-11-04T20:56:32.380208+00:00",
           "access": "Retrieved from primary source this collection"
         }
       ],
@@ -126,7 +126,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T20:53:25.316557+00:00",
+      "checked_at": "2026-11-04T20:57:09.120650+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -142,7 +142,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T20:53:25.316557+00:00",
+      "checked_at": "2026-11-04T20:57:09.120650+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -165,7 +165,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-04T20:52:51.470848+00:00",
+            "retrieved_at": "2026-11-04T20:56:32.380208+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -185,7 +185,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T20:53:25.316557+00:00",
+      "checked_at": "2026-11-04T20:57:09.120650+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -219,7 +219,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T20:53:25.316557+00:00",
+      "checked_at": "2026-11-04T20:57:09.120650+00:00",
       "source_access": "retrieved",
       "developments": [
         {
