@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import urllib.parse
 import urllib.request
+from qualify_prospects import qualify_batch
 
 ROOT=Path(__file__).resolve().parent
 CITIES=[
@@ -46,8 +47,13 @@ def candidate(element,city,state,excluded):
 def query(city):
  name,state,lat,lon=city
  q=f'[out:json][timeout:24];(nwr(around:35000,{lat},{lon})["craft"~"metal_construction|welder|metal_worker|metalworking",i];nwr(around:35000,{lat},{lon})["industrial"~"machine_shop|metalworking|manufacturing|factory",i];);out tags center 160;'
- req=urllib.request.Request('https://overpass.kumi.systems/api/interpreter',data=urllib.parse.urlencode({'data':q}).encode(),headers={'User-Agent':'RangerSteelIntel/2.0 (public lead research)'})
- with urllib.request.urlopen(req,timeout=32) as response:return json.load(response).get('elements',[])
+ last=None
+ for endpoint in ('https://overpass.private.coffee/api/interpreter','https://overpass.nchc.org.tw/api/interpreter'):
+  try:
+   req=urllib.request.Request(endpoint,data=urllib.parse.urlencode({'data':q}).encode(),headers={'User-Agent':'RangerSteelIntel/2.0 (public lead research)'})
+   with urllib.request.urlopen(req,timeout=12) as response:return json.load(response).get('elements',[])
+  except Exception as exc:last=exc
+ raise last
 
 def main():
  today=dt.datetime.now(dt.timezone.utc)
@@ -73,7 +79,8 @@ def main():
  # Do not manufacture leads if source is unavailable.
  items=[x for x in leads.values() if norm(x['name']) not in excluded]
  items.sort(key=lambda x:(x.get('first_seen',''),x['name']),reverse=True)
- result={'schema_version':1,'updated_at':today.isoformat(),'method':'Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. No confirmed plate usage or purchasing volumes.','checks':checks,'leads':items[:300]}
+ qualified=qualify_batch(items,limit=12)
+ result={'schema_version':1,'updated_at':today.isoformat(),'method':'Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.','checks':checks,'website_reviews_this_run':qualified,'leads':items[:300]}
  path.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
  print('Prospect discovery:',len(result['leads']),'candidates;',checks)
 if __name__=='__main__':main()
