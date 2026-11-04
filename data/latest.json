@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-04T18:14:42.512202+00:00",
+  "updated_at": "2026-11-04T18:18:20.021729+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-04T18:14:42.512202+00:00",
+    "generated_at": "2026-11-04T18:18:20.021729+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-04T18:14:42.512202+00:00",
+        "retrieved_at": "2026-11-04T18:18:20.021729+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-04T18:14:42.512202+00:00",
+        "retrieved_at": "2026-11-04T18:18:20.021729+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,7 +171,7 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-04T18:14:42.512202+00:00",
+        "retrieved_at": "2026-11-04T18:18:20.021729+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
@@ -308,6 +308,16 @@
       "category": "Import News"
     },
     {
+      "title": "Steel Fabrication Market Size, Share, Growth | Global Report 2035 - Market Research Future",
+      "date": "2026-10-27",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQXRRdjB1Mi1hcldzMkxqVzV0NF81bnRSbjllSHc4MUJpN0lyLVVhNnBPVnJhd1FUWGhPeTFHRGxFcjltVENuNlNTcWpuR05zYnVxTk1neHRUbE92ZzAxZFpNbkk0U0NfNXpWVEYtdzBsOG4tSUxGSGFnWXphV2RRaQ?oc=5",
+      "publisher": "Market Research Future",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
       "title": "Can Steel Dynamics (NASDAQ:STLD) Benefit From Rising American Metal Demand? - Kalkine Media",
       "date": "2026-10-26",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaElOTzJ6NWFraERGS1RxRE1LbGdENUgzX19Ybm8zXy1naFhwUHBhVVdWcHE5SlJyOERzS1B3U2ljSnhlYXIwaEc3ZWhtdlNpbkp5Q0g5N3BPR0RGc2pMem9QYzQ1VUFkNlBqSGVuOEJLN3ZmYkE2RzlQVG9nOEhJbWRhcUhHb3pWc0JIYVZxdUR4Vk5Ra3lmeDZzYlp4eGFDMGRpLUtIUjRUSEZrR2RQN0tVLUhHYnRON3JodWNsZHY?oc=5",
@@ -364,6 +374,16 @@
         "items": 0
       },
       {
+        "source": "Domestic Mill News RSS",
+        "status": "ok",
+        "items": 0
+      },
+      {
+        "source": "Import News RSS",
+        "status": "ok",
+        "items": 0
+      },
+      {
         "source": "Import News RSS",
         "status": "ok",
         "items": 6
@@ -371,7 +391,7 @@
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 10
+        "items": 11
       }
     ]
   }
