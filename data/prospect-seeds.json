@@ -210,6 +210,162 @@
         "Carbon steel CNC plasma cutting",
         "Large industrial components"
       ]
+    },
+    {
+      "name": "Industrial Fabricators of Corpus Christi",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "website": "https://www.indfabcc.com/",
+      "source_url": "https://www.indfabcc.com/capabilities/",
+      "category": "Heavy plate fabrication",
+      "why": "Three 10x40-foot CNC burning centers, rolling up to 1-3/4 inches",
+      "signals": [
+        "CNC plate burning",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Texas Steel Processing",
+      "city": "Texas",
+      "state": "TX",
+      "website": "https://www.txstl.com/",
+      "source_url": "https://www.txstl.com/",
+      "category": "Heavy plate processor",
+      "why": "Plasma and oxyfuel burning and plate rolling 3/16 to 4 inches",
+      "signals": [
+        "Heavy plate burning",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Quality Manufacturing Group",
+      "city": "Columbia",
+      "state": "MS",
+      "website": "https://qualitymfggroup.com/",
+      "source_url": "https://qualitymfggroup.com/services/",
+      "category": "Pressure vessel and transport tank fabricator",
+      "why": "A36 plate rolling to 1-1/4 inches by 12 feet and plasma cutting to 3 inches",
+      "signals": [
+        "A36 plate rolling",
+        "Plasma cutting"
+      ]
+    },
+    {
+      "name": "M-C Fabrication",
+      "city": "Olathe",
+      "state": "KS",
+      "website": "https://www.m-cfabrication.com/",
+      "source_url": "https://www.linkedin.com/company/m-c-fabrication",
+      "category": "Heavy component manufacturer",
+      "why": "Heavy fabricated components from sheet through 3-inch plate",
+      "signals": [
+        "3-inch plate fabrication",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Industrial Metal Fabricators",
+      "city": "West Monroe",
+      "state": "LA",
+      "website": "https://www.imfmetalfab.com/",
+      "source_url": "https://www.imfmetalfab.com/",
+      "category": "Industrial plate fabrication",
+      "why": "10x20-foot plasma cutting to 2-inch steel and plate rolling to 1 inch",
+      "signals": [
+        "2-inch steel plate cutting",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Volks Constructors",
+      "city": "Prairieville",
+      "state": "LA",
+      "website": "https://www.volksconst.com/",
+      "source_url": "https://www.volksconst.com/services/fabrication/",
+      "category": "ASME pressure vessel fabrication",
+      "why": "10x49-foot CNC plasma cutting table to 2-inch plate",
+      "signals": [
+        "ASME vessels",
+        "Large CNC plate cutting"
+      ]
+    },
+    {
+      "name": "Deltak Manufacturing",
+      "city": "Walker",
+      "state": "LA",
+      "website": "https://deltakmfg.com/",
+      "source_url": "https://deltakmfg.com/about/walker-facility/",
+      "category": "Industrial metal manufacturer",
+      "why": "Two plasma tables, three plate rolls and heavy press brakes",
+      "signals": [
+        "Plasma cutting",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Boland Marine",
+      "city": "New Orleans",
+      "state": "LA",
+      "website": "https://bolandmarine.com/",
+      "source_url": "https://bolandmarine.com/company/capabilities",
+      "category": "Marine and industrial fabrication",
+      "why": "2-inch plate rolling and 30,000-square-foot fabrication shop",
+      "signals": [
+        "2-inch plate rolling",
+        "Industrial fabrication"
+      ]
+    },
+    {
+      "name": "Precision Fabrication Services",
+      "city": "Fort Worth",
+      "state": "TX",
+      "website": "https://precisionfabsvs.com/",
+      "source_url": "https://precisionfabsvs.com/",
+      "category": "Industrial steel plate processor",
+      "why": "10x40-foot plasma table and 120x240-inch laser beds",
+      "signals": [
+        "Large plate processing",
+        "Plasma cutting"
+      ]
+    },
+    {
+      "name": "Industrial Service Solutions",
+      "city": "West Monroe",
+      "state": "LA",
+      "website": "https://iss-na.com/",
+      "source_url": "https://iss-na.com/services/equipment-services/process-equipment/material-handling/",
+      "category": "Heavy industrial fabrication",
+      "why": "12x43-foot CNC burning table and plate rolling to 1 inch",
+      "signals": [
+        "Heavy plate burning",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Refrigeration Vessels and Systems Corporation",
+      "city": "Bryan",
+      "state": "TX",
+      "website": "https://rvscorp.com/",
+      "source_url": "https://rvscorp.com/media/296059",
+      "category": "ASME pressure vessel manufacturer",
+      "why": "100,000-square-foot manufacturing facility with plate rolling and plasma cutting",
+      "signals": [
+        "ASME vessels",
+        "Plate rolling"
+      ]
+    },
+    {
+      "name": "Taylor Forge Engineered Systems",
+      "city": "Paola",
+      "state": "KS",
+      "website": "https://www.tfes.com/",
+      "source_url": "https://www.tfes.com/solutions/pressure-vessels/",
+      "category": "Engineered pressure vessel manufacturer",
+      "why": "Starts manufacturing from flat plate with in-house rolling and welding",
+      "signals": [
+        "Flat plate processing",
+        "Pressure vessels"
+      ]
     }
   ]
 }
