@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T18:05:38.351660+00:00",
+  "updated_at": "2026-11-04T18:09:06.342074+00:00",
   "pulse": [
     {
       "id": "pricing",
@@ -29,7 +29,7 @@
             "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
             "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
           },
-          "retrieved_at": "2026-11-04T18:05:37.033058+00:00",
+          "retrieved_at": "2026-11-04T18:09:05.366107+00:00",
           "access": "Retrieved from primary source this collection"
         }
       ],
@@ -38,29 +38,43 @@
     {
       "id": "supply",
       "label": "Domestic Mill Supply",
-      "condition": "Insufficient Data",
-      "color": "gray",
-      "arrow": "—",
-      "confidence": "Not rated",
-      "evidence_date": null,
-      "last_evidence_date": null,
-      "basis": "Low inventories alone do not establish tightening. Current plate supply direction is not verified.",
-      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
-      "sources": [],
+      "condition": "Tightening",
+      "color": "red",
+      "arrow": "↑",
+      "confidence": "Low",
+      "evidence_date": "2026-10-27",
+      "basis": "SMU reported shrinking remaining 2026 domestic spot tonnage for plate and sheet, with steel buyers struggling to find domestic mills offering spot availability. This indicates tightening spot access, not a measured decline in total U.S. plate production.",
+      "period": "Late October 2026",
+      "limitation": "Qualitative buyer reports; cannot infer exact mill allocation percentages or all-grade availability. Supply direction here refers to domestic spot-order availability.",
+      "sources": [
+        {
+          "publisher": "Steel Market Update",
+          "title": "Sheet and plate price gains accelerate as 2026 tons dry up",
+          "url": "https://www.steelmarketupdate.com/category/sheet/",
+          "evidence_date": "2026-10-27"
+        }
+      ],
       "previous": null
     },
     {
       "id": "lead_times",
       "label": "Mill Lead Times",
-      "condition": "Insufficient Data",
-      "color": "gray",
-      "arrow": "—",
-      "confidence": "Not rated",
-      "evidence_date": null,
-      "last_evidence_date": null,
-      "basis": "No comparable dated plate-mill delivery schedules were verified.",
-      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
-      "sources": [],
+      "condition": "Lengthening",
+      "color": "red",
+      "arrow": "↑",
+      "confidence": "Medium",
+      "evidence_date": "2026-10-29",
+      "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
+      "period": "Late October 2026",
+      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29.",
+      "sources": [
+        {
+          "publisher": "Steel Market Update",
+          "title": "Mill lead times climb to new highs, buyers expect little relief",
+          "url": "https://www.steelmarketupdate.com/category/sheet/",
+          "evidence_date": "2026-10-29"
+        }
+      ],
       "previous": null
     },
     {
@@ -108,7 +122,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T18:05:38.351660+00:00",
+      "checked_at": "2026-11-04T18:09:06.342074+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -122,7 +136,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T18:05:38.351660+00:00",
+      "checked_at": "2026-11-04T18:09:06.342074+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -145,7 +159,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-04T18:05:37.033058+00:00",
+            "retrieved_at": "2026-11-04T18:09:05.366107+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -163,7 +177,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T18:05:38.351660+00:00",
+      "checked_at": "2026-11-04T18:09:06.342074+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -195,7 +209,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-04T18:05:38.351660+00:00",
+      "checked_at": "2026-11-04T18:09:06.342074+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -391,9 +405,39 @@
           "evidence_date": null
         }
       ]
+    },
+    {
+      "as_of": "2026-11-04",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-09-30"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "evidence_date": "2026-10-27"
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Lengthening",
+          "evidence_date": "2026-10-29"
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        }
+      ]
     }
   ],
-  "history_count": 2,
+  "history_count": 3,
   "history_started": "2026-11-04",
   "rules": [
     "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",
