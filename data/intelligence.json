@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-04T17:28:07.967198+00:00",
+  "pulse": [
+    {
+      "id": "pricing",
+      "label": "Plate Pricing",
+      "condition": "Rising",
+      "color": "red",
+      "arrow": "↑",
+      "confidence": "Low",
+      "evidence_date": "2026-09-30",
+      "basis": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+      "period": "Q3 2026",
+      "limitation": "Latest reported quarterly trend, not a daily spot quote. Eligible for 45 days from period end.",
+      "sources": [
+        {
+          "id": "ssab-market",
+          "publisher": "SSAB",
+          "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+          "title": "Market situation and outlook",
+          "period": "Q3 2026",
+          "evidence_date": "2026-09-30",
+          "date_kind": "period end; publication date not supplied on page",
+          "max_age_days": 105,
+          "observations": {
+            "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+            "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+            "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+            "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
+          },
+          "retrieved_at": "2026-11-04T17:17:15.217965+00:00",
+          "access": "Retrieved from primary source this collection"
+        }
+      ],
+      "previous": null
+    },
+    {
+      "id": "supply",
+      "label": "Domestic Mill Supply",
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": null,
+      "basis": "Low inventories alone do not establish tightening. Current plate supply direction is not verified.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
+      "previous": null
+    },
+    {
+      "id": "lead_times",
+      "label": "Mill Lead Times",
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": null,
+      "basis": "No comparable dated plate-mill delivery schedules were verified.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
+      "previous": null
+    },
+    {
+      "id": "imports",
+      "label": "Import Availability",
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": null,
+      "basis": "All-steel imports and license totals do not establish discrete plate availability.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
+      "previous": null
+    },
+    {
+      "id": "demand",
+      "label": "Plate Demand",
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": null,
+      "basis": "A strong market is a level, not proof of strengthening demand. Sector activity is not plate order volume.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
+      "previous": null
+    }
+  ],
+  "weekly": {
+    "status": "baseline_pending",
+    "summary": "Weekly comparison is building. There is no saved observation from the previous week yet.",
+    "previous_date": null,
+    "changes": []
+  },
+  "mills": [
+    {
+      "id": "nucor",
+      "name": "Nucor",
+      "url": "https://nucor.com/products/plate/",
+      "coverage": "U.S. discrete plate mills; sheet projects excluded",
+      "condition": "Current status unverified",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "checked_at": "2026-11-04T17:28:07.967198+00:00",
+      "source_access": "retrieved",
+      "developments": [],
+      "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+    },
+    {
+      "id": "ssab",
+      "name": "SSAB Americas",
+      "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+      "coverage": "North American plate commentary; individual plant operation not inferred",
+      "condition": "Current status unverified",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "checked_at": "2026-11-04T17:28:07.967198+00:00",
+      "source_access": "retrieved",
+      "developments": [
+        {
+          "event_id": "ssab-2026-09-30",
+          "evidence_date": "2026-09-30",
+          "date_kind": "reporting period end",
+          "summary": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+          "source": {
+            "id": "ssab-market",
+            "publisher": "SSAB",
+            "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+            "title": "Market situation and outlook",
+            "period": "Q3 2026",
+            "evidence_date": "2026-09-30",
+            "date_kind": "period end; publication date not supplied on page",
+            "max_age_days": 105,
+            "observations": {
+              "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+              "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+              "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+              "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
+            },
+            "retrieved_at": "2026-11-04T17:17:15.217965+00:00",
+            "access": "Retrieved from primary source this collection"
+          },
+          "status": "Dated quarterly market commentary, not a plant operating report",
+          "access": "Dated reviewed development; not freshly reverified"
+        }
+      ],
+      "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+    },
+    {
+      "id": "jsw",
+      "name": "JSW Steel USA",
+      "url": "https://jswsteel.us/baytown/",
+      "coverage": "Baytown plate; Mingo coil/slab context kept separate",
+      "condition": "Current status unverified",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "checked_at": "2026-11-04T17:28:07.967198+00:00",
+      "source_access": "retrieved",
+      "developments": [
+        {
+          "event_id": "jsw-baytown-september-2026-plan",
+          "mill_id": "jsw",
+          "evidence_date": "2026-09-01",
+          "date_kind": "publication date",
+          "max_age_days": 90,
+          "reviewed_at": "2026-11-04",
+          "summary": "A public report quoting JSW’s CEO described a planned 45-day Baytown plate-mill outage starting in September for upgrades. Completion and present production status have not been verified; the scheduled duration is not a restart confirmation.",
+          "status": "Historical reported plan; current status unverified",
+          "source": {
+            "publisher": "Steel Market Update, quoting JSW management",
+            "title": "JSW Steel USA moves 45-day outage to September",
+            "url": "https://www.steelmarketupdate.com/2026/09/01/jsw-steel-usa-moves-45-day-outage-to-sept-amid-value-add-push/",
+            "evidence_date": "2026-09-01"
+          },
+          "access": "Dated reviewed development; not freshly reverified"
+        }
+      ],
+      "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+    },
+    {
+      "id": "cliffs",
+      "name": "Cleveland-Cliffs",
+      "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
+      "coverage": "U.S. plate footprint; sheet and electrical-steel projects excluded",
+      "condition": "Current status unverified",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "checked_at": "2026-11-04T17:28:07.967198+00:00",
+      "source_access": "retrieved",
+      "developments": [
+        {
+          "event_id": "cliffs-q3-2026-plate-footprint",
+          "mill_id": "cliffs",
+          "evidence_date": "2026-09-30",
+          "date_kind": "reporting period end; changes described in the Q3 10-Q",
+          "max_age_days": 90,
+          "reviewed_at": "2026-11-04",
+          "summary": "The Q3 2026 filing describes idling the Gary plate finishing line and one Burns Harbor plate mill during Q2, consolidating capabilities at one Burns Harbor mill. The company said capability and steel output were not compromised. This is a dated footprint change, not proof of current spot availability or allocations.",
+          "verification_anchor": "idling our Gary plate finishing line",
+          "status": "Dated company filing; current availability unverified",
+          "source": {
+            "publisher": "Cleveland-Cliffs",
+            "title": "Form 10-Q for period ended September 30, 2026",
+            "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
+            "evidence_date": "2026-09-30"
+          },
+          "access": "Primary statement rechecked this collection"
+        }
+      ],
+      "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+    }
+  ],
+  "demand_drivers": [
+    {
+      "name": "Energy, oil & gas",
+      "scope": "Direct equipment demand; project-dependent",
+      "grades": "A516 Grade 70 for specified vessels; A36 / A572 Grade 50 for skids and supports",
+      "analysis": "Tanks, separators, process vessels and heavy equipment can consume discrete plate. Oil prices and drilling activity are indirect indicators; funded fabrication orders, specification requirements and project timing matter more than announcements.",
+      "sources": [
+        {
+          "evidence_date": "2026-10-06",
+          "max_age_days": 60,
+          "retrieved_at": "2026-11-04T17:00:29.076192+00:00",
+          "access": "Retrieved this forecast edition",
+          "scope": "Indirect; not plate tonnage or transaction prices",
+          "id": "eia-energy",
+          "publisher": "EIA",
+          "title": "Short-Term Energy Outlook",
+          "url": "https://www.eia.gov/outlooks/steo/report/",
+          "summary": "EIA’s dated outlook projects a lower Brent price next year; this is an energy forecast, not a plate forecast.",
+          "oil_outlook": "lower"
+        }
+      ]
+    },
+    {
+      "name": "Power generation & data centers",
+      "scope": "Selected direct plate applications; much demand is for other products",
+      "grades": "A36 / A572 Grade 50 skids and baseplates; A516 Grade 70 where pressure equipment specifications require it",
+      "analysis": "Generator skids, tanks, baseplates and selected power equipment provide a plate channel. Building frames, rebar, electrical steel and many enclosures belong to different product markets. Electricity-demand projections do not establish plate tonnage; grid access and project execution can delay consumption.",
+      "sources": [
+        {
+          "id": "data-centers",
+          "publisher": "DOE / Lawrence Berkeley National Laboratory",
+          "title": "United States Data Center Energy Usage Report: 2025 Update",
+          "url": "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
+          "evidence_date": "2026-06-18",
+          "reviewed_at": "2026-11-04",
+          "max_age_days": 540,
+          "scope": "Electricity-demand scenarios; not a plate demand forecast",
+          "summary": "DOE/LBNL research projects substantial data-center electricity-demand growth with a wide scenario range. It does not estimate carbon steel plate tonnage. The forecast treats demand for selected power equipment, tanks and generator skids as a conditional plate channel; building frames and other steel products are distinguished.",
+          "access": "Dated reviewed context; not reverified by the monthly parser"
+        }
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "scope": "Plate bridges and equipment versus structural products",
+      "grades": "A36 / A572 Grade 50 where project specifications permit",
+      "analysis": "Bridge fabrication, heavy equipment and selected industrial structures can create plate orders. Many projects primarily use beams, rebar or other steel. Funding must turn into procurement before it becomes current plate demand.",
+      "sources": [
+        {
+          "id": "trade-policy",
+          "publisher": "White House",
+          "title": "June 2026 adjustment to Section 232 metals tariff regimes",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states/",
+          "evidence_date": "2026-06-01",
+          "reviewed_at": "2026-11-04",
+          "max_age_days": 210,
+          "scope": "Direct trade-policy channel, but product and country treatment requires current verification",
+          "summary": "The June 1 proclamation amended the Section 232 metals framework and differentiated metals articles from certain derivatives. This dated document is context, not a determination of the current tariff on any plate shipment. The model assigns no numerical tariff premium. Future changes remain scenario risks.",
+          "access": "Dated reviewed context; not reverified by the monthly parser"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing & industrial equipment",
+      "scope": "Broad output indicator; direct plate orders require separate evidence",
+      "grades": "A36 / A572 Grade 50 equipment frames; A516 Grade 70 specified process equipment",
+      "analysis": "Machinery, mining equipment and fabrication backlogs can affect mother-plate consumption. Manufacturing output alone cannot measure plate orders, and coil-heavy automotive activity is not interchangeable with plate demand.",
+      "sources": [
+        {
+          "evidence_date": "2026-10-16",
+          "max_age_days": 60,
+          "retrieved_at": "2026-11-04T17:00:29.076192+00:00",
+          "access": "Retrieved this forecast edition",
+          "scope": "Indirect; not plate tonnage or transaction prices",
+          "id": "fed-manufacturing",
+          "publisher": "Federal Reserve",
+          "title": "Industrial Production and Capacity Utilization",
+          "url": "https://www.federalreserve.gov/releases/g17/20261016/",
+          "summary": "The Federal Reserve reports manufacturing output rose 0.3% in September. Defense and space equipment output rose 0.4% in that release.",
+          "manufacturing_change": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Defense",
+      "scope": "Specialized plate applications; specifications may exceed standard grades",
+      "grades": "A36 / A572 Grade 50 / A516 Grade 70 only when approved by contract; armor/naval grades differ",
+      "analysis": "Shipbuilding and heavy defense fabrication may consume plate, but procurement calendars, appropriations and material approvals determine timing. Growth in defense equipment output is broader than demand for these three grades. No announced budget is counted as a confirmed Ranger-grade plate order.",
+      "sources": [
+        {
+          "evidence_date": "2026-10-16",
+          "max_age_days": 60,
+          "retrieved_at": "2026-11-04T17:00:29.076192+00:00",
+          "access": "Retrieved this forecast edition",
+          "scope": "Indirect; not plate tonnage or transaction prices",
+          "id": "fed-manufacturing",
+          "publisher": "Federal Reserve",
+          "title": "Industrial Production and Capacity Utilization",
+          "url": "https://www.federalreserve.gov/releases/g17/20261016/",
+          "summary": "The Federal Reserve reports manufacturing output rose 0.3% in September. Defense and space equipment output rose 0.4% in that release.",
+          "manufacturing_change": 0.3
+        }
+      ]
+    }
+  ],
+  "accuracy": {
+    "status": "not_yet_evaluable",
+    "results": [],
+    "completed_quarters_pending": 0,
+    "summary": "Not yet evaluable. No completed forecast quarter has a sufficiently verified, like-for-like plate outcome. No accuracy score or actual price has been invented."
+  },
+  "recent_history": [
+    {
+      "as_of": "2026-11-04",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-09-30"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        }
+      ]
+    },
+    {
+      "as_of": "2026-11-04",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-09-30"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        }
+      ]
+    }
+  ],
+  "history_count": 2,
+  "history_started": "2026-11-04",
+  "rules": [
+    "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",
+    "Only explicit dated discrete-plate directional observations qualify. Low inventories, strong demand levels, all-steel production and aggregate imports cannot establish a change in plate supply or demand.",
+    "Recognized producer quarterly plate-price direction is eligible for 45 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.",
+    "Conflicting eligible readings on the same evidence date show Mixed at Low confidence. Missing data never defaults to Stable.",
+    "Daily snapshots preserve evidence and readings. The weekly baseline is the latest saved snapshot on or before seven days ago, no more than fourteen days old. Missing weeks are not backfilled. Coverage changes are separate from physical market changes.",
+    "Mill webpages are checked daily, but only recognized or reviewed dated developments are shown. A planned outage end is never treated as a confirmed restart. Capabilities pages do not verify current operations or allocations.",
+    "Forecast accuracy needs a completed quarter and reviewed like-for-like observations for discrete plate. A current-quarter forecast requires the matching remaining-period baseline; a full-quarter result cannot substitute. Coil/HRC, all-steel output, within-quarter price changes and unverified headlines do not qualify. No suitable automated actual-price series is configured."
+  ]
+}
