@@ -165,7 +165,7 @@ def directory_candidates(market,excluded):
 def main():
  today=dt.datetime.now(dt.timezone.utc)
  profile=json.loads((ROOT/'data/prospect-profile.json').read_text())
- excluded={norm(n) for n in profile['excluded_companies']}
+ excluded={norm(n) for n in profile['excluded_companies'] + profile.get('reviewed_baseline_names',[])}
  path=ROOT/'data/prospects.json'
  old=json.loads(path.read_text()) if path.exists() else {'leads':[]}
  leads={x['id']:x for x in old.get('leads',[]) if x.get('id') and x.get('discovered_from')!='Public search result; company identity and city require verification'}
