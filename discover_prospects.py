@@ -146,6 +146,9 @@ def main():
    if norm(entry['name']) in excluded:continue
    host=urllib.parse.urlsplit(entry['website']).hostname or entry['name']
    ident=hashlib.sha256(host.lower().removeprefix('www.').encode()).hexdigest()[:16]
+   for existing_id, existing in list(leads.items()):
+    if existing_id!=ident and (urllib.parse.urlsplit(existing.get('website','')).hostname or '').lower().removeprefix('www.')==host.lower().removeprefix('www.'):
+     del leads[existing_id]
    if ident not in leads:
     leads[ident]={**entry,'id':ident,'first_seen':today.date().isoformat(),
       'discovered_from':'Reviewed public manufacturer website','verified_plate_buyer':False,
