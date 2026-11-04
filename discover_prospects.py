@@ -46,12 +46,12 @@ def candidate(element,city,state,excluded):
 
 def query(city):
  name,state,lat,lon=city
- q=f'[out:json][timeout:24];(nwr(around:35000,{lat},{lon})["craft"~"metal_construction|welder|metal_worker|metalworking",i];nwr(around:35000,{lat},{lon})["industrial"~"machine_shop|metalworking|manufacturing|factory",i];);out tags center 160;'
+ q=f'[out:json][timeout:12];(nwr(around:12000,{lat},{lon})["craft"~"metal_construction|welder|metal_worker|metalworking",i];nwr(around:35000,{lat},{lon})["industrial"~"machine_shop|metalworking|manufacturing|factory",i];);out tags center 60;'
  last=None
- for endpoint in ('https://overpass.private.coffee/api/interpreter','https://overpass.nchc.org.tw/api/interpreter'):
+ for endpoint in ('https://overpass-api.de/api/interpreter','https://overpass.private.coffee/api/interpreter'):
   try:
    req=urllib.request.Request(endpoint,data=urllib.parse.urlencode({'data':q}).encode(),headers={'User-Agent':'RangerSteelIntel/2.0 (public lead research)'})
-   with urllib.request.urlopen(req,timeout=12) as response:return json.load(response).get('elements',[])
+   with urllib.request.urlopen(req,timeout=15) as response:return json.load(response).get('elements',[])
   except Exception as exc:last=exc
  raise last
 
@@ -65,7 +65,7 @@ def main():
  checks=[]
  # Rotate three geographic markets per day; previous discoveries remain in the pool.
  offset=today.date().toordinal()%len(CITIES)
- for i in range(3):
+ for i in range(2):
   city=CITIES[(offset+i*5)%len(CITIES)]
   try:
    items=query(city)
