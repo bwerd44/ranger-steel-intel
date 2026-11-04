@@ -4,6 +4,7 @@ Unverified research candidates only. No paid API or claims about actual plate pu
 import datetime as dt
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import urllib.parse
@@ -132,6 +133,60 @@ def search_candidates(market,excluded):
   except Exception:continue
  return found
 
+
+def directory_candidates(market,excluded):
+ """Geocoded public business discovery; does not depend on Overpass."""
+ city,state,phrase=market
+ query_text='metal fabrication '+city+' '+state
+ params=urllib.parse.urlencode({'q':query_text,'format':'jsonv2','addressdetails':1,'limit':25,'dedupe':1})
+ url='https://nominatim.openstreetmap.org/search?'+params
+ request=urllib.request.Request(url,headers={'User-Agent':'RangerSteelIntel/2.1 (public business research; GitHub Pages)','Accept':'application/json'})
+ with urllib.request.urlopen(request,timeout=12) as response:records=json.load(response)
+ found=[]
+ for record in records:
+  address=record.get('address') or {}
+  if (address.get('state_code') or '').upper() not in ('',state):continue
+  name=(record.get('name') or '').strip()
+  if len(name)<5 or norm(name) in excluded or BAD_TITLE.search(name):continue
+  if not (COMPANY_NAME.search(name) or re.search(r'fabricat|manufactur|industrial|metal|steel|machine|weld',record.get('display_name',''),re.I)):continue
+  kind=record.get('type','')
+  if kind in ('residential','house','road','administrative','city','county','state'):continue
+  osmtype=record.get('osm_type','node')
+  osmid=record.get('osm_id')
+  if not osmid:continue
+  found.append({'id':hashlib.sha256((osmtype+str(osmid)).encode()).hexdigest()[:16],
+   'name':name,'city':address.get('city') or address.get('town') or address.get('village') or city,
+   'state':state,'category':'Publicly mapped industrial business — capabilities unverified',
+   'why':'Named business located through public geographic business data. Confirm full-size plate buying and in-house processing.',
+   'website':None,'source_url':f'https://www.openstreetmap.org/{osmtype}/{osmid}',
+   'discovered_from':'OpenStreetMap Nominatim named business','verified_plate_buyer':False})
+ return found
+
+def search_api_candidates(market,excluded):
+ """Optional reliable search API; requires BRAVE_SEARCH_API_KEY in Actions secrets."""
+ key=os.environ.get('BRAVE_SEARCH_API_KEY','').strip()
+ if not key:return [],'not_configured'
+ city,state,phrase=market
+ url='https://api.search.brave.com/res/v1/web/search?'+urllib.parse.urlencode({'q':phrase,'count':20,'country':'us','search_lang':'en'})
+ req=urllib.request.Request(url,headers={'Accept':'application/json','X-Subscription-Token':key})
+ with urllib.request.urlopen(req,timeout=12) as response:results=json.load(response).get('web',{}).get('results',[])
+ found=[]
+ for entry in results:
+  link=entry.get('url','')
+  p=urllib.parse.urlsplit(link);host=(p.hostname or '').lower().removeprefix('www.')
+  title=re.sub(r'\s+',' ',entry.get('title','')).strip()
+  if p.scheme not in ('http','https') or not host or any(host==h or host.endswith('.'+h) for h in BLOCKED_HOSTS):continue
+  if p.path.strip('/') not in ('','home','index.html','index.php') or BAD_TITLE.search(title):continue
+  name=re.split(r'\s+[-|–]\s+| : ',title)[0].strip()
+  if len(name)<5 or len(name)>65 or not COMPANY_NAME.search(name) or norm(name) in excluded:continue
+  # Search snippet is only a clue. Company website qualification is required.
+  found.append({'id':hashlib.sha256(host.encode()).hexdigest()[:16],'name':name,'city':city,
+    'state':state,'category':'Search-discovered manufacturer — location unverified',
+    'why':'Industrial business search result; homepage and full-size plate purchasing require confirmation.',
+    'website':urllib.parse.urlunsplit((p.scheme,p.netloc,'/','','')),'source_url':link,
+    'discovered_from':'Brave business web search; unverified','verified_plate_buyer':False})
+ return found,'ok'
+
 def main():
  today=dt.datetime.now(dt.timezone.utc)
  profile=json.loads((ROOT/'data/prospect-profile.json').read_text())
@@ -181,6 +236,24 @@ def main():
      c['first_seen']=today.date().isoformat();leads[c['id']]=c;count+=1
    checks.append({'market':market[0]+' web search','status':'ok','new':count})
   except Exception as exc:checks.append({'market':market[0]+' web search','status':'unavailable','error':type(exc).__name__})
+ # Additional independent business data sources rotate automatically.
+ market=SEARCHES[search_offset]
+ try:
+  found=directory_candidates(market,excluded)
+  added=0
+  for c in found:
+   if c['id'] not in leads:
+    c['first_seen']=today.date().isoformat();leads[c['id']]=c;added+=1
+  checks.append({'market':market[0]+' geographic directory','status':'ok','new':added})
+ except Exception as exc:checks.append({'market':market[0]+' geographic directory','status':'unavailable','error':type(exc).__name__})
+ try:
+  found,status=search_api_candidates(market,excluded)
+  added=0
+  for c in found:
+   if c['id'] not in leads:
+    c['first_seen']=today.date().isoformat();leads[c['id']]=c;added+=1
+  checks.append({'market':market[0]+' search API','status':status,'new':added})
+ except Exception as exc:checks.append({'market':market[0]+' search API','status':'unavailable','error':type(exc).__name__})
  # Do not manufacture leads if source is unavailable.
  items=[x for x in leads.values() if norm(x['name']) not in excluded]
  items.sort(key=lambda x:(x.get('first_seen',''),x['name']),reverse=True)
