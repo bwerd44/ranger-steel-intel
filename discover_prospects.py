@@ -139,6 +139,19 @@ def main():
  path=ROOT/'data/prospects.json'
  old=json.loads(path.read_text()) if path.exists() else {'leads':[]}
  leads={x['id']:x for x in old.get('leads',[]) if x.get('id') and x.get('discovered_from')!='Public search result; company identity and city require verification'}
+ # Publish independently sourced manufacturer leads even if automated search sources fail.
+ seed_path=ROOT/'data/prospect-seeds.json'
+ if seed_path.exists():
+  for entry in json.loads(seed_path.read_text()).get('leads',[]):
+   if norm(entry['name']) in excluded:continue
+   host=urllib.parse.urlsplit(entry['website']).hostname or entry['name']
+   ident=hashlib.sha256(host.lower().removeprefix('www.').encode()).hexdigest()[:16]
+   if ident not in leads:
+    leads[ident]={**entry,'id':ident,'first_seen':today.date().isoformat(),
+      'discovered_from':'Reviewed public manufacturer website','verified_plate_buyer':False,
+      'qualification':{'fit':'Worth reviewing','score':0,'signals':[{'label':label,'excerpt':'Published company capability'} for label in entry.get('signals',[])],
+       'checked_at':today.isoformat(),'evidence_url':entry['source_url'],
+       'note':'Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified.'}}
  checks=[]
  # Rotate three geographic markets per day; previous discoveries remain in the pool.
  offset=today.date().toordinal()%len(CITIES)
@@ -168,7 +181,7 @@ def main():
  # Do not manufacture leads if source is unavailable.
  items=[x for x in leads.values() if norm(x['name']) not in excluded]
  items.sort(key=lambda x:(x.get('first_seen',''),x['name']),reverse=True)
- qualified=qualify_batch(items,limit=12)
+ qualified=qualify_batch([x for x in items if x.get('discovered_from')!='Reviewed public manufacturer website'],limit=12)
  result={'schema_version':1,'updated_at':today.isoformat(),'method':'Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.','checks':checks,'website_reviews_this_run':qualified,'leads':items[:300]}
  path.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
  print('Prospect discovery:',len(result['leads']),'candidates;',checks)
