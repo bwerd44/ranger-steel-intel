@@ -18,6 +18,8 @@ UTC = dt.timezone.utc
 CATEGORIES = ('Domestic Mill News', 'Import News', 'All Other Steel News')
 QUERIES = (
     (CATEGORIES[0], 'US steel plate mill production allocation lead times shutdown'),
+    (CATEGORIES[0], 'Nucor SSAB JSW Cleveland Cliffs plate mill outage restart capacity'),
+    (CATEGORIES[1], 'cut-to-length plate imports SIMA licenses Census AISI country of origin'),
     (CATEGORIES[1], 'steel plate imports tariffs trade duties global'),
     (CATEGORIES[2], 'steel plate demand manufacturing fabrication energy infrastructure'),
 )
@@ -118,7 +120,7 @@ def collect_news(now):
             return found, {'source': category + ' RSS', 'status': 'ok', 'items': len(found)}
         except Exception as error:
             return [], {'source': category + ' RSS', 'status': 'unavailable', 'reason': type(error).__name__}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for found, check in pool.map(feed, QUERIES):
             articles.extend(found)
             checks.append(check)
