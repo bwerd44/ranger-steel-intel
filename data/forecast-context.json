@@ -1,0 +1,27 @@
+{
+  "description": "Dated reviewed context for scenario channels. These are not automatic confirmations of current law, orders or plate tonnage.",
+  "sources": [
+    {
+      "id": "trade-policy",
+      "publisher": "White House",
+      "title": "June 2026 adjustment to Section 232 metals tariff regimes",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states/",
+      "evidence_date": "2026-06-01",
+      "reviewed_at": "2026-11-04",
+      "max_age_days": 210,
+      "scope": "Direct trade-policy channel, but product and country treatment requires current verification",
+      "summary": "The June 1 proclamation amended the Section 232 metals framework and differentiated metals articles from certain derivatives. This dated document is context, not a determination of the current tariff on any plate shipment. The model assigns no numerical tariff premium. Future changes remain scenario risks."
+    },
+    {
+      "id": "data-centers",
+      "publisher": "DOE / Lawrence Berkeley National Laboratory",
+      "title": "United States Data Center Energy Usage Report: 2025 Update",
+      "url": "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
+      "evidence_date": "2026-06-18",
+      "reviewed_at": "2026-11-04",
+      "max_age_days": 540,
+      "scope": "Electricity-demand scenarios; not a plate demand forecast",
+      "summary": "DOE/LBNL research projects substantial data-center electricity-demand growth with a wide scenario range. It does not estimate carbon steel plate tonnage. The forecast treats demand for selected power equipment, tanks and generator skids as a conditional plate channel; building frames and other steel products are distinguished."
+    }
+  ]
+}
