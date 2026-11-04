@@ -52,6 +52,21 @@ def observed_from_briefing(data):
     return observations
 
 
+def apply_editorial_assessments(readings, day):
+    """Time-limited editorial judgments, never represented as independently verified evidence."""
+    editorial = {
+        'imports': ('Stable', '2026-11-04', 'Current industry assessment: import availability is broadly neutral. This is an editorial judgment, not a verified month-over-month plate import trend.'),
+        'demand': ('Stable', '2026-11-04', 'Current industry assessment: plate demand is broadly neutral. Earlier reporting of improved demand does not establish that demand is still strengthening today.'),
+    }
+    for reading in readings:
+        if reading['id'] not in editorial:
+            continue
+        condition, assessed_at, basis = editorial[reading['id']]
+        if 0 <= (day-date_of(assessed_at)).days <= 14:
+            reading.update(condition=condition,color='orange',arrow='→',confidence='Editorial assessment',evidence_date=None,assessment_date=assessed_at,basis=basis,limitation='Not independently verified. Expires after 14 days unless reassessed. Published evidence remains available in source history.',sources=[])
+    return readings
+
+
 def derive_readings(observations, day):
     missing = {
         'pricing':'No eligible dated discrete plate price-direction evidence.',
@@ -61,17 +76,7 @@ def derive_readings(observations, day):
         'demand':'A strong market is a level, not proof of strengthening demand. Sector activity is not plate order volume.',
     }
     readings = []
-    # Explicit editorial assessments are displayed separately from verified source evidence.
-    editorial = {
-        'imports': ('Stable', '2026-11-04', 'Current industry assessment: import availability is broadly neutral. This is an editorial judgment, not a verified month-over-month plate import trend.'),
-        'demand': ('Stable', '2026-11-04', 'Current industry assessment: plate demand is broadly neutral. Earlier reporting of improved demand does not establish that demand is still strengthening today.'),
-    }
     for key,(label,allowed) in METRICS.items():
-        if key in editorial:
-            condition, assessed_at, basis = editorial[key]
-            if 0 <= (day-date_of(assessed_at)).days <= 14:
-                readings.append({'id':key,'label':label,'condition':condition,'color':'orange','arrow':'→','confidence':'Editorial assessment','evidence_date':None,'assessment_date':assessed_at,'basis':basis,'limitation':'Not independently verified. Expires after 14 days unless reassessed. Published evidence remains available in source history.','sources':[]})
-                continue
         candidates = [x for x in observations if x.get('metric')==key and x.get('condition') in allowed and x.get('scope')=='discrete_plate' and x.get('verified') is True and x.get('source',{}).get('url','').startswith('https://') and usable(x,day)]
         if candidates:
             newest = max(x['evidence_date'] for x in candidates)
@@ -192,7 +197,7 @@ def build(data, reviewed, context, forecasts, history, now, offline=False):
     validate_history(history)
     day=now.astimezone(ZoneInfo('America/Chicago')).date()
     observations=observed_from_briefing(data)+copy.deepcopy(reviewed.get('observations',[]))
-    snapshot={'id':now.isoformat(),'as_of':day.isoformat(),'generated_at':now.isoformat(),'rule_version':RULE_VERSION,'readings':derive_readings(observations,day),'mills':mill_tracker(data,reviewed,now,offline),'observations':observations}
+    snapshot={'id':now.isoformat(),'as_of':day.isoformat(),'generated_at':now.isoformat(),'rule_version':RULE_VERSION,'readings':apply_editorial_assessments(derive_readings(observations,day),day),'mills':mill_tracker(data,reviewed,now,offline),'observations':observations}
     snapshot['developments']=[]
     for source in data.get('briefing',{}).get('sources',[]):
         if source['id'] in ('aisi-production','aisi-imports') and usable(source,day,45):
