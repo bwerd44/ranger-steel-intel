@@ -4,10 +4,22 @@ on:
     # 07:17 Central: run both UTC offsets and gate using America/Chicago.
     - cron: '17 12,13 * * *'
   workflow_dispatch:
+    inputs:
+      revision_reason:
+        description: 'Optional reason to append an explicit forecast revision; never replaces an old edition'
+        required: false
+        type: string
   push:
     branches: [main]
     paths:
       - 'collect.py'
+      - 'forecast.py'
+      - 'test_*.py'
+      - 'index.html'
+      - 'sw.js'
+      - 'manifest.webmanifest'
+      - 'icon.png'
+      - 'data/forecast-context.json'
       - 'data/reviewed-evidence.json'
       - '.github/workflows/update.yml'
 permissions:
@@ -38,18 +50,28 @@ jobs:
           python-version: '3.12'
       - name: Test generation safeguards
         if: steps.clock.outputs.run == 'true'
-        run: python -m unittest -v test_collect.py
+        run: python -m unittest discover -p 'test_*.py' -v
       - name: Collect and validate report
         if: steps.clock.outputs.run == 'true'
         run: python collect.py
+      - name: Maintain monthly forecast history
+        if: steps.clock.outputs.run == 'true'
+        env:
+          FORECAST_REVISION_REASON: ${{ inputs.revision_reason }}
+        run: |
+          if [ -n "$FORECAST_REVISION_REASON" ]; then
+            python forecast.py --revision-reason "$FORECAST_REVISION_REASON"
+          else
+            python forecast.py
+          fi
       - name: Commit generated report
         if: steps.clock.outputs.run == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json
+          git add data/latest.json data/forecasts.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update sourced plate market briefing'
+            git commit -m 'Update plate briefing and preserve monthly forecast editions'
             git push
           fi
       # GITHUB_TOKEN commits do not trigger another Pages branch build.
@@ -59,7 +81,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/latest.json _site/data/
+          cp data/latest.json data/forecasts.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
