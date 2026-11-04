@@ -18,3 +18,7 @@ GitHub Pages and GitHub Actions have free usage for qualifying public repositori
 
 ## Next upgrade
 Add a genuine AI analysis backend only after choosing a provider and understanding its pricing/free limits. Current notes are **generic topic prompts**, not evidence-based assessments of individual stories.
+
+
+## News categories (updated November 2026)
+The Latest news tab now groups articles into Domestic Mill News, Import News (all countries), and All Other Steel News. Older data files without category fields are classified by their topic labels. The collector writes an explicit category for new articles. The page remains informational and does not include sales takeaways.
