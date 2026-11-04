@@ -1,0 +1,72 @@
+name: Collect plate market briefing
+on:
+  schedule:
+    # 07:17 Central: run both UTC offsets and gate using America/Chicago.
+    - cron: '17 12,13 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'collect.py'
+      - 'data/reviewed-evidence.json'
+      - '.github/workflows/update.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: plate-market-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check Central-time schedule
+        id: clock
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT" != "schedule" ] || [ "$(TZ=America/Chicago date +%H)" = "07" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.clock.outputs.run == 'true'
+      - uses: actions/setup-python@v5
+        if: steps.clock.outputs.run == 'true'
+        with:
+          python-version: '3.12'
+      - name: Test generation safeguards
+        if: steps.clock.outputs.run == 'true'
+        run: python -m unittest -v test_collect.py
+      - name: Collect and validate report
+        if: steps.clock.outputs.run == 'true'
+        run: python collect.py
+      - name: Commit generated report
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update sourced plate market briefing'
+            git push
+          fi
+      # GITHUB_TOKEN commits do not trigger another Pages branch build.
+      # Deploy the freshly generated root directly, excluding the legacy subfolder.
+      - name: Prepare Pages artifact
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          mkdir -p _site/data
+          cp index.html sw.js manifest.webmanifest icon.png _site/
+          cp data/latest.json _site/data/
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.clock.outputs.run == 'true'
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        if: steps.clock.outputs.run == 'true'
+        id: deployment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
