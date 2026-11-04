@@ -168,6 +168,48 @@
         "In-house steel manufacturing",
         "Agricultural and construction components"
       ]
+    },
+    {
+      "name": "Shamrad Metal Fabricators",
+      "city": "St. Joseph",
+      "state": "MO",
+      "website": "https://www.shamradmetal.com/",
+      "source_url": "https://www.shamradmetal.com/",
+      "category": "ASME pressure vessel and API tank manufacturer",
+      "why": "Manufacturer explicitly lists carbon-steel vessels and tanks, plate rolling, plasma and oxygen cutting. Mother-plate purchasing and tonnage require confirmation.",
+      "signals": [
+        "Carbon steel fabrication",
+        "ASME vessels and API tanks",
+        "Plate rolling and oxyfuel cutting"
+      ]
+    },
+    {
+      "name": "Antonia Fabricators Inc.",
+      "city": "Imperial",
+      "state": "MO",
+      "website": "https://antoniafabricatorsinc.godaddysites.com/",
+      "source_url": "https://antoniafabricatorsinc.godaddysites.com/",
+      "category": "Carbon steel plate fabrication and processing",
+      "why": "Company lists plate shearing, burning, CNC plasma, waterjet, plate rolling and carbon steel fabrication. Full-size plate buying unverified.",
+      "signals": [
+        "Carbon steel fabrication",
+        "Plate rolling",
+        "CNC plasma and burning"
+      ]
+    },
+    {
+      "name": "Custom Fabrication & Engineering Inc.",
+      "city": "Fort Smith",
+      "state": "AR",
+      "website": "",
+      "source_url": "https://www.thomasnet.com/suppliers/arkansas/all-cities/plasma-cutting-services-58820804",
+      "category": "Heavy industrial CNC plate fabrication",
+      "why": "Thomasnet lists carbon-steel CNC plasma fabrication with 15 x 53 foot cutting envelope and 12-foot-plus parts. Direct website and purchasing volume require verification.",
+      "signals": [
+        "15 x 53 foot cutting envelope",
+        "Carbon steel CNC plasma cutting",
+        "Large industrial components"
+      ]
     }
   ]
 }
