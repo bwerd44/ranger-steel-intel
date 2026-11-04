@@ -62,8 +62,6 @@ jobs:
         run: python collect.py
       - name: Discover potential plate prospects from public business listings
         if: steps.clock.outputs.run == 'true'
-        env:
-          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
         run: python discover_prospects.py
       - name: Maintain monthly forecast history
         if: steps.clock.outputs.run == 'true'
