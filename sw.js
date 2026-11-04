@@ -1,4 +1,4 @@
-const CACHE = 'ranger-intel-report-v3';
+const CACHE = 'ranger-intel-forecast-v4';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));

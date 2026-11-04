@@ -1,6 +1,6 @@
 # Ranger Steel Intel
 
-Mobile-friendly carbon steel plate market briefing and categorized news, hosted at https://bwerd44.github.io/ranger-steel-intel/ . The **root** files on `main` are the active application. The nested `ranger-steel-intel/` directory is legacy and is not updated or deployed by the collector workflow.
+Mobile-friendly carbon steel plate market briefing and categorized news with an archived quarterly forecast dashboard, hosted at https://bwerd44.github.io/ranger-steel-intel/ . The **root** files on `main` are the active application. The nested `ranger-steel-intel/` directory is legacy and is not updated or deployed by the collector workflow.
 
 ## Morning Market Briefing
 
@@ -35,6 +35,33 @@ The app refreshes on opening, coming back into view, reconnecting and every 15 m
 
 ## Verification
 
-`test_collect.py` checks expiry, source references, incomplete collection, rejection of unsupported/future evidence, news deduplication and safe category assignment. `--offline --output /tmp/report.json` is a deterministic fallback test, not a live collection. Live runs disclose source failures and retained evidence in the Sources tab.
+`test_collect.py` checks expiry, source references, incomplete collection, rejection of unsupported/future evidence, news deduplication and safe category assignment. `--offline --output /tmp/report.json` is a deterministic fallback test, not a live collection. Live runs disclose source failures and retained evidence in the published data diagnostics.
 
 The site contains public-source information only. Never add customer quotes, private inventory, confidential supplier pricing or credentials. This is not a verified price index or an official Ranger Steel IT system.
+
+
+## Quarterly Forecast (replaces Sources navigation)
+
+The third tab is now **Quarterly Forecast**. Briefing paragraphs and news articles retain their original source links. The forecast covers A36, A572 Grade 50 and A516 Grade 70 with a common directional framework; it does not estimate grade premiums or dollar prices.
+
+`forecast.py` uses the current Chicago calendar quarter through Q4 of the following calendar year. In November 2026 that is Q4 2026 and Q1–Q4 2027. The dashboard shows a qualitative quarterly trend chart, detailed quarter analyses, bullish/base/bearish scenarios, availability assumptions, confidence, product-specific driver channels and indicators that could change the forecast. Bullish and bearish refer to higher and lower plate prices, not an investment recommendation.
+
+### Monthly maintenance and permanent editions
+
+The existing free daily GitHub Actions workflow calls `forecast.py` after refreshing the briefing. On the first successful run of each new Chicago calendar month, the generator appends one edition to `data/forecasts.json`. Further runs in that month preserve it byte-for-byte. This uses the daily 7:17 AM Central schedule, so monthly maintenance does not depend on a second independent deployment workflow. Missing runs are caught up at the next successful daily run.
+
+The single `forecasts.json` file contains **all complete historical editions**, not just summary labels. Each edition saves its model version, dates, sources, inputs, scenarios, assumptions, original horizon and integrity hash. `validate()` rejects changed historical content. Git commits provide an additional version history. The first real edition is November 2026; no historical forecasts are fabricated. The edition selector displays preserved forecasts and the dashboard compares each quarter's direction and availability to the prior edition.
+
+To revise within a month, manually dispatch **Collect plate market briefing** with a nonempty `revision_reason`. This appends a labeled `YYYY-MM-rN` revision, preserving the original and explaining the change. It never silently updates the existing edition. The client flags missing monthly updates and missing quarters when the calendar advances; it does not invent forecasts to fill them.
+
+### Model and sources
+
+No AI model is configured. This is a deterministic scenario framework, not a statistically fitted or backtested plate-price predictor. Its full thresholds, weights, quarterly decay, judgmental seasonal adjustments and stress scenarios appear inside every edition and in the dashboard's assumptions panel. Confidence is qualitative, not a probability.
+
+Dated SSAB plate commentary supplies the main signal. Federal Reserve G.17 manufacturing output supplies a deliberately small indirect adjustment. AISI all-steel statistics, EIA energy outlooks and dated reviewed DOE and trade-policy context describe scenario channels; they do not automatically add plate price premiums. The generator attempts fresh Federal Reserve and EIA retrieval for each new monthly edition. The daily collector refreshes supported SSAB and AISI evidence first. Missing, stale or unrecognized inputs are omitted and retrieval failures are recorded. Missing plate-price evidence suppresses the directional base case and the chart displays gaps.
+
+`data/forecast-context.json` stores dated manually reviewed policy and data-center context, with expiry windows. It is not a live legal database. The monthly model does not claim to verify every new tariff, mill shutdown, government policy, sector order or project announcement. Policy continuity, seasonality, historical inventory-cycle behavior and longer-horizon supply normalization are clearly labeled assumptions. Sources and retrieval/review dates are saved with each edition. Mutable source pages can change later; the archived edition preserves the extracted inputs and their dates.
+
+Data centers primarily create demand for structural products, rebar and electrical equipment; plate exposure through tanks, skids and selected power equipment is identified separately. HRC futures, coil prices, all-steel output and electrical-steel demand are never used as direct plate-price forecasts. A516 Grade 70 specification, testing or normalized requirements may restrict availability differently from commodity A36 and Grade 50; no unsupported specification premium is estimated.
+
+Run `python -m unittest discover -p 'test_*.py' -v` and `python forecast.py` to verify generation. `--offline` is for tests only. No paid services or keys are required. Pages publishes `data/forecasts.json` along with the existing PWA assets. All `/data/` fetches remain network-only, and the forecast worker version replaces the previous shell cache.
