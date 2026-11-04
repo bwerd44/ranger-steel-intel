@@ -61,7 +61,17 @@ def derive_readings(observations, day):
         'demand':'A strong market is a level, not proof of strengthening demand. Sector activity is not plate order volume.',
     }
     readings = []
+    # Explicit editorial assessments are displayed separately from verified source evidence.
+    editorial = {
+        'imports': ('Stable', '2026-11-04', 'Current industry assessment: import availability is broadly neutral. This is an editorial judgment, not a verified month-over-month plate import trend.'),
+        'demand': ('Stable', '2026-11-04', 'Current industry assessment: plate demand is broadly neutral. Earlier reporting of improved demand does not establish that demand is still strengthening today.'),
+    }
     for key,(label,allowed) in METRICS.items():
+        if key in editorial:
+            condition, assessed_at, basis = editorial[key]
+            if 0 <= (day-date_of(assessed_at)).days <= 14:
+                readings.append({'id':key,'label':label,'condition':condition,'color':'orange','arrow':'→','confidence':'Editorial assessment','evidence_date':None,'assessment_date':assessed_at,'basis':basis,'limitation':'Not independently verified. Expires after 14 days unless reassessed. Published evidence remains available in source history.','sources':[]})
+                continue
         candidates = [x for x in observations if x.get('metric')==key and x.get('condition') in allowed and x.get('scope')=='discrete_plate' and x.get('verified') is True and x.get('source',{}).get('url','').startswith('https://') and usable(x,day)]
         if candidates:
             newest = max(x['evidence_date'] for x in candidates)
