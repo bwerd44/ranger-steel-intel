@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-04T19:22:15.093854+00:00",
+  "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. No confirmed plate usage or purchasing volumes.",
+  "checks": [
+    {
+      "market": "Little Rock",
+      "status": "unavailable",
+      "error": "TimeoutError"
+    },
+    {
+      "market": "Shreveport",
+      "status": "unavailable",
+      "error": "TimeoutError"
+    },
+    {
+      "market": "Springfield",
+      "status": "unavailable",
+      "error": "TimeoutError"
+    }
+  ],
+  "leads": []
+}
