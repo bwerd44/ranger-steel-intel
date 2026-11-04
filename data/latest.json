@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-04T21:22:49.166104+00:00",
+  "updated_at": "2026-11-04T21:25:26.647253+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-04T21:22:49.166104+00:00",
+    "generated_at": "2026-11-04T21:25:26.647253+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-04T21:22:49.166104+00:00",
+        "retrieved_at": "2026-11-04T21:25:26.647253+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-04T21:22:49.166104+00:00",
+        "retrieved_at": "2026-11-04T21:25:26.647253+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,7 +171,7 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-04T21:22:49.166104+00:00",
+        "retrieved_at": "2026-11-04T21:25:26.647253+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
@@ -196,16 +196,6 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
-    },
-    {
-      "title": "EU backs duties on cold-rolled steel from five countries - Металлургпром",
-      "date": "2026-11-02",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN3A3NF96cF9NVXV1LUpKVUtES3dZTHdOVFczNXFoR0RUVkZyLWdxd2Z1ZnFZWG5FQktrb2xqQVNlOEpNTTVsNzlFcG1WOE9hNEo0VHpzVmZLbTFBQzhZYnBPWm5GMmNhVVFfc3llYjAwcV8wYTRoR2EzMG1BUXkxRjA4eFY5SnNNdjJTdm5VTkF2RlMzMDZtdFE1N0RmOUZRbC1fM0VVZGhxOWNi0gG-AUFVX3lxTE5UM0dEdWphcjBmN1dDMndaWmoxdDZSZDljX1pfMFptSUlxZkxOejJXeUhGblBSSHlBYy1IeGlxRENlNjFiaDZPcTBMWF9hbTRGYlZsUEhuQi01WjVFYlNIQ0FyTXZxUTB0STN2RlA4dXdmR3JHdGdfWkxSSjFWWmZWWFVLMng3S3FDck5rY2xlcTVWOXpKZ3hwa0MyV2FuNG1DZ3JuSXk4bUlkNVpQQzFsYXZ6OFR6WlFYb0ZJR0E?oc=5",
-      "publisher": "Металлургпром",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
     },
     {
       "title": "AD/CVD News: Aluminum Foil, Steel Products, Strontium Chromate, Wind Towers - Sandler, Travis & Rosenberg, P.A.",
@@ -302,6 +292,16 @@
       "date": "2026-10-27",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmdFZ0laZlNTaUFEUWlCTE4wUEVZVVlpaU9GWkZCTURUUFRWUFpVMEJ4bkdVRnRpNVBDeFdfX2ZFMlBiZm1CY3ZGNVd5NTlqV1RZcUxQQmpWOThsd0p5U2I4MThlZTJkeU0zU3dFZlVOTEZqVWpzZ21CZDZnd014OWNyeU1jc2FmT3BOMjB2R09tUUFHeWkxaUV1RU9ra09GWXpZNmUzVlNPb1RsOFkxWmp2VWlwZmYzMTgtWHln?oc=5",
       "publisher": "CityNews Kitchener",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Honda: Doubling of US Tariffs on Canadian Steel and Autos Would Be Catastrophic - News and Statistics - IndexBox",
+      "date": "2026-10-27",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdi1OVWhiRnlsd1gtN2RiWlBkeld6S05CUnlXVjRXYjJJZ08wdldRNlZPeHZadmNXeUFpdGNTMVh0aXhMTHVFU2htSTRPcU5telEzZjhvc3l5dm9VV0RQVU1BbjYzNlBZWkdzSC1SSS1WNGZIampNcm4taU0zdUxObkd0X1BrVWFfTUI4ZmdfaHBpU29PcUhRY1lnZVRnMmFJRXh6YmpMQ3ZzU3RxUExQSy1IWHp3VnFEWnVzVldKdXNjWU9SRjNWMA?oc=5",
+      "publisher": "IndexBox",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
