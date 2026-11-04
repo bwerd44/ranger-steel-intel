@@ -16,6 +16,7 @@ on:
       - 'discover_prospects.py'
       - 'qualify_prospects.py'
       - 'data/prospect-profile.json'
+      - 'data/prospect-seeds.json'
       - 'forecast.py'
       - 'intelligence.py'
       - 'data/market-evidence.json'
