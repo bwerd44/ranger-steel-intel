@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-11-04T14:50:00Z",
+  "articles": [
+    {
+      "topic": "Plate pricing | Nov 3 report",
+      "date": "Nov 3, 2026",
+      "title": "Plate market remains firm as spot steel supply tightens",
+      "ranger_note": "Steel Market Update lists a plate pricing average of $1,495 per short ton ($74.75/cwt) on its current pricing table. This is a published market assessment, not Ranger's mill cost or selling price. Tight spot availability can support replacement costs, but confirm actual plate offers before quoting long-validity projects.",
+      "url": "https://www.steelmarketupdate.com/"
+    },
+    {
+      "topic": "Imports | AISI",
+      "date": "Oct 27, 2026",
+      "title": "Finished steel imports down 13.8% year to date",
+      "ranger_note": "AISI reports finished steel imports fell 13.8% through September versus the same period in 2025. This is all finished steel, not plate alone. Lower import competition may reinforce domestic supply constraints. For Ranger, maintain a balanced forward-buy strategy rather than assuming import plate will arrive quickly.",
+      "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/"
+    },
+    {
+      "topic": "Import origins | AISI",
+      "date": "Oct 27, 2026",
+      "title": "South Korea and Brazil remain major U.S. steel suppliers",
+      "ranger_note": "AISI reports September steel imports from South Korea at 519,000 net tons and Brazil at 349,000 net tons, across all steel categories. Since Ranger sources plate from these origins, monitor actual plate-specific import permits, tariffs, freight and arrival timing before making purchase commitments.",
+      "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/"
+    },
+    {
+      "topic": "Mill supply | CRU",
+      "date": "Oct 22, 2026",
+      "title": "Production disruptions extend mill order backlogs",
+      "ranger_note": "CRU reports ongoing domestic production issues, elevated backlogs and scarce spot availability, principally in sheet steel. This is a directional signal, not a confirmed plate allocation update. Ranger should verify plate-specific mill schedules and avoid treating coil prices as interchangeable with discrete plate.",
+      "url": "https://www.cmegroup.com/newsletters/steel-insights/2026-10-steel-insights.html"
+    }
+  ]
+}
