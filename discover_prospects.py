@@ -4,7 +4,6 @@ Unverified research candidates only. No paid API or claims about actual plate pu
 import datetime as dt
 import hashlib
 import json
-import os
 from pathlib import Path
 import re
 import urllib.parse
@@ -162,30 +161,6 @@ def directory_candidates(market,excluded):
    'discovered_from':'OpenStreetMap Nominatim named business','verified_plate_buyer':False})
  return found
 
-def search_api_candidates(market,excluded):
- """Optional reliable search API; requires BRAVE_SEARCH_API_KEY in Actions secrets."""
- key=os.environ.get('BRAVE_SEARCH_API_KEY','').strip()
- if not key:return [],'not_configured'
- city,state,phrase=market
- url='https://api.search.brave.com/res/v1/web/search?'+urllib.parse.urlencode({'q':phrase,'count':20,'country':'us','search_lang':'en'})
- req=urllib.request.Request(url,headers={'Accept':'application/json','X-Subscription-Token':key})
- with urllib.request.urlopen(req,timeout=12) as response:results=json.load(response).get('web',{}).get('results',[])
- found=[]
- for entry in results:
-  link=entry.get('url','')
-  p=urllib.parse.urlsplit(link);host=(p.hostname or '').lower().removeprefix('www.')
-  title=re.sub(r'\s+',' ',entry.get('title','')).strip()
-  if p.scheme not in ('http','https') or not host or any(host==h or host.endswith('.'+h) for h in BLOCKED_HOSTS):continue
-  if p.path.strip('/') not in ('','home','index.html','index.php') or BAD_TITLE.search(title):continue
-  name=re.split(r'\s+[-|–]\s+| : ',title)[0].strip()
-  if len(name)<5 or len(name)>65 or not COMPANY_NAME.search(name) or norm(name) in excluded:continue
-  # Search snippet is only a clue. Company website qualification is required.
-  found.append({'id':hashlib.sha256(host.encode()).hexdigest()[:16],'name':name,'city':city,
-    'state':state,'category':'Search-discovered manufacturer — location unverified',
-    'why':'Industrial business search result; homepage and full-size plate purchasing require confirmation.',
-    'website':urllib.parse.urlunsplit((p.scheme,p.netloc,'/','','')),'source_url':link,
-    'discovered_from':'Brave business web search; unverified','verified_plate_buyer':False})
- return found,'ok'
 
 def main():
  today=dt.datetime.now(dt.timezone.utc)
@@ -213,7 +188,7 @@ def main():
  checks=[]
  # Rotate three geographic markets per day; previous discoveries remain in the pool.
  offset=today.date().toordinal()%len(CITIES)
- for i in range(1):
+ for i in range(2):
   city=CITIES[(offset+i*5)%len(CITIES)]
   try:
    items=query(city)
@@ -226,7 +201,7 @@ def main():
   except Exception as exc:checks.append({'market':city[0],'status':'unavailable','error':type(exc).__name__})
  # Independently search for business websites, even if mapping endpoints fail.
  search_offset=today.date().toordinal()%len(SEARCHES)
- for i in range(5):
+ for i in range(4):
   market=SEARCHES[(search_offset+i*3)%len(SEARCHES)]
   try:
    found=search_candidates(market,excluded)
@@ -236,29 +211,22 @@ def main():
      c['first_seen']=today.date().isoformat();leads[c['id']]=c;count+=1
    checks.append({'market':market[0]+' web search','status':'ok','new':count})
   except Exception as exc:checks.append({'market':market[0]+' web search','status':'unavailable','error':type(exc).__name__})
- # Additional independent business data sources rotate automatically.
- market=SEARCHES[search_offset]
- try:
-  found=directory_candidates(market,excluded)
-  added=0
-  for c in found:
-   if c['id'] not in leads:
-    c['first_seen']=today.date().isoformat();leads[c['id']]=c;added+=1
-  checks.append({'market':market[0]+' geographic directory','status':'ok','new':added})
- except Exception as exc:checks.append({'market':market[0]+' geographic directory','status':'unavailable','error':type(exc).__name__})
- try:
-  found,status=search_api_candidates(market,excluded)
-  added=0
-  for c in found:
-   if c['id'] not in leads:
-    c['first_seen']=today.date().isoformat();leads[c['id']]=c;added+=1
-  checks.append({'market':market[0]+' search API','status':status,'new':added})
- except Exception as exc:checks.append({'market':market[0]+' search API','status':'unavailable','error':type(exc).__name__})
+ # Rotate free public geographic discovery across three markets each day.
+ for i in range(3):
+  market=SEARCHES[(search_offset+i*4)%len(SEARCHES)]
+  try:
+   found=directory_candidates(market,excluded)
+   added=0
+   for c in found:
+    if c['id'] not in leads:
+     c['first_seen']=today.date().isoformat();leads[c['id']]=c;added+=1
+   checks.append({'market':market[0]+' geographic directory','status':'ok','new':added})
+  except Exception as exc:checks.append({'market':market[0]+' geographic directory','status':'unavailable','error':type(exc).__name__})
  # Do not manufacture leads if source is unavailable.
- items=[x for x in leads.values() if norm(x['name']) not in excluded]
+ items=[x for x in leads.values() if norm(x['name']) not in excluded and x.get('discovered_from')!='Brave business web search; unverified']
  items.sort(key=lambda x:(x.get('first_seen',''),x['name']),reverse=True)
  qualified=qualify_batch([x for x in items if x.get('discovered_from')!='Reviewed public manufacturer website'],limit=12)
- result={'schema_version':1,'updated_at':today.isoformat(),'method':'Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.','checks':checks,'website_reviews_this_run':qualified,'leads':items[:300]}
+ result={'schema_version':1,'updated_at':today.isoformat(),'method':'Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.','checks':checks,'website_reviews_this_run':qualified,'new_this_run':sum(c.get('new',0) for c in checks),'leads':items[:300]}
  path.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
  print('Prospect discovery:',len(result['leads']),'candidates;',checks)
 if __name__=='__main__':main()
