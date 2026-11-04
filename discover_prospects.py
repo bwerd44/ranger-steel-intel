@@ -18,8 +18,13 @@ CITIES=[
  ("Kansas City","MO",39.100,-94.580),("Denver","CO",39.740,-104.990),
  ("Albuquerque","NM",35.084,-106.650),("Shreveport","LA",32.526,-93.750),
  ("Jackson","MS",32.299,-90.185),("Omaha","NE",41.257,-95.934),
+ ("Baton Rouge","LA",30.451,-91.187),("Lake Charles","LA",30.226,-93.217),
+ ("Lafayette","LA",30.224,-92.020),("New Orleans","LA",29.951,-90.072),
+ ("Amarillo","TX",35.222,-101.831),("Longview","TX",32.501,-94.740),
  ("Victoria","TX",28.805,-97.003),("Ponca City","OK",36.707,-97.085),
- ("Springfield","MO",37.209,-93.292),("Fort Smith","AR",35.385,-94.398)]
+ ("Springfield","MO",37.209,-93.292),("Fort Smith","AR",35.385,-94.398),
+ ("Joplin","MO",37.084,-94.513),("Fayetteville","AR",36.062,-94.158),
+ ("Topeka","KS",39.048,-95.678),("Lawton","OK",34.603,-98.395)]
 KEYWORDS=re.compile(r'fabricat|machine.shop|metal.work|weld|industrial.equipment|pressure.vessel|tank.manufactur|boiler|heat.exchang|process.equipment|oilfield.equipment|steel.fabricat|metal.manufactur',re.I)
 NEGATIVE=re.compile(r'coil.processing|tower|telecom|auto.body|jewelry|scrap|recycl|retail|roofing|fence|fencing|ornamental',re.I)
 
