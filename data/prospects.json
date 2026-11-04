@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T20:56:33.948100+00:00",
+  "updated_at": "2026-11-04T20:59:44.048Z",
   "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.",
   "checks": [
     {
@@ -356,6 +356,162 @@
         "checked_at": "2026-11-04T20:52:52.673425+00:00",
         "evidence_url": "https://www.aopfab.com/",
         "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Prostar Manufacturing Inc.",
+      "city": "Pasadena",
+      "state": "TX",
+      "website": "https://prostarmfg.us/",
+      "source_url": "https://prostarmfg.us/our-capabilities/",
+      "category": "ASME vessel and heavy plate fabricator",
+      "why": "Published capabilities include two 12 × 20 ft CNC plasma tables, plate rolling, waterjet cutting to 8 inches, ASME fabrication, and 30-ton lifting.",
+      "signals": [
+        "CNC plasma cutting",
+        "Plate rolling",
+        "ASME pressure vessels"
+      ],
+      "id": "sourced-added-1",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "CNC plasma cutting",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "ASME pressure vessels",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:00:00Z",
+        "evidence_url": "https://prostarmfg.us/our-capabilities/",
+        "note": "Manufacturing capabilities supported by a company source. Buying volume and account status not verified."
+      }
+    },
+    {
+      "name": "Northstar Industries",
+      "city": "Houston",
+      "state": "TX",
+      "website": "https://www.northstarind.net/",
+      "source_url": "https://www.northstarind.net/fabrication-machining",
+      "category": "Pressure vessel and heat exchanger fabricator",
+      "why": "Company lists ASME U/R fabrication, CNC plasma/flame cutting, plate rolling, and pressure vessel and heat exchanger production.",
+      "signals": [
+        "Pressure vessels and heat exchangers",
+        "Plate rolling",
+        "CNC plasma and flame cutting"
+      ],
+      "id": "sourced-added-2",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Pressure vessels and heat exchangers",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "CNC plasma and flame cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:00:00Z",
+        "evidence_url": "https://www.northstarind.net/fabrication-machining",
+        "note": "Manufacturing capabilities supported by a company source. Buying volume and account status not verified."
+      }
+    },
+    {
+      "name": "BWFS Industries LLC",
+      "city": "Houston",
+      "state": "TX",
+      "website": "https://www.butcherweldfab.com/",
+      "source_url": "https://www.butcherweldfab.com/service.html",
+      "category": "Heavy pressure-vessel plate fabricator",
+      "why": "Company reports a 12-foot-wide plate roll handling 1-3/8-inch vessel-quality plate, 5-axis plate cutting and substantial annual plate purchasing history.",
+      "signals": [
+        "Plate rolling up to 1-3/8 inches",
+        "5-axis plate cutting",
+        "Reported large annual plate purchases"
+      ],
+      "id": "sourced-added-3",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Plate rolling up to 1-3/8 inches",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "5-axis plate cutting",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Reported large annual plate purchases",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:00:00Z",
+        "evidence_url": "https://www.butcherweldfab.com/service.html",
+        "note": "Manufacturing capabilities supported by a company source. Buying volume and account status not verified."
+      }
+    },
+    {
+      "name": "Haven Steel Products",
+      "city": "Haven",
+      "state": "KS",
+      "website": "https://havensteel.com/",
+      "source_url": "https://havensteel.com/",
+      "category": "Industrial steel manufacturing",
+      "why": "Company describes in-house forging, hot forming and fiber laser cutting up to 2-inch carbon steel. Confirm whether it purchases discrete mother plate rather than other steel forms.",
+      "signals": [
+        "Carbon steel laser cutting to 2 inches",
+        "In-house steel manufacturing",
+        "Agricultural and construction components"
+      ],
+      "id": "sourced-added-4",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Carbon steel laser cutting to 2 inches",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "In-house steel manufacturing",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Agricultural and construction components",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:00:00Z",
+        "evidence_url": "https://havensteel.com/",
+        "note": "Manufacturing capabilities supported by a company source. Buying volume and account status not verified."
       }
     }
   ]
