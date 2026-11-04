@@ -1,22 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T19:25:28.300390+00:00",
+  "updated_at": "2026-11-04T19:30:40.693829+00:00",
   "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.",
   "checks": [
     {
-      "market": "Little Rock",
+      "market": "Amarillo",
       "status": "unavailable",
-      "error": "URLError"
+      "error": "TimeoutError"
     },
     {
-      "market": "Shreveport",
+      "market": "Fort Smith",
       "status": "unavailable",
-      "error": "URLError"
-    },
-    {
-      "market": "Springfield",
-      "status": "unavailable",
-      "error": "URLError"
+      "error": "TimeoutError"
     }
   ],
   "website_reviews_this_run": 0,
