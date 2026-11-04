@@ -1,33 +1,388 @@
 {
-  "updated_at": "2026-11-04T14:50:00Z",
+  "schema_version": 2,
+  "updated_at": "2026-11-04T16:36:06.641224+00:00",
+  "briefing": {
+    "title": "Morning Market Briefing",
+    "generated_at": "2026-11-04T16:36:06.641224+00:00",
+    "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Market Overview",
+        "status": "Dated evidence",
+        "paragraphs": [
+          {
+            "kind": "reported",
+            "text": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+            "source_ids": [
+              "ssab-market"
+            ]
+          },
+          {
+            "kind": "context",
+            "text": "Quarterly producer commentary provides background rather than a live market survey.",
+            "source_ids": []
+          }
+        ]
+      },
+      {
+        "id": "domestic",
+        "title": "Domestic Mill Supply",
+        "status": "Dated evidence",
+        "paragraphs": [
+          {
+            "kind": "reported",
+            "text": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability.",
+            "source_ids": [
+              "aisi-production"
+            ]
+          },
+          {
+            "kind": "reported",
+            "text": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule.",
+            "source_ids": [
+              "ssab-market"
+            ]
+          },
+          {
+            "kind": "context",
+            "text": "Mill-specific allocation percentages, lead times, shutdown status and grade-by-size availability are not verified by this report.",
+            "source_ids": []
+          }
+        ]
+      },
+      {
+        "id": "imports",
+        "title": "Imports & Trade",
+        "status": "Dated evidence",
+        "paragraphs": [
+          {
+            "kind": "reported",
+            "text": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone.",
+            "source_ids": [
+              "aisi-imports"
+            ]
+          },
+          {
+            "kind": "context",
+            "text": "All-steel imports are not a measure of plate imports. Current country- and product-specific tariffs, trade restrictions, landed costs and arrival dates remain unverified; RSS trade headlines are discovery only.",
+            "source_ids": []
+          }
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "Pricing Trends",
+        "status": "Dated evidence",
+        "paragraphs": [
+          {
+            "kind": "reported",
+            "text": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+            "source_ids": [
+              "ssab-market"
+            ]
+          },
+          {
+            "kind": "context",
+            "text": "No current dollar-per-ton or dollar-per-cwt assessment is available. The report does not estimate mill quotes, transaction prices or Ranger selling prices.",
+            "source_ids": []
+          }
+        ]
+      },
+      {
+        "id": "demand",
+        "title": "Demand Outlook",
+        "status": "Dated evidence",
+        "paragraphs": [
+          {
+            "kind": "reported",
+            "text": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+            "source_ids": [
+              "ssab-market"
+            ]
+          },
+          {
+            "kind": "context",
+            "text": "Current manufacturing, fabrication, energy and infrastructure plate orders are not measured separately. General steel commentary cannot establish project-level demand.",
+            "source_ids": []
+          }
+        ]
+      },
+      {
+        "id": "conditions",
+        "title": "Overall Market Conditions",
+        "status": "Interpretation",
+        "paragraphs": [
+          {
+            "kind": "interpretation",
+            "text": "The available producer commentary points to a firm plate market in the reported quarter, while broader steel statistics add context rather than confirmation of today’s plate supply. A precise assessment of present spot conditions remains limited by unverified mill schedules, allocations and transaction pricing. This is a neutral interpretation of dated public evidence, not a purchasing or sales recommendation.",
+            "source_ids": [
+              "ssab-market",
+              "aisi-imports",
+              "aisi-production"
+            ]
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "ssab-market",
+        "publisher": "SSAB",
+        "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+        "title": "Market situation and outlook",
+        "period": "Q3 2026",
+        "evidence_date": "2026-09-30",
+        "date_kind": "period end; publication date not supplied on page",
+        "max_age_days": 105,
+        "observations": {
+          "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+          "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+          "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+          "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
+        },
+        "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+        "access": "Retrieved from primary source this collection"
+      },
+      {
+        "id": "aisi-imports",
+        "publisher": "AISI / preliminary Census data",
+        "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
+        "title": "Monthly steel import report",
+        "period": "September 2026",
+        "evidence_date": "2026-10-27",
+        "date_kind": "publication date",
+        "max_age_days": 45,
+        "observations": {
+          "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
+        },
+        "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+        "access": "Retrieved from primary source this collection"
+      },
+      {
+        "id": "aisi-production",
+        "publisher": "AISI",
+        "url": "https://www.steel.org/industry-data/",
+        "title": "Weekly raw steel production",
+        "period": "Week ending 2026-10-31",
+        "evidence_date": "2026-10-31",
+        "date_kind": "reporting period end",
+        "max_age_days": 14,
+        "observations": {
+          "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
+        },
+        "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+        "access": "Retrieved from primary source this collection"
+      }
+    ]
+  },
   "articles": [
     {
-      "topic": "Plate pricing | Nov 3 report",
-      "date": "Nov 3, 2026",
-      "title": "Plate market remains firm as spot steel supply tightens",
-      "ranger_note": "Steel Market Update lists a plate pricing average of $1,495 per short ton ($74.75/cwt) on its current pricing table. This is a published market assessment, not Ranger's mill cost or selling price. Tight spot availability can support replacement costs, but confirm actual plate offers before quoting long-validity projects.",
-      "url": "https://www.steelmarketupdate.com/"
+      "title": "Steel Sections Market to Reach US$192.2 Billion at 5.9% CAGR Driven by Infrastructure and Sustainable Construction - openPR.com",
+      "date": "2026-11-04",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUm8tcnY2bEJENXhxanZJTzg1UkNUeDJVcnI1Q1F2cjJzUHVvZXVGcTRJT0xQU0xwUEdHZlVJUjd2T0hUOHdMREY2TjI5RVdaX0xGaVVRdG41REwtQU1LUkhTanRlNHFLek0tMmV6TmpuZ29TVXNmbGx3QWZiZzNlU2M2c1l3S0cweENrNE44dlg4N1RPak1oUlZqaw?oc=5",
+      "publisher": "openPR.com",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
     },
     {
-      "topic": "Imports | AISI",
-      "date": "Oct 27, 2026",
-      "title": "Finished steel imports down 13.8% year to date",
-      "ranger_note": "AISI reports finished steel imports fell 13.8% through September versus the same period in 2025. This is all finished steel, not plate alone. Lower import competition may reinforce domestic supply constraints. For Ranger, maintain a balanced forward-buy strategy rather than assuming import plate will arrive quickly.",
-      "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/"
+      "title": "Low Alloy Steel Market To 2035: Automotive Lightweighting and Infrastructure to Drive Growth - News and Statistics - IndexBox",
+      "date": "2026-11-03",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRFNvNDJLM05Gb005YUVRX09USmRUc2VGZ2lpRlpOOHBqRnhhQjI5N0lvLS1JTXpxcTBMbjUxRGFzMHRIY3piTS1xUTg3dnhVV1hTazlPdWd3bnh2WTJIQlVfZmdFcjB4Q1NBcW1YRk5JbmFaYU5nTUxOMENHU1llQkVnLTZISU1vdTRNTFRlb2hxbVBZUkRjc3hGQ3UwQkE1bnNkX2pvVWtsVE1fZGRqS2FHcnQwajNNVVNtZ3h0RG52MEtLbGNxZVg2dw?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
     },
     {
-      "topic": "Import origins | AISI",
-      "date": "Oct 27, 2026",
-      "title": "South Korea and Brazil remain major U.S. steel suppliers",
-      "ranger_note": "AISI reports September steel imports from South Korea at 519,000 net tons and Brazil at 349,000 net tons, across all steel categories. Since Ranger sources plate from these origins, monitor actual plate-specific import permits, tariffs, freight and arrival timing before making purchase commitments.",
-      "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/"
+      "title": "AD/CVD News: Aluminum Foil, Steel Products, Strontium Chromate, Wind Towers - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-02",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTG4xNGt3WldvQWpDckFubGp2X0hQZUU0QzlzamVVTnpjeGNxNHJ1ZVVnNmI4R1ZVZno3OVlxWm5BWTExbmZnVDk5Wm9tc3lQdFlIM0N5WHBiVkVINXJQN2U0c2h4Qy1faFBuUXpWbmV4Skg4UFhJa0RWN0JTcHBrYUYxdFdNckdlWVVlVUV2M2E1X213ejBSSVBqT0ZZSXotVnd3LWJwdmVObF8wejdPSUVqTTRGZExfM0lkMVVHX2tDbGw2WWd2OW1lQm1fR1pYN3dpM0g0OUVkXzg?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
     },
     {
-      "topic": "Mill supply | CRU",
-      "date": "Oct 22, 2026",
-      "title": "Production disruptions extend mill order backlogs",
-      "ranger_note": "CRU reports ongoing domestic production issues, elevated backlogs and scarce spot availability, principally in sheet steel. This is a directional signal, not a confirmed plate allocation update. Ranger should verify plate-specific mill schedules and avoid treating coil prices as interchangeable with discrete plate.",
-      "url": "https://www.cmegroup.com/newsletters/steel-insights/2026-10-steel-insights.html"
+      "title": "EU backs duties on cold-rolled steel from five countries - Металлургпром",
+      "date": "2026-11-02",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN3A3NF96cF9NVXV1LUpKVUtES3dZTHdOVFczNXFoR0RUVkZyLWdxd2Z1ZnFZWG5FQktrb2xqQVNlOEpNTTVsNzlFcG1WOE9hNEo0VHpzVmZLbTFBQzhZYnBPWm5GMmNhVVFfc3llYjAwcV8wYTRoR2EzMG1BUXkxRjA4eFY5SnNNdjJTdm5VTkF2RlMzMDZtdFE1N0RmOUZRbC1fM0VVZGhxOWNi0gG-AUFVX3lxTE5UM0dEdWphcjBmN1dDMndaWmoxdDZSZDljX1pfMFptSUlxZkxOejJXeUhGblBSSHlBYy1IeGlxRENlNjFiaDZPcTBMWF9hbTRGYlZsUEhuQi01WjVFYlNIQ0FyTXZxUTB0STN2RlA4dXdmR3JHdGdfWkxSSjFWWmZWWFVLMng3S3FDck5rY2xlcTVWOXpKZ3hwa0MyV2FuNG1DZ3JuSXk4bUlkNVpQQzFsYXZ6OFR6WlFYb0ZJR0E?oc=5",
+      "publisher": "Металлургпром",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Galvanized and Coated Iron and Steel Sheets Market in Japan: Size, Trends and Forecast to 2035 - IndexBox",
+      "date": "2026-11-02",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdzJVbXpGRDFJU2Z1X0VpdU8xbFhraF9IcUxPMGU3VTQ1a0Q0d3RhallhcFdvMTN4Q3lkSWowU0VPN3YxbUJpazdvU3NNaGQwRS12aVE0TGtMQTh2a1V3a0tzazZGdF92dHN2UnptRThuRXpYdXJYMUJGbkRBMVFzWFl3eHlvLTRON3JEWFIyTkhnMVc4QXdzalNLaWYzQTNNZkN6NDNCcHNYeGhWSEJaMEc2UUFhSG5iYjFoSFhpaFJXMGhLMExheGt3?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Mild Steel Market in Germany: Size, Trends and Forecast to 2035 - IndexBox",
+      "date": "2026-11-01",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSUJYTEVzU1NtcmF2TVN6amNIbjdjUV9LOW92ZWYxLWswNGNfY3Nac1o0SFBZWFVKb1JERmVOUU5Ody0zMzdyNjlCUjNubEJ6NUpEOHh2TjNtaVF1aEVkRE9Yb2g1cXB4V19SeHBfV00wLUdxdW13ZzUtOEpaLU9YZTBwOGtOLW9FeUVqY3RHbjJNOVZDem42VlMzbThSLWMt?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "EU & UK Stainless Steel Quotas Tighten: Higher Tariffs, CBAM Costs Ahead - News and Statistics - IndexBox",
+      "date": "2026-10-30",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYm9Ea3NUcGk0UjBnVHQ3VWUwVzRqTGdUSGozVUtqOW9rZGNkMlZnTVdodko3X2FQdkFmUUZCNnExd0pDd3JWNVJ5NXQtM2t1a3lndm1Yd0MzZ3d1cC1heHEzTkdHbHNYTG5WTXN5aWd4UkNkRFpZWjlkYk52d3FyTGs5d1BHUGxUbzdEV0s2X0dEZTJZRktUQVVybmV6MUVaUWdrWGpPdGlSQ0FIYkVz?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Top 10 Steel Fabrication Manufacturers and Suppliers: 2026 Comparison Guide - Thomasnet",
+      "date": "2026-10-29",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWi00R1BmLTZFaV9UT0RkY3NTMzZXc2xKOGtYbFZNaVdVa3prMEpDLVVlZjRMRVJPV0V6QjVMRXJUZ1UxYWI4bDk1R3VLMENnUGMyT29MOG9tMTFReWx0WERjbXlGY250VnRGRGhpb2tkZVVwTEg0UmlYSk5odGdzX1hVS1daUkdMeEdYS29TYw?oc=5",
+      "publisher": "Thomasnet",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "President Trump’s Steel and Aluminum Tariffs: 1.0 vs. 2.0 - The American Action Forum",
+      "date": "2026-10-28",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcWJGdlVBWU54VE1ZdVlmTTFTRkV5SEl5YXhVSTI3UmdLMkxZYVZKTGZMcEtnaF95Slh2OVZEcXkyQUtYVnFCSVlVTTBya1dfWktUOWNDeVJ0Y1ZiLXlYMXBZVngwZm5PUjlseG9rQTljakd2bVM3QUswbHNLWC1Hb1lWd1R4X24yZnVYTjR4bjJmQXc4Y25MVkJ0Q2ZjcnZx?oc=5",
+      "publisher": "The American Action Forum",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Limited Progress in US-Canada Trade Talks on Steel and Auto Tariffs - News and Statistics - IndexBox",
+      "date": "2026-10-28",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNzNnR0lmcTV6TG1sU3RmYXVURjJGaC16cEtJQ2R2LWZXRVpIR29qV1o3dEIyQXFQdEdpbHRqMXNKYjc1QktPTU9mMjF1Nmp3amQ1UEk3OUdQaHltUHhzNHdjN1Fxel8zbHNUU1gwVkxnQWMxbHh5bDE1QnlqMWlzdlNhVnBVQkpHbkNvY0Q1cmlaWmhrNElvdy1sZVVFdUg3N0E2UDRkTQ?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "What Lifted Nucor (NYSE:NUE) As Steel Mill Performance Firmed This Quarter? - Kalkine Media",
+      "date": "2026-10-28",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOT3daTXhoUUszYUhBa1hkQTI1OW5iOU9FbjE5d0V2a3Nqcy1tRVJTNkR5cmVYNHlpOEE3ay1QZk80ZjAtT2d2YVBDUVljMEdGaFZIckczQUp6NWNoaUhRVlI3WDR1WUVvU2l4ODNkdTMxQVB4Zlp0YXZiYlFQYVFQaWFLTTlSUm4tLWFhbGdHdGd1dkp6ODh6dDZ4R3JKNjF0X2hKTnZSZUZLRVlIT1E3NXBzanFZMEdjZXNCbldsZks?oc=5",
+      "publisher": "Kalkine Media",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Domestic Mill News"
+    },
+    {
+      "title": "American steel — not overseas dumping — dominates Canadian imports, trade data shows - CityNews Kitchener",
+      "date": "2026-10-27",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmdFZ0laZlNTaUFEUWlCTE4wUEVZVVlpaU9GWkZCTURUUFRWUFpVMEJ4bkdVRnRpNVBDeFdfX2ZFMlBiZm1CY3ZGNVd5NTlqV1RZcUxQQmpWOThsd0p5U2I4MThlZTJkeU0zU3dFZlVOTEZqVWpzZ21CZDZnd014OWNyeU1jc2FmT3BOMjB2R09tUUFHeWkxaUV1RU9ra09GWXpZNmUzVlNPb1RsOFkxWmp2VWlwZmYzMTgtWHln?oc=5",
+      "publisher": "CityNews Kitchener",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Honda: Doubling of US Tariffs on Canadian Steel and Autos Would Be Catastrophic - News and Statistics - IndexBox",
+      "date": "2026-10-27",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdi1OVWhiRnlsd1gtN2RiWlBkeld6S05CUnlXVjRXYjJJZ08wdldRNlZPeHZadmNXeUFpdGNTMVh0aXhMTHVFU2htSTRPcU5telEzZjhvc3l5dm9VV0RQVU1BbjYzNlBZWkdzSC1SSS1WNGZIampNcm4taU0zdUxObkd0X1BrVWFfTUI4ZmdfaHBpU29PcUhRY1lnZVRnMmFJRXh6YmpMQ3ZzU3RxUExQSy1IWHp3VnFEWnVzVldKdXNjWU9SRjNWMA?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Steel Fabrication Market Size, Share, Growth | Global Report 2035 - Market Research Future",
+      "date": "2026-10-27",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQXRRdjB1Mi1hcldzMkxqVzV0NF81bnRSbjllSHc4MUJpN0lyLVVhNnBPVnJhd1FUWGhPeTFHRGxFcjltVENuNlNTcWpuR05zYnVxTk1neHRUbE92ZzAxZFpNbkk0U0NfNXpWVEYtdzBsOG4tSUxGSGFnWXphV2RRaQ?oc=5",
+      "publisher": "Market Research Future",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Can Steel Dynamics (NASDAQ:STLD) Benefit From Rising American Metal Demand? - Kalkine Media",
+      "date": "2026-10-26",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaElOTzJ6NWFraERGS1RxRE1LbGdENUgzX19Ybm8zXy1naFhwUHBhVVdWcHE5SlJyOERzS1B3U2ljSnhlYXIwaEc3ZWhtdlNpbkp5Q0g5N3BPR0RGc2pMem9QYzQ1VUFkNlBqSGVuOEJLN3ZmYkE2RzlQVG9nOEhJbWRhcUhHb3pWc0JIYVZxdUR4Vk5Ra3lmeDZzYlp4eGFDMGRpLUtIUjRUSEZrR2RQN0tVLUhHYnRON3JodWNsZHY?oc=5",
+      "publisher": "Kalkine Media",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Wear-Resistant Steel Plate Market in Germany: Size, Trends and Forecast to 2035 - IndexBox",
+      "date": "2026-10-23",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONl9RUDJLeVRueUJjVDBXSGtwblczWnBDWEc4Wnp4Q1NUb1NZOEVNLW9lWk5BS1ZWZnNkRTdVWHZlaDk4aWV1QXJXUVR3M2VFTG1sLXo3WW1CX0doYnRXVWF3Q3RNOTh3QjduSlBBS3hmYjByNDlOanU4aG5fdHExMmdOMWdPdi1TWGlKWjl5czNxWHVZaFZGQ0lFVEFVWVEzQjljdUZhY25FQWdEZEtWaWlKakxzUQ?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Chicago Expo: FAMOUS Steel — China Leading AWS D1.5 & AASHTO LRFD Steel Box Girder Arch Bridge Fabrication Manufacturer - Issuewire.com",
+      "date": "2026-10-22",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWWc5Ym94ZmFFVW16a2dURS1qaE91bGozTFF0RTlaSFh1NGFyU3dlZmdjdlVKaHp2d0tCbkJ6Q3pLTF9qOEFkaFJFOU1Uc2EyTi1LVDB0ZzFGd2lhdUlSZUpPWmplY2N0cmxxbGR1eV9yaTh3Z1NWcXEwTjlUU1pPLUZwc0JKYUh5emQ0OWRlMzhTMUpLNmhjR0wtcG9XS2hYeGV4RDdRT2N6ZGw5SXRRNTFRcDNqRHlsWEVINkc0T2cyMC05ck55bHBXRUFDc0swbDRtck1zQzAwN21wcU1INkJWc2FrYXpOQkllag?oc=5",
+      "publisher": "Issuewire.com",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
     }
-  ]
+  ],
+  "collection": {
+    "mode": "live",
+    "news_status": "fresh",
+    "checks": [
+      {
+        "source": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+        "status": "ok"
+      },
+      {
+        "source": "https://www.steel.org/industry-data/",
+        "status": "ok"
+      },
+      {
+        "source": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
+        "status": "ok"
+      },
+      {
+        "source": "https://www.steel.org/2026/09/steel-imports-up-3-4-in-august-vs-july/",
+        "status": "ok"
+      },
+      {
+        "source": "Domestic Mill News RSS",
+        "status": "ok",
+        "items": 0
+      },
+      {
+        "source": "Import News RSS",
+        "status": "ok",
+        "items": 7
+      },
+      {
+        "source": "All Other Steel News RSS",
+        "status": "ok",
+        "items": 10
+      }
+    ]
+  }
 }

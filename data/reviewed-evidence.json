@@ -1,0 +1,36 @@
+{
+  "description": "Dated, manually checked primary-source fallbacks. Never refreshed merely because collection ran. Expire by evidence date.",
+  "sources": [
+    {
+      "id": "ssab-market",
+      "publisher": "SSAB",
+      "title": "Market situation and outlook",
+      "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+      "period": "Q3 2026",
+      "evidence_date": "2026-09-30",
+      "date_kind": "period end; publication date not supplied on page",
+      "reviewed_at": "2026-11-04",
+      "max_age_days": 105,
+      "observations": {
+        "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+        "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule.",
+        "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+        "demand": "SSAB’s Q3 2026 commentary indicates firm North American plate demand. It does not provide a current breakdown of plate orders by consuming industry."
+      }
+    },
+    {
+      "id": "aisi-imports",
+      "publisher": "AISI / preliminary Census data",
+      "title": "Monthly steel import report",
+      "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
+      "period": "September 2026",
+      "evidence_date": "2026-10-27",
+      "date_kind": "publication date",
+      "reviewed_at": "2026-11-04",
+      "max_age_days": 45,
+      "observations": {
+        "imports": "AISI’s October 27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
+      }
+    }
+  ]
+}
