@@ -13,6 +13,8 @@ on:
     branches: [main]
     paths:
       - 'collect.py'
+      - 'discover_prospects.py'
+      - 'data/prospect-profile.json'
       - 'forecast.py'
       - 'intelligence.py'
       - 'data/market-evidence.json'
@@ -56,6 +58,9 @@ jobs:
       - name: Collect and validate report
         if: steps.clock.outputs.run == 'true'
         run: python collect.py
+      - name: Discover potential plate prospects from public business listings
+        if: steps.clock.outputs.run == 'true'
+        run: python discover_prospects.py
       - name: Maintain monthly forecast history
         if: steps.clock.outputs.run == 'true'
         env:
@@ -74,7 +79,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json
+          git add data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update plate intelligence and preserve observation history'
             git push
@@ -86,7 +91,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json _site/data/
+          cp data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
