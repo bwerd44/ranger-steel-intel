@@ -75,12 +75,15 @@ SEARCHES=[
  ('Amarillo','TX','steel plate fabrication manufacturer Amarillo Texas'),
  ('Springfield','MO','industrial steel fabrication manufacturing Springfield Missouri')
 ]
-BLOCKED_HOSTS=('google.com','bing.com','yelp.com','yellowpages.com','facebook.com','linkedin.com','instagram.com','mapquest.com','manta.com','chamberofcommerce.com','bbb.org','indeed.com','glassdoor.com','youtube.com','wikipedia.org','reddit.com','news.google.com')
-GENERIC=re.compile(r'^(best |top |industrial |metal fabrication |steel fabrication |home$|about$|services$|contact$|manufacturers |fabricators |companies |directory |search |find |results |jobs )',re.I)
+BLOCKED_HOSTS=('google.com','bing.com','yelp.com','yellowpages.com','facebook.com','linkedin.com','instagram.com','mapquest.com','manta.com','chamberofcommerce.com','bbb.org','indeed.com','glassdoor.com','youtube.com','wikipedia.org','reddit.com','news.google.com','worldsteel.org','britannica.com','merriam-webster.com','imdb.com','dictionary.com','vocabulary.com','thefreedictionary.com','investopedia.com','steel.org','servicesteel.org')
+BAD_TITLE=re.compile(r'\b(what is|definition|meaning|examples?|explained|guide|types of|grades chart|history of|wiki|movie|film|dictionary|encyclopedia|near me|top \d+|best \d+|jobs|salary|news|article|learn about|how to|industry overview)\b|[?!]',re.I)
+COMPANY_NAME=re.compile(r'\b(inc\.?|llc|ltd\.?|corp\.?|corporation|company|co\.?|manufacturing|fabrication|fabricators|industries|industrial|engineering|equipment|welding|machine|metalworks|metalworking|steelworks|tank|vessel|boiler|heat transfer)\b',re.I)
+CAPABILITY=re.compile(r'\b(pressure vessels?|tank fabrication|plate rolling|plate cutting|flame cutting|plasma cutting|heavy fabrication|industrial fabrication|steel fabrication|heat exchangers?|process equipment|oilfield equipment|manufacturing facilities|custom manufacturing|structural steel fabrication)\b',re.I)
 
 def search_candidates(market,excluded):
- """Discover public business websites through a search-results RSS feed, not fabricated names."""
+ """Accept only probable company homepages with actual manufacturing capability evidence."""
  import xml.etree.ElementTree as ET
+ from qualify_prospects import VisibleText,safe_site
  city,state,phrase=market
  url='https://www.bing.com/search?'+urllib.parse.urlencode({'q':phrase,'format':'rss'})
  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; RangerSteelIntel/2.0)'})
@@ -94,14 +97,29 @@ def search_candidates(market,excluded):
   host=(p.hostname or '').lower().removeprefix('www.')
   if p.scheme not in ('http','https') or not host or any(host==h or host.endswith('.'+h) for h in BLOCKED_HOSTS):continue
   name=re.split(r'\s+[-|–]\s+| : ',title)[0].strip()
-  name=re.sub(r'\s+(?:Home|Official Website|Manufacturing|Fabrication Services)$','',name,flags=re.I).strip()
-  if len(name)<5 or len(name)>70 or GENERIC.search(name) or norm(name) in excluded:continue
-  if not re.search(r'fabricat|metal|steel|industrial|vessel|tank|equipment|machine|manufactur|weld|boiler|heat.exchang',title+' '+(node.findtext('description') or ''),re.I):continue
+  if len(name)<6 or len(name)>65 or BAD_TITLE.search(title) or not COMPANY_NAME.search(name) or norm(name) in excluded:continue
+  if p.path.strip('/') and p.path.strip('/').lower() not in ('home','index.html','index.php'):continue
+  homepage=urllib.parse.urlunsplit((p.scheme,p.netloc,'/','',''))
+  if not safe_site(homepage):continue
+  try:
+   request=urllib.request.Request(homepage,headers={'User-Agent':'Mozilla/5.0 (compatible; RangerSteelIntel/2.0)'})
+   with urllib.request.urlopen(request,timeout=6) as response:
+    if 'html' not in response.headers.get('Content-Type','').lower():continue
+    final=response.geturl()
+    if not safe_site(final):continue
+    rawpage=response.read(160000).decode('utf-8','replace')
+   parser=VisibleText();parser.feed(rawpage)
+   body=' '.join(parser.parts)
+   if not CAPABILITY.search(body):continue
+   if not re.search(r'\b('+re.escape(city)+r'|'+re.escape(state)+r')\b',body,re.I):
+    # Search location alone is not proof of where a company operates.
+    continue
+  except Exception:continue
   ident=hashlib.sha256(host.encode()).hexdigest()[:16]
-  found.append({'id':ident,'name':name,'city':city,'state':state,'category':'Search-discovered industrial business — location and capabilities unverified',
-    'why':'Found in a public industrial-manufacturer search. Confirm business identity, location, plate processing and purchasing fit.',
-    'website':urllib.parse.urlunsplit((p.scheme,p.netloc,'/','','')),'source_url':link,
-    'discovered_from':'Public search result; company identity and city require verification','verified_plate_buyer':False})
+  found.append({'id':ident,'name':name,'city':city,'state':state,
+    'category':'Company website corroborates manufacturing capability and market location',
+    'why':'Company homepage contains industrial fabrication or equipment-manufacturing terms and the searched market. Plate buying remains unverified.',
+    'website':homepage,'source_url':link,'discovered_from':'Public company homepage with basic capability and location corroboration','verified_plate_buyer':False})
  return found
 
 def main():
@@ -110,7 +128,7 @@ def main():
  excluded={norm(n) for n in profile['excluded_companies']}
  path=ROOT/'data/prospects.json'
  old=json.loads(path.read_text()) if path.exists() else {'leads':[]}
- leads={x['id']:x for x in old.get('leads',[]) if x.get('id')}
+ leads={x['id']:x for x in old.get('leads',[]) if x.get('id') and x.get('discovered_from')!='Public search result; company identity and city require verification'}
  checks=[]
  # Rotate three geographic markets per day; previous discoveries remain in the pool.
  offset=today.date().toordinal()%len(CITIES)
