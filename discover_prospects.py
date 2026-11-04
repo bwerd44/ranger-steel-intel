@@ -60,6 +60,50 @@ def query(city):
   except Exception as exc:last=exc
  raise last
 
+
+SEARCHES=[
+ ('Houston','TX','industrial pressure vessel fabrication manufacturer Houston Texas'),
+ ('Tulsa','OK','heavy steel plate fabrication manufacturing Tulsa Oklahoma'),
+ ('Baton Rouge','LA','pressure vessel tank fabrication manufacturer Louisiana'),
+ ('Wichita','KS','heavy plate fabrication manufacturer Wichita Kansas'),
+ ('Little Rock','AR','industrial tank fabrication company Arkansas'),
+ ('Dallas-Fort Worth','TX','industrial steel plate processing fabrication Fort Worth Texas'),
+ ('Kansas City','MO','industrial equipment heavy plate fabrication Missouri'),
+ ('Shreveport','LA','industrial steel fabrication manufacturer Shreveport Louisiana'),
+ ('Oklahoma City','OK','industrial tank vessel fabrication manufacturer Oklahoma City'),
+ ('Lafayette','LA','oilfield equipment heavy fabrication Lafayette Louisiana'),
+ ('Amarillo','TX','steel plate fabrication manufacturer Amarillo Texas'),
+ ('Springfield','MO','industrial steel fabrication manufacturing Springfield Missouri')
+]
+BLOCKED_HOSTS=('google.com','bing.com','yelp.com','yellowpages.com','facebook.com','linkedin.com','instagram.com','mapquest.com','manta.com','chamberofcommerce.com','bbb.org','indeed.com','glassdoor.com','youtube.com','wikipedia.org','reddit.com','news.google.com')
+GENERIC=re.compile(r'^(best |top |industrial |metal fabrication |steel fabrication |home$|about$|services$|contact$|manufacturers |fabricators |companies |directory |search |find |results |jobs )',re.I)
+
+def search_candidates(market,excluded):
+ """Discover public business websites through a search-results RSS feed, not fabricated names."""
+ import xml.etree.ElementTree as ET
+ city,state,phrase=market
+ url='https://www.bing.com/search?'+urllib.parse.urlencode({'q':phrase,'format':'rss'})
+ req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; RangerSteelIntel/2.0)'})
+ with urllib.request.urlopen(req,timeout=11) as response:raw=response.read(300000)
+ root=ET.fromstring(raw)
+ found=[]
+ for node in root.findall('./channel/item')[:20]:
+  title=re.sub(r'\s+',' ',node.findtext('title') or '').strip()
+  link=node.findtext('link') or ''
+  p=urllib.parse.urlsplit(link)
+  host=(p.hostname or '').lower().removeprefix('www.')
+  if p.scheme not in ('http','https') or not host or any(host==h or host.endswith('.'+h) for h in BLOCKED_HOSTS):continue
+  name=re.split(r'\s+[-|–]\s+| : ',title)[0].strip()
+  name=re.sub(r'\s+(?:Home|Official Website|Manufacturing|Fabrication Services)$','',name,flags=re.I).strip()
+  if len(name)<5 or len(name)>70 or GENERIC.search(name) or norm(name) in excluded:continue
+  if not re.search(r'fabricat|metal|steel|industrial|vessel|tank|equipment|machine|manufactur|weld|boiler|heat.exchang',title+' '+(node.findtext('description') or ''),re.I):continue
+  ident=hashlib.sha256(host.encode()).hexdigest()[:16]
+  found.append({'id':ident,'name':name,'city':city,'state':state,'category':'Search-discovered industrial business — location and capabilities unverified',
+    'why':'Found in a public industrial-manufacturer search. Confirm business identity, location, plate processing and purchasing fit.',
+    'website':urllib.parse.urlunsplit((p.scheme,p.netloc,'/','','')),'source_url':link,
+    'discovered_from':'Public search result; company identity and city require verification','verified_plate_buyer':False})
+ return found
+
 def main():
  today=dt.datetime.now(dt.timezone.utc)
  profile=json.loads((ROOT/'data/prospect-profile.json').read_text())
@@ -81,6 +125,18 @@ def main():
      c['first_seen']=today.date().isoformat();leads[c['id']]=c;count+=1
    checks.append({'market':city[0],'status':'ok','new':count})
   except Exception as exc:checks.append({'market':city[0],'status':'unavailable','error':type(exc).__name__})
+ # Independently search for business websites, even if mapping endpoints fail.
+ search_offset=today.date().toordinal()%len(SEARCHES)
+ for i in range(4):
+  market=SEARCHES[(search_offset+i*3)%len(SEARCHES)]
+  try:
+   found=search_candidates(market,excluded)
+   count=0
+   for c in found:
+    if c['id'] not in leads:
+     c['first_seen']=today.date().isoformat();leads[c['id']]=c;count+=1
+   checks.append({'market':market[0]+' web search','status':'ok','new':count})
+  except Exception as exc:checks.append({'market':market[0]+' web search','status':'unavailable','error':type(exc).__name__})
  # Do not manufacture leads if source is unavailable.
  items=[x for x in leads.values() if norm(x['name']) not in excluded]
  items.sort(key=lambda x:(x.get('first_seen',''),x['name']),reverse=True)
