@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T21:25:27.815692+00:00",
+  "updated_at": "2026-11-04T21:27:16.038455+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
@@ -53,6 +53,108 @@
   "new_this_run": 0,
   "leads": [
     {
+      "name": "Volks Constructors",
+      "city": "Prairieville",
+      "state": "LA",
+      "website": "https://www.volksconst.com/",
+      "source_url": "https://www.volksconst.com/services/fabrication/",
+      "category": "ASME pressure vessel fabrication",
+      "why": "10x49-foot CNC plasma cutting table to 2-inch plate",
+      "signals": [
+        "ASME vessels",
+        "Large CNC plate cutting"
+      ],
+      "id": "58f5c05f18bf6163",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "ASME vessels",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Large CNC plate cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.volksconst.com/services/fabrication/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Texas Steel Processing",
+      "city": "Texas",
+      "state": "TX",
+      "website": "https://www.txstl.com/",
+      "source_url": "https://www.txstl.com/",
+      "category": "Heavy plate processor",
+      "why": "Plasma and oxyfuel burning and plate rolling 3/16 to 4 inches",
+      "signals": [
+        "Heavy plate burning",
+        "Plate rolling"
+      ],
+      "id": "31ca500f460890eb",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Heavy plate burning",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.txstl.com/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Taylor Forge Engineered Systems",
+      "city": "Paola",
+      "state": "KS",
+      "website": "https://www.tfes.com/",
+      "source_url": "https://www.tfes.com/solutions/pressure-vessels/",
+      "category": "Engineered pressure vessel manufacturer",
+      "why": "Starts manufacturing from flat plate with in-house rolling and welding",
+      "signals": [
+        "Flat plate processing",
+        "Pressure vessels"
+      ],
+      "id": "6e040812f4423e54",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Flat plate processing",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Pressure vessels",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.tfes.com/solutions/pressure-vessels/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
       "name": "Shamrad Metal Fabricators",
       "city": "St. Joseph",
       "state": "MO",
@@ -92,6 +194,278 @@
       }
     },
     {
+      "name": "Refrigeration Vessels and Systems Corporation",
+      "city": "Bryan",
+      "state": "TX",
+      "website": "https://rvscorp.com/",
+      "source_url": "https://rvscorp.com/media/296059",
+      "category": "ASME pressure vessel manufacturer",
+      "why": "100,000-square-foot manufacturing facility with plate rolling and plasma cutting",
+      "signals": [
+        "ASME vessels",
+        "Plate rolling"
+      ],
+      "id": "e6735e353b13cd66",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "ASME vessels",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://rvscorp.com/media/296059",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Quality Manufacturing Group",
+      "city": "Columbia",
+      "state": "MS",
+      "website": "https://qualitymfggroup.com/",
+      "source_url": "https://qualitymfggroup.com/services/",
+      "category": "Pressure vessel and transport tank fabricator",
+      "why": "A36 plate rolling to 1-1/4 inches by 12 feet and plasma cutting to 3 inches",
+      "signals": [
+        "A36 plate rolling",
+        "Plasma cutting"
+      ],
+      "id": "ecc0ccd42fc11636",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "A36 plate rolling",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plasma cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://qualitymfggroup.com/services/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Precision Fabrication Services",
+      "city": "Fort Worth",
+      "state": "TX",
+      "website": "https://precisionfabsvs.com/",
+      "source_url": "https://precisionfabsvs.com/",
+      "category": "Industrial steel plate processor",
+      "why": "10x40-foot plasma table and 120x240-inch laser beds",
+      "signals": [
+        "Large plate processing",
+        "Plasma cutting"
+      ],
+      "id": "e4447a58e57a2a16",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Large plate processing",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plasma cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://precisionfabsvs.com/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "M-C Fabrication",
+      "city": "Olathe",
+      "state": "KS",
+      "website": "https://www.m-cfabrication.com/",
+      "source_url": "https://www.linkedin.com/company/m-c-fabrication",
+      "category": "Heavy component manufacturer",
+      "why": "Heavy fabricated components from sheet through 3-inch plate",
+      "signals": [
+        "3-inch plate fabrication",
+        "Plate rolling"
+      ],
+      "id": "fe364a9916ccb298",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "3-inch plate fabrication",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.linkedin.com/company/m-c-fabrication",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Industrial Service Solutions",
+      "city": "West Monroe",
+      "state": "LA",
+      "website": "https://iss-na.com/",
+      "source_url": "https://iss-na.com/services/equipment-services/process-equipment/material-handling/",
+      "category": "Heavy industrial fabrication",
+      "why": "12x43-foot CNC burning table and plate rolling to 1 inch",
+      "signals": [
+        "Heavy plate burning",
+        "Plate rolling"
+      ],
+      "id": "f8a66327fa63e10e",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Heavy plate burning",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://iss-na.com/services/equipment-services/process-equipment/material-handling/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Industrial Metal Fabricators",
+      "city": "West Monroe",
+      "state": "LA",
+      "website": "https://www.imfmetalfab.com/",
+      "source_url": "https://www.imfmetalfab.com/",
+      "category": "Industrial plate fabrication",
+      "why": "10x20-foot plasma cutting to 2-inch steel and plate rolling to 1 inch",
+      "signals": [
+        "2-inch steel plate cutting",
+        "Plate rolling"
+      ],
+      "id": "56fcb9da8b42d7d5",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "2-inch steel plate cutting",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.imfmetalfab.com/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Industrial Fabricators of Corpus Christi",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "website": "https://www.indfabcc.com/",
+      "source_url": "https://www.indfabcc.com/capabilities/",
+      "category": "Heavy plate fabrication",
+      "why": "Three 10x40-foot CNC burning centers, rolling up to 1-3/4 inches",
+      "signals": [
+        "CNC plate burning",
+        "Plate rolling"
+      ],
+      "id": "76a06deab137deb4",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "CNC plate burning",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://www.indfabcc.com/capabilities/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Deltak Manufacturing",
+      "city": "Walker",
+      "state": "LA",
+      "website": "https://deltakmfg.com/",
+      "source_url": "https://deltakmfg.com/about/walker-facility/",
+      "category": "Industrial metal manufacturer",
+      "why": "Two plasma tables, three plate rolls and heavy press brakes",
+      "signals": [
+        "Plasma cutting",
+        "Plate rolling"
+      ],
+      "id": "65e9f2a6f53dc93b",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Plasma cutting",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://deltakmfg.com/about/walker-facility/",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
       "name": "Custom Fabrication & Engineering Inc.",
       "city": "Fort Smith",
       "state": "AR",
@@ -127,6 +501,40 @@
         ],
         "checked_at": "2026-11-04T21:22:50.402049+00:00",
         "evidence_url": "https://www.thomasnet.com/suppliers/arkansas/all-cities/plasma-cutting-services-58820804",
+        "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
+      }
+    },
+    {
+      "name": "Boland Marine",
+      "city": "New Orleans",
+      "state": "LA",
+      "website": "https://bolandmarine.com/",
+      "source_url": "https://bolandmarine.com/company/capabilities",
+      "category": "Marine and industrial fabrication",
+      "why": "2-inch plate rolling and 30,000-square-foot fabrication shop",
+      "signals": [
+        "2-inch plate rolling",
+        "Industrial fabrication"
+      ],
+      "id": "c8bce46edc37387e",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "2-inch plate rolling",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Industrial fabrication",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T21:27:16.038455+00:00",
+        "evidence_url": "https://bolandmarine.com/company/capabilities",
         "note": "Manufacturing capabilities supported by a public company source. Direct mother-plate purchasing and account status not verified."
       }
     },
