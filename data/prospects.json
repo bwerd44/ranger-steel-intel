@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T19:35:34.181001+00:00",
-  "method": "Strict company homepage and manufacturing/location checks; search result titles alone are not accepted as company names.",
+  "updated_at": "2026-11-04T20:40:02.300977+00:00",
+  "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.",
   "checks": [
     {
       "market": "Amarillo",
@@ -9,14 +9,9 @@
       "error": "TimeoutError"
     },
     {
-      "market": "Fort Smith",
-      "status": "unavailable",
-      "error": "TimeoutError"
-    },
-    {
       "market": "Little Rock web search",
       "status": "ok",
-      "new": 3
+      "new": 0
     },
     {
       "market": "Shreveport web search",
@@ -26,15 +21,19 @@
     {
       "market": "Amarillo web search",
       "status": "ok",
-      "new": 7
+      "new": 0
     },
     {
       "market": "Tulsa web search",
       "status": "ok",
       "new": 0
+    },
+    {
+      "market": "Little Rock web search",
+      "status": "ok",
+      "new": 0
     }
   ],
-  "website_reviews_this_run": 10,
-  "leads": [],
-  "invalid_leads_removed": 10
+  "website_reviews_this_run": 0,
+  "leads": []
 }
