@@ -81,45 +81,55 @@ COMPANY_NAME=re.compile(r'\b(inc\.?|llc|ltd\.?|corp\.?|corporation|company|co\.?
 CAPABILITY=re.compile(r'\b(pressure vessels?|tank fabrication|plate rolling|plate cutting|flame cutting|plasma cutting|heavy fabrication|industrial fabrication|steel fabrication|heat exchangers?|process equipment|oilfield equipment|manufacturing facilities|custom manufacturing|structural steel fabrication)\b',re.I)
 
 def search_candidates(market,excluded):
- """Accept only probable company homepages with actual manufacturing capability evidence."""
+ """Require an identifiable manufacturer and evidence on its own website."""
  import xml.etree.ElementTree as ET
  from qualify_prospects import VisibleText,safe_site
  city,state,phrase=market
- url='https://www.bing.com/search?'+urllib.parse.urlencode({'q':phrase,'format':'rss'})
+ # Product/industry terms must occur on the page, not merely in a generic result snippet.
+ targeted=phrase+' (fabrication OR manufacturing OR vessel OR equipment) -definition -meaning -wikipedia -dictionary -jobs'
+ url='https://www.bing.com/search?'+urllib.parse.urlencode({'q':targeted,'format':'rss'})
  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; RangerSteelIntel/2.0)'})
- with urllib.request.urlopen(req,timeout=11) as response:raw=response.read(300000)
+ with urllib.request.urlopen(req,timeout=12) as response:raw=response.read(350000)
  root=ET.fromstring(raw)
  found=[]
- for node in root.findall('./channel/item')[:20]:
+ for node in root.findall('./channel/item')[:30]:
   title=re.sub(r'\s+',' ',node.findtext('title') or '').strip()
   link=node.findtext('link') or ''
   p=urllib.parse.urlsplit(link)
   host=(p.hostname or '').lower().removeprefix('www.')
   if p.scheme not in ('http','https') or not host or any(host==h or host.endswith('.'+h) for h in BLOCKED_HOSTS):continue
-  name=re.split(r'\s+[-|–]\s+| : ',title)[0].strip()
-  if len(name)<6 or len(name)>65 or BAD_TITLE.search(title) or not COMPANY_NAME.search(name) or norm(name) in excluded:continue
+  if BAD_TITLE.search(title):continue
+  # Never accept an article or glossary as the business homepage.
   if p.path.strip('/') and p.path.strip('/').lower() not in ('home','index.html','index.php'):continue
   homepage=urllib.parse.urlunsplit((p.scheme,p.netloc,'/','',''))
   if not safe_site(homepage):continue
   try:
    request=urllib.request.Request(homepage,headers={'User-Agent':'Mozilla/5.0 (compatible; RangerSteelIntel/2.0)'})
-   with urllib.request.urlopen(request,timeout=6) as response:
+   with urllib.request.urlopen(request,timeout=7) as response:
     if 'html' not in response.headers.get('Content-Type','').lower():continue
     final=response.geturl()
     if not safe_site(final):continue
-    rawpage=response.read(160000).decode('utf-8','replace')
+    rawpage=response.read(180000).decode('utf-8','replace')
    parser=VisibleText();parser.feed(rawpage)
-   body=' '.join(parser.parts)
+   body=re.sub(r'\s+',' ',' '.join(parser.parts))
    if not CAPABILITY.search(body):continue
-   if not re.search(r'\b('+re.escape(city)+r'|'+re.escape(state)+r')\b',body,re.I):
-    # Search location alone is not proof of where a company operates.
-    continue
+   # Site must actually reference the market; never assign the query's city as a proven address.
+   location_match=re.search(r'\b'+re.escape(city)+r'\b',body,re.I)
+   state_match=re.search(r'\b'+re.escape(state)+r'\b',body,re.I)
+   if not (location_match or state_match):continue
+   # Prefer the company title of the homepage over arbitrary search-result headings.
+   title_match=re.search(r'<title[^>]*>(.*?)</title>',rawpage,re.I|re.S)
+   site_title=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',title_match.group(1))).strip() if title_match else ''
+   options=[re.split(r'\s+[-|–]\s+| : ',site_title)[0].strip(),re.split(r'\s+[-|–]\s+| : ',title)[0].strip()]
+   name=next((n for n in options if 5<=len(n)<=70 and COMPANY_NAME.search(n) and not BAD_TITLE.search(n)),None)
+   if not name or norm(name) in excluded:continue
+   ident=hashlib.sha256(host.encode()).hexdigest()[:16]
+   found.append({'id':ident,'name':name,'city':city if location_match else 'Location requires verification','state':state,
+     'category':'Manufacturer website corroborates industrial capabilities',
+     'why':'Company homepage contains industrial manufacturing or fabrication language and a regional reference. Full-size plate buying is not confirmed.',
+     'website':homepage,'source_url':final,
+     'discovered_from':'Company homepage with capability and regional reference','verified_plate_buyer':False})
   except Exception:continue
-  ident=hashlib.sha256(host.encode()).hexdigest()[:16]
-  found.append({'id':ident,'name':name,'city':city,'state':state,
-    'category':'Company website corroborates manufacturing capability and market location',
-    'why':'Company homepage contains industrial fabrication or equipment-manufacturing terms and the searched market. Plate buying remains unverified.',
-    'website':homepage,'source_url':link,'discovered_from':'Public company homepage with basic capability and location corroboration','verified_plate_buyer':False})
  return found
 
 def main():
