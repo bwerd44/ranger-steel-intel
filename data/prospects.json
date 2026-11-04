@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T20:40:02.300977+00:00",
-  "method": "Public industrial business listings, rotating geographic discovery; tags indicate possible industry fit only. Website capability signals are research clues, not verified buying history or volume.",
+  "updated_at": "2026-11-04T20:45:00Z",
+  "method": "Sourced industrial manufacturer candidates plus ongoing automated discovery. Buying history is unverified.",
   "checks": [
     {
       "market": "Amarillo",
@@ -35,5 +35,318 @@
     }
   ],
   "website_reviews_this_run": 0,
-  "leads": []
+  "leads": [
+    {
+      "name": "AOP",
+      "city": "Crossett",
+      "state": "AR",
+      "website": "https://www.aopfab.com/",
+      "source_url": "https://www.aopfab.com/",
+      "category": "Industrial plate fabrication",
+      "why": "Company reports a 14 ft × 24 ft CNC plasma table cutting plate up to 4 inches; tanks and industrial fabrication.",
+      "signals": [
+        "Steel plate fabrication",
+        "CNC plasma cutting up to 4-inch plate",
+        "Industrial tanks"
+      ],
+      "id": "sourced-001",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Steel plate fabrication",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "CNC plasma cutting up to 4-inch plate",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Industrial tanks",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://www.aopfab.com/",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Industrial Fabrication Services (IFS)",
+      "city": "Sand Springs",
+      "state": "OK",
+      "website": "https://www.ifsok.com/",
+      "source_url": "https://www.ifsok.com/fabrication-services",
+      "category": "Pressure vessels and heavy fabrication",
+      "why": "Company reports a 42,000-square-foot shop, ASME pressure-vessel fabrication and plate rolling to 1 inch.",
+      "signals": [
+        "ASME pressure vessels",
+        "Plate rolling up to 1 inch",
+        "Heavy fabrication"
+      ],
+      "id": "sourced-002",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "ASME pressure vessels",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate rolling up to 1 inch",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Heavy fabrication",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://www.ifsok.com/fabrication-services",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Economasters, LLC",
+      "city": "Tulsa",
+      "state": "OK",
+      "website": "https://economasters.com/",
+      "source_url": "https://economasters.com/",
+      "category": "Pressure vessel and boiler fabrication",
+      "why": "Company identifies pressure vessel and structural steel manufacturing, ASME fabrication, and large industrial heater/economizer assemblies.",
+      "signals": [
+        "Pressure vessels",
+        "Structural steel manufacturing",
+        "ASME fabrication"
+      ],
+      "id": "sourced-003",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Pressure vessels",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Structural steel manufacturing",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "ASME fabrication",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://economasters.com/",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Allstates Production Equipment",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "website": "https://www.allstatesproductionequipment.com/",
+      "source_url": "https://www.allstatesproductionequipment.com/",
+      "category": "Oilfield pressure-vessel manufacturer",
+      "why": "Company describes a 25,000-square-foot production facility making ASME and non-code pressure vessels.",
+      "signals": [
+        "ASME pressure vessels",
+        "Oilfield fabrication",
+        "25,000-square-foot production facility"
+      ],
+      "id": "sourced-004",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "ASME pressure vessels",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Oilfield fabrication",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "25,000-square-foot production facility",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://www.allstatesproductionequipment.com/",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "PALA Group",
+      "city": "Hammond",
+      "state": "LA",
+      "website": "https://www.palagroup.com/",
+      "source_url": "https://www.palagroup.com/wp-content/uploads/2026/03/PALA-Capabilities-Brochure-2026.pdf",
+      "category": "Tank and pressure-vessel fabrication",
+      "why": "Published capabilities brochure describes plate processing and rolling, API tanks, process skids and a 12 ft × 100 ft plasma table.",
+      "signals": [
+        "Plate processing and rolling",
+        "API tanks",
+        "Plasma cutting"
+      ],
+      "id": "sourced-005",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Plate processing and rolling",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "API tanks",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plasma cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://www.palagroup.com/wp-content/uploads/2026/03/PALA-Capabilities-Brochure-2026.pdf",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Custom Steel Manufacturing, Inc.",
+      "city": "Belton",
+      "state": "MO",
+      "website": "https://customsteelkc.com/",
+      "source_url": "https://customsteelkc.com/",
+      "category": "Heavy plate processing and fabrication",
+      "why": "Company describes 20-foot plate rolling, 40-foot shearing and processing carbon steel plate including A588 and AR400.",
+      "signals": [
+        "Plate rolling to 20 feet",
+        "Carbon steel plate",
+        "Heavy fabrication"
+      ],
+      "id": "sourced-006",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "Plate rolling to 20 feet",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Carbon steel plate",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Heavy fabrication",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://customsteelkc.com/",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Wright Steel & Machine Co.",
+      "city": "Harrison",
+      "state": "AR",
+      "website": "https://www.wrightsteelandmachine.com/",
+      "source_url": "https://www.wrightsteelandmachine.com/facilities",
+      "category": "Plate cutting and industrial fabrication",
+      "why": "Company lists CNC plate cutting, plasma/oxy-fuel cutting, heavy weldments and machining.",
+      "signals": [
+        "CNC plate cutting",
+        "Heavy weldments",
+        "Plasma/oxy-fuel cutting"
+      ],
+      "id": "sourced-007",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "CNC plate cutting",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Heavy weldments",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plasma/oxy-fuel cutting",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://www.wrightsteelandmachine.com/facilities",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    },
+    {
+      "name": "Blytheville Plate Works (Williams Steel)",
+      "city": "Blytheville",
+      "state": "AR",
+      "website": "https://wscsteel.com/",
+      "source_url": "https://wscsteel.com/Services.asp?hService=8",
+      "category": "Plate and duct fabrication",
+      "why": "Company describes a 52,000-square-foot plate fabrication operation using A36, Grade 70 and AR400 materials.",
+      "signals": [
+        "A36 and Grade 70 plate",
+        "Plate fabrication",
+        "Heavy industrial ductwork"
+      ],
+      "id": "sourced-008",
+      "first_seen": "2026-11-04",
+      "discovered_from": "Reviewed public manufacturer website",
+      "verified_plate_buyer": false,
+      "qualification": {
+        "fit": "Worth reviewing",
+        "score": 0,
+        "signals": [
+          {
+            "label": "A36 and Grade 70 plate",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Plate fabrication",
+            "excerpt": "Published company capability"
+          },
+          {
+            "label": "Heavy industrial ductwork",
+            "excerpt": "Published company capability"
+          }
+        ],
+        "checked_at": "2026-11-04T20:45:00Z",
+        "evidence_url": "https://wscsteel.com/Services.asp?hService=8",
+        "note": "Published manufacturing capabilities; direct plate purchasing and customer status are not verified."
+      }
+    }
+  ]
 }
