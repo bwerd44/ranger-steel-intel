@@ -1,6 +1,45 @@
 {
-  "description": "Reviewed dated developments. No current allocation, delivery schedule or quarterly actual outcome has been verified here. New directional observations require scope=discrete_plate, verified=true, a source URL, date and documented basis.",
-  "observations": [],
+  "description": "Reviewed dated discrete-plate directional evidence and mill developments. Survey-based readings are identified with limitations; other metrics remain unverified until comparable plate-specific evidence is available.",
+  "observations": [
+    {
+      "metric": "lead_times",
+      "condition": "Lengthening",
+      "scope": "discrete_plate",
+      "verified": true,
+      "evidence_date": "2026-10-29",
+      "max_age_days": 30,
+      "confidence": "Medium",
+      "period": "Late October 2026",
+      "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
+      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29.",
+      "verification": "Reviewed SMU reporting; late-October survey described explicitly increasing plate lead times.",
+      "source": {
+        "publisher": "Steel Market Update",
+        "title": "Mill lead times climb to new highs, buyers expect little relief",
+        "url": "https://www.steelmarketupdate.com/category/sheet/",
+        "evidence_date": "2026-10-29"
+      }
+    },
+    {
+      "metric": "supply",
+      "condition": "Tightening",
+      "scope": "discrete_plate",
+      "verified": true,
+      "evidence_date": "2026-10-27",
+      "max_age_days": 30,
+      "confidence": "Low",
+      "period": "Late October 2026",
+      "basis": "SMU reported shrinking remaining 2026 domestic spot tonnage for plate and sheet, with steel buyers struggling to find domestic mills offering spot availability. This indicates tightening spot access, not a measured decline in total U.S. plate production.",
+      "limitation": "Qualitative buyer reports; cannot infer exact mill allocation percentages or all-grade availability. Supply direction here refers to domestic spot-order availability.",
+      "verification": "Reviewed SMU late-October reporting on domestic plate spot availability.",
+      "source": {
+        "publisher": "Steel Market Update",
+        "title": "Sheet and plate price gains accelerate as 2026 tons dry up",
+        "url": "https://www.steelmarketupdate.com/category/sheet/",
+        "evidence_date": "2026-10-27"
+      }
+    }
+  ],
   "quarterly_outcomes": [],
   "market_developments": [],
   "mill_developments": [
