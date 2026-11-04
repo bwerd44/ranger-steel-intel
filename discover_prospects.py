@@ -122,7 +122,7 @@ def search_candidates(market,excluded):
    site_title=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',title_match.group(1))).strip() if title_match else ''
    options=[re.split(r'\s+[-|–]\s+| : ',site_title)[0].strip(),re.split(r'\s+[-|–]\s+| : ',title)[0].strip()]
    name=next((n for n in options if 5<=len(n)<=70 and COMPANY_NAME.search(n) and not BAD_TITLE.search(n)),None)
-   if not name or norm(name) in excluded:continue
+   if not name or norm(name) in excluded or name.lower() in ('industrial','steel','metal','manufacturing','fabrication','equipment','engineering','welding','machine','tank','vessel'):continue
    ident=hashlib.sha256(host.encode()).hexdigest()[:16]
    found.append({'id':ident,'name':name,'city':city if location_match else 'Location requires verification','state':state,
      'category':'Manufacturer website corroborates industrial capabilities',
@@ -142,7 +142,7 @@ def main():
  checks=[]
  # Rotate three geographic markets per day; previous discoveries remain in the pool.
  offset=today.date().toordinal()%len(CITIES)
- for i in range(2):
+ for i in range(1):
   city=CITIES[(offset+i*5)%len(CITIES)]
   try:
    items=query(city)
@@ -155,7 +155,7 @@ def main():
   except Exception as exc:checks.append({'market':city[0],'status':'unavailable','error':type(exc).__name__})
  # Independently search for business websites, even if mapping endpoints fail.
  search_offset=today.date().toordinal()%len(SEARCHES)
- for i in range(4):
+ for i in range(5):
   market=SEARCHES[(search_offset+i*3)%len(SEARCHES)]
   try:
    found=search_candidates(market,excluded)
