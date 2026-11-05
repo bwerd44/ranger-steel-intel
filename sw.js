@@ -1,4 +1,4 @@
-const CACHE = 'ranger-intel-pulse-light-v5';
+const CACHE = 'ranger-intel-dark-news-v6';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
