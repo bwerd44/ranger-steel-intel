@@ -24,7 +24,7 @@ def parse(text,as_of=None):
     rows=[]
     for r in csv.DictReader(io.StringIO(text)):
         try:
-            day=dt.date.fromisoformat(r['DATE'])
+            day=dt.date.fromisoformat(r.get('observation_date') or r.get('DATE'))
             value=float(r['WPU101'])
             if value<=0 or (as_of and day>as_of):continue
             rows.append((day,value))
