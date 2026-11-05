@@ -1,5 +1,20 @@
 {
-  "status": "unavailable",
-  "data_status": "unavailable",
-  "retrieval_error": "TimeoutError"
+  "status": "evaluated",
+  "series": "WPU101",
+  "proxy": "U.S. steel mill products PPI (not discrete plate)",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WPU101",
+  "start": "1926-01-01",
+  "last_observation": "2026-09-01",
+  "observations": 1209,
+  "holdout_quarters": 19,
+  "directional_hits": 10,
+  "directional_hit_rate": 0.526,
+  "majority_baseline_hits": 11,
+  "majority_baseline_rate": 0.579,
+  "historical_signal": "Upward historical momentum",
+  "signal_code": 1,
+  "method": "Six- and twelve-month momentum, three-month forward directional evaluation; nonoverlapping quarterly test observations; fixed rules, no optimization; historical revised series may contain revision bias.",
+  "warning": "This is an all-steel price proxy, not plate prices. Historical accuracy does not establish future probability or forecast confidence.",
+  "retrieved_at": "2026-11-05T22:26:25.467861+00:00",
+  "data_status": "fresh"
 }
