@@ -18,6 +18,7 @@ on:
       - 'data/prospect-profile.json'
       - 'data/prospect-seeds.json'
       - 'forecast.py'
+      - 'historical_forecast.py'
       - 'intelligence.py'
       - 'data/market-evidence.json'
       - 'test_*.py'
@@ -63,6 +64,9 @@ jobs:
       - name: Discover potential plate prospects from public business listings
         if: steps.clock.outputs.run == 'true'
         run: python discover_prospects.py
+      - name: Refresh free historical steel-price proxy and evaluate holdout
+        if: steps.clock.outputs.run == 'true'
+        run: python historical_forecast.py
       - name: Maintain monthly forecast history
         if: steps.clock.outputs.run == 'true'
         env:
@@ -81,7 +85,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json
+          git add data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update plate intelligence and preserve observation history'
             git push
@@ -93,7 +97,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
+          cp data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
