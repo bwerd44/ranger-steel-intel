@@ -18,6 +18,7 @@ on:
       - 'data/prospect-profile.json'
       - 'data/prospect-seeds.json'
       - 'forecast.py'
+      - 'data/ai-assessment.json'
       - 'historical_forecast.py'
       - 'intelligence.py'
       - 'data/market-evidence.json'
@@ -97,7 +98,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
+          cp data/ai-assessment.json data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
