@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T21:27:16.038455+00:00",
+  "updated_at": "2026-11-05T13:23:46.101140+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Amarillo",
+      "market": "Longview",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Fort Smith",
+      "market": "Joplin",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Little Rock web search",
+      "market": "Dallas-Fort Worth web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Shreveport web search",
+      "market": "Oklahoma City web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Amarillo web search",
+      "market": "Springfield web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Tulsa web search",
+      "market": "Baton Rouge web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Little Rock geographic directory",
+      "market": "Dallas-Fort Worth geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Oklahoma City geographic directory",
+      "market": "Lafayette geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Houston geographic directory",
+      "market": "Tulsa geographic directory",
       "status": "ok",
       "new": 0
     }

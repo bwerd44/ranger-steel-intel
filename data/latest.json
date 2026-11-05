@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-04T21:27:15.415637+00:00",
+  "updated_at": "2026-11-05T13:23:44.216216+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-04T21:27:15.415637+00:00",
+    "generated_at": "2026-11-05T13:23:44.216216+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-04T21:27:15.415637+00:00",
+        "retrieved_at": "2026-11-05T13:23:44.216216+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-04T21:27:15.415637+00:00",
+        "retrieved_at": "2026-11-05T13:23:44.216216+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,12 +171,32 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-04T21:27:15.415637+00:00",
+        "retrieved_at": "2026-11-05T13:23:44.216216+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "Nucor and Prudential Financial have been highlighted as Zacks Bull and Bear of the Day - TradingView",
+      "date": "2026-11-05",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQnMwdmJMbk94RkZMRUlWdE1aVllQT1ZtWUtwN3k5eHNRbl9QXzZmeWFmSlppZERrUVo1QnJhcGxmblFfTVNFNHI0SWxDYkU3WE8zSkdycTRtcmRhekZpUjlaZ056dzZ1RWo1eDZkVnctUjR2OVMtX3lXaFg4VzZWTDl3Z0EtVWVOYTFiMkVTWG0xQ0tjOFVaM2tYSER1OXhTY2FjRnZVclM5N19GZGEzWm4yaWhMSzVOT2pJalRHU05FcjZDUENMWENFTFNIRXlIaG53TjlDS0RFZw?oc=5",
+      "publisher": "TradingView",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Domestic Mill News"
+    },
+    {
+      "title": "The Ministry of Industry and Trade is seeking solutions to develop Vietnam's steel industry. - Vietnam.vn",
+      "date": "2026-11-05",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcmNldEZTWlFoYTZRWWNDU2k1akhRZkYtUlJOY1BudkhRTUd2dGNLNloycTQxZk9mNXhtajNmSW14akpkZ3hGR1JkN0VaUkRRTU9yZG5pR2RoSGNHbGpMZmgwSG03SkhvZ0VGMW53bmdlTnp2LWR3SzVrd3BvbGVFRDVrQWxFN19Jc21Tbkp3?oc=5",
+      "publisher": "Vietnam.vn",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
     {
       "title": "Steel Sections Market to Reach US$192.2 Billion at 5.9% CAGR Driven by Infrastructure and Sustainable Construction - openPR.com",
       "date": "2026-11-04",
@@ -228,11 +248,11 @@
       "category": "All Other Steel News"
     },
     {
-      "title": "Duplex Stainless Steel Market To 2035: Offshore Energy and Desalination Drive Growth - News and Statistics - IndexBox",
+      "title": "Steel Coils Market Forecast to 2035: Construction and Infrastructure Demand Drive Growth - News and Statistics - IndexBox",
       "date": "2026-10-31",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWC1xaTlBb2tOVjJkQnBEYXZ1clpmSHUtcVIxTUpDZU1XMzZ2RUVuZGUzRGpNbjRvenQ3MmVoRnlkYzBvenk3VEJqUVlsSE5hT0NJQTdad3VNM1haeHlOMUJMVXc3ak50dVBhSWZBRzNKZmRYU3l6WmRxLVRWbEJrcGNKUlhIQkk2X092NTd2WjZwd05OajJ2Z2tNcC02QW43S0tXZjJsNTFlRkxWSEwtNnJqcjJIM3RBNkU2WE9PaFotaTNH?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZmRoaVB1aml2TENZcWVlbTJDNktMcm5TUEVpNlRjQkgtU0xaTUNiVjdRdkdCUHcyMGNtcHhyNEJQMzVpQzVSNXVNSTR4djZwQldRaXR6MkdGeTFmNXRtZW03d2RlUlhRTEJDYVU1MmI4bkZwT2lBOWw2d2RHanVIVW1qdXZ6cEY3TWVGdXFpV1dRTExuMk1TbmhUSnUyZHRCdVVZTk1iUnJNTTF5X19MYnFobndOaTJHVWxiQ0NNX1o5QlVMdjFr?oc=5",
       "publisher": "IndexBox",
-      "topic": "All Other Steel News",
+      "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
@@ -268,26 +288,6 @@
       "category": "Import News"
     },
     {
-      "title": "Limited Progress in US-Canada Trade Talks on Steel and Auto Tariffs - News and Statistics - IndexBox",
-      "date": "2026-10-28",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNzNnR0lmcTV6TG1sU3RmYXVURjJGaC16cEtJQ2R2LWZXRVpIR29qV1o3dEIyQXFQdEdpbHRqMXNKYjc1QktPTU9mMjF1Nmp3amQ1UEk3OUdQaHltUHhzNHdjN1Fxel8zbHNUU1gwVkxnQWMxbHh5bDE1QnlqMWlzdlNhVnBVQkpHbkNvY0Q1cmlaWmhrNElvdy1sZVVFdUg3N0E2UDRkTQ?oc=5",
-      "publisher": "IndexBox",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
-      "title": "What Lifted Nucor (NYSE:NUE) As Steel Mill Performance Firmed This Quarter? - Kalkine Media",
-      "date": "2026-10-28",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOT3daTXhoUUszYUhBa1hkQTI1OW5iOU9FbjE5d0V2a3Nqcy1tRVJTNkR5cmVYNHlpOEE3ay1QZk80ZjAtT2d2YVBDUVljMEdGaFZIckczQUp6NWNoaUhRVlI3WDR1WUVvU2l4ODNkdTMxQVB4Zlp0YXZiYlFQYVFQaWFLTTlSUm4tLWFhbGdHdGd1dkp6ODh6dDZ4R3JKNjF0X2hKTnZSZUZLRVlIT1E3NXBzanFZMEdjZXNCbldsZks?oc=5",
-      "publisher": "Kalkine Media",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Domestic Mill News"
-    },
-    {
       "title": "American steel — not overseas dumping — dominates Canadian imports, trade data shows - CityNews Kitchener",
       "date": "2026-10-27",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmdFZ0laZlNTaUFEUWlCTE4wUEVZVVlpaU9GWkZCTURUUFRWUFpVMEJ4bkdVRnRpNVBDeFdfX2ZFMlBiZm1CY3ZGNVd5NTlqV1RZcUxQQmpWOThsd0p5U2I4MThlZTJkeU0zU3dFZlVOTEZqVWpzZ21CZDZnd014OWNyeU1jc2FmT3BOMjB2R09tUUFHeWkxaUV1RU9ra09GWXpZNmUzVlNPb1RsOFkxWmp2VWlwZmYzMTgtWHln?oc=5",
@@ -308,14 +308,14 @@
       "category": "Import News"
     },
     {
-      "title": "Steel Fabrication Market Size, Share, Growth | Global Report 2035 - Market Research Future",
+      "title": "American steel dominates Canadian imports, trade data shows - CTV News",
       "date": "2026-10-27",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQXRRdjB1Mi1hcldzMkxqVzV0NF81bnRSbjllSHc4MUJpN0lyLVVhNnBPVnJhd1FUWGhPeTFHRGxFcjltVENuNlNTcWpuR05zYnVxTk1neHRUbE92ZzAxZFpNbkk0U0NfNXpWVEYtdzBsOG4tSUxGSGFnWXphV2RRaQ?oc=5",
-      "publisher": "Market Research Future",
-      "topic": "All Other Steel News",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUGUtSmlkbWF2Sm9zbmQtTmF0aEszT05YUzJ1T3BraldwejJBdkFoamVfVl9YQTkwZVZFSFNucTFRRDlpWlpsekZGcWhlX194MkwxVmtrQjZMTmZrNHoyYnQwckVRdUVVVHdwQXg1TXpLMVRBeEs4eEVnMlZOY0gyc2hmRHktTFJfa01fUF9Kd2puTExnYmhCVW96YWpydEVFMldZSUR1LXZ1RUVENENfTi02UTh5bkhocWhmRg?oc=5",
+      "publisher": "CTV News",
+      "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
+      "category": "Import News"
     },
     {
       "title": "Can Steel Dynamics (NASDAQ:STLD) Benefit From Rising American Metal Demand? - Kalkine Media",
@@ -332,16 +332,6 @@
       "date": "2026-10-23",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONl9RUDJLeVRueUJjVDBXSGtwblczWnBDWEc4Wnp4Q1NUb1NZOEVNLW9lWk5BS1ZWZnNkRTdVWHZlaDk4aWV1QXJXUVR3M2VFTG1sLXo3WW1CX0doYnRXVWF3Q3RNOTh3QjduSlBBS3hmYjByNDlOanU4aG5fdHExMmdOMWdPdi1TWGlKWjl5czNxWHVZaFZGQ0lFVEFVWVEzQjljdUZhY25FQWdEZEtWaWlKakxzUQ?oc=5",
       "publisher": "IndexBox",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
-    {
-      "title": "Chicago Expo: FAMOUS Steel — China Leading AWS D1.5 & AASHTO LRFD Steel Box Girder Arch Bridge Fabrication Manufacturer - Issuewire.com",
-      "date": "2026-10-22",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWWc5Ym94ZmFFVW16a2dURS1qaE91bGozTFF0RTlaSFh1NGFyU3dlZmdjdlVKaHp2d0tCbkJ6Q3pLTF9qOEFkaFJFOU1Uc2EyTi1LVDB0ZzFGd2lhdUlSZUpPWmplY2N0cmxxbGR1eV9yaTh3Z1NWcXEwTjlUU1pPLUZwc0JKYUh5emQ0OWRlMzhTMUpLNmhjR0wtcG9XS2hYeGV4RDdRT2N6ZGw5SXRRNTFRcDNqRHlsWEVINkc0T2cyMC05ck55bHBXRUFDc0swbDRtck1zQzAwN21wcU1INkJWc2FrYXpOQkllag?oc=5",
-      "publisher": "Issuewire.com",
       "topic": "All Other Steel News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
@@ -386,12 +376,12 @@
       {
         "source": "Import News RSS",
         "status": "ok",
-        "items": 6
+        "items": 7
       },
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 11
+        "items": 9
       }
     ]
   }
