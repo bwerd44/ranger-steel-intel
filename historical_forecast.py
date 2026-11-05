@@ -12,13 +12,21 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
 URL='https://fred.stlouisfed.org/graph/fredgraph.csv?id=WPU101'
+ALTERNATE_URL='https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=1939-01-01&id=WPU101'
 MIN_TRAIN=120
 MIN_TEST=36
 
-def download(timeout=18):
-    req=urllib.request.Request(URL,headers={'User-Agent':'RangerSteelIntel/1.0 public historical research'})
-    with urllib.request.urlopen(req,timeout=timeout) as response:
-        return response.read().decode('utf-8-sig')
+def download(timeout=12):
+    errors=[]
+    for url in (URL,ALTERNATE_URL):
+        try:
+            req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 RangerSteelIntel/1.0','Accept':'text/csv'})
+            with urllib.request.urlopen(req,timeout=timeout) as response:
+                data=response.read().decode('utf-8-sig')
+            if 'WPU101' in data[:200]:return data
+            errors.append('Unexpected CSV header')
+        except Exception as exc:errors.append(type(exc).__name__)
+    raise RuntimeError('Historical sources failed: '+', '.join(errors))
 
 def parse(text,as_of=None):
     rows=[]
