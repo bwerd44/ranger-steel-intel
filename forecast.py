@@ -133,6 +133,10 @@ def make_edition(sources, checks, now, edition_id, historical=None):
     score_signals = signals(sources)
     direct = any(s['id'] == 'ssab-market' and 'pricing' in s.get('observations', {}) for s in sources)
     raw_score = sum(s['weight'] for s in score_signals)
+    tested = historical.get('status') == 'evaluated' and historical.get('holdout_quarters',0) >= 12
+    beats_baseline = (historical.get('directional_hit_rate') or 0) > (historical.get('majority_baseline_rate') or 1) + .05
+    historical_weight = .25 * (historical.get('signal_code') or 0) if tested and beats_baseline and direct else 0
+    raw_score += historical_weight
     quarter_rows = []
     seasonal = {1: .15, 2: .25, 3: -.1, 4: -.5}
     for distance, (year, q) in enumerate(horizon(local.date())):
@@ -162,7 +166,7 @@ def make_edition(sources, checks, now, edition_id, historical=None):
             'Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.',
             'Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders.'
         ], 'source_ids': source_ids})
-    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'historical_validation': historical, 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
+    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'historical_validation': historical, 'historical_weight': historical_weight, 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
         'methodology': [
             'This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.',
             'Only unexpired, dated primary evidence is eligible. A recognized SSAB plate-price increase contributes +2 directional points; its low distributor inventory assessment contributes +1. Broad manufacturing output adds at most +0.25 or -0.25. Missing inputs contribute nothing; missing plate-price evidence suppresses the directional base case.',
