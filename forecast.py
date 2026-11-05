@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from collect import fetch, plain, date_of
 
 ROOT = Path(__file__).resolve().parent
-VERSION = 'plate-direction-1.0'
+VERSION = 'plate-direction-1.1-historical-context'
 FED = 'https://www.federalreserve.gov/releases/g17/current/'
 EIA = 'https://www.eia.gov/outlooks/steo/report/'
 GRADES = ['A36', 'A572 Grade 50', 'A516 Grade 70']
@@ -127,8 +127,9 @@ def drivers(sources, q, distance):
     ]
 
 
-def make_edition(sources, checks, now, edition_id):
+def make_edition(sources, checks, now, edition_id, historical=None):
     local = now.astimezone(ZoneInfo('America/Chicago'))
+    historical = historical or {'status':'unavailable'}
     score_signals = signals(sources)
     direct = any(s['id'] == 'ssab-market' and 'pricing' in s.get('observations', {}) for s in sources)
     raw_score = sum(s['weight'] for s in score_signals)
@@ -161,7 +162,7 @@ def make_edition(sources, checks, now, edition_id):
             'Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.',
             'Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders.'
         ], 'source_ids': source_ids})
-    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
+    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'historical_validation': historical, 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
         'methodology': [
             'This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.',
             'Only unexpired, dated primary evidence is eligible. A recognized SSAB plate-price increase contributes +2 directional points; its low distributor inventory assessment contributes +1. Broad manufacturing output adds at most +0.25 or -0.25. Missing inputs contribute nothing; missing plate-price evidence suppresses the directional base case.',
@@ -196,7 +197,7 @@ def validate(history):
             assert all(x['chart_value'] is None or -2 <= x['chart_value'] <= 2 for x in q['scenarios'])
 
 
-def update(history, briefing, context, now, revision_reason='', offline=False):
+def update(history, briefing, context, now, revision_reason='', offline=False, historical=None):
     validate(history)
     month = now.astimezone(ZoneInfo('America/Chicago')).strftime('%Y-%m')
     existing = [e for e in history['editions'] if e['month'] == month]
@@ -204,7 +205,7 @@ def update(history, briefing, context, now, revision_reason='', offline=False):
         return history, False
     sources, checks = gather(briefing, context, now, offline)
     new_id = month if not existing else f'{month}-r{len(existing)+1}'
-    edition = make_edition(sources, checks, now, new_id)
+    edition = make_edition(sources, checks, now, new_id, historical)
     if revision_reason:
         edition.pop('content_hash')
         edition['revision_reason'] = revision_reason
@@ -226,7 +227,9 @@ def main():
     history = json.loads(args.output.read_text()) if args.output.exists() else {'schema_version': 1, 'latest_id': None, 'editions': []}
     briefing = json.loads((ROOT/'data/latest.json').read_text())
     context = json.loads((ROOT/'data/forecast-context.json').read_text())
-    data, changed = update(history, briefing, context, now, args.revision_reason, args.offline)
+    hp = ROOT/'data/historical-forecast.json'
+    historical = json.loads(hp.read_text()) if hp.exists() else {'status':'unavailable'}
+    data, changed = update(history, briefing, context, now, args.revision_reason, args.offline, historical)
     if changed:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         temp = args.output.with_suffix('.tmp')
