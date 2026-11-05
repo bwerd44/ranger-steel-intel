@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-11-05",
+  "authoring": "ChatGPT-assisted qualitative market assessment; manually published, not an automated AI feed",
+  "scope": "U.S. discrete carbon steel plate (A36, A572 Grade 50, A516 Grade 70)",
+  "overall": "Near-term firm pricing risk remains elevated. Supply recovery later in 2027 is possible but should not be assumed without evidence.",
+  "quarters": [
+    {
+      "quarter": "Q4 2026",
+      "direction": "Firming",
+      "confidence": "Moderate",
+      "rationale": "Dated producer commentary on rising North American plate prices and low distributor inventories supports near-term firmness; current mill allocations and transaction prices are not independently verified."
+    },
+    {
+      "quarter": "Q1 2027",
+      "direction": "Firming",
+      "confidence": "Low to moderate",
+      "rationale": "Restricted distributor replenishment and long import lead times could carry supply pressure into the first quarter, but demand and supply could change."
+    },
+    {
+      "quarter": "Q2 2027",
+      "direction": "Firming or stable",
+      "confidence": "Low",
+      "rationale": "The path depends on whether mill output, allocations and import arrivals recover. No verified recovery schedule is available."
+    },
+    {
+      "quarter": "Q3 2027",
+      "direction": "Uncertain; scenario-dependent",
+      "confidence": "Low",
+      "rationale": "Both prolonged tightness and a faster inventory correction remain plausible. A single directional prediction is not supported."
+    },
+    {
+      "quarter": "Q4 2027",
+      "direction": "Uncertain; scenario-dependent",
+      "confidence": "Low",
+      "rationale": "The evidence is insufficient for a reliable directional call this far ahead."
+    }
+  ],
+  "key_watchpoints": [
+    "Published plate mill lead times and allocation notices",
+    "Plate-specific import license volumes and actual arrivals",
+    "Distributor inventory and replenishment",
+    "Plate transaction prices by grade, thickness and width",
+    "Fabricator order activity and project conversion"
+  ],
+  "sources": [
+    {
+      "name": "SSAB North American plate market commentary",
+      "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook"
+    },
+    {
+      "name": "Federal Reserve industrial production",
+      "url": "https://www.federalreserve.gov/releases/g17/current/"
+    },
+    {
+      "name": "AISI industry data",
+      "url": "https://www.steel.org/industry-data/"
+    }
+  ],
+  "limitations": "Qualitative judgment, not a trained or calibrated AI forecasting model. Some distributor-level constraints come from user-supplied market observations, not independently verified public releases. No probability percentages or plate-specific historical backtest are claimed. This assessment is a dated snapshot and does not automatically update."
+}
