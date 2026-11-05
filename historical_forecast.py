@@ -75,7 +75,10 @@ def refresh(path=ROOT/'data/historical-forecast.json',as_of=None):
             saved['data_status']='retained; latest retrieval failed'
             saved['retrieval_error']=type(exc).__name__
             return saved
-        return {'status':'unavailable','data_status':'unavailable','retrieval_error':type(exc).__name__}
+        fallback={'status':'unavailable','data_status':'unavailable','retrieval_error':type(exc).__name__}
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_text(json.dumps(fallback,indent=2)+'\n')
+        return fallback
 
 if __name__=='__main__':
     print(json.dumps(refresh(),indent=2))
