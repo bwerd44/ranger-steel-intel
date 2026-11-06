@@ -1,57 +1,70 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T22:39:46.725763+00:00",
+  "updated_at": "2026-11-06T13:16:06.423465+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Longview",
+      "market": "Victoria",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Joplin",
+      "market": "Fayetteville",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Dallas-Fort Worth web search",
+      "market": "Kansas City web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Oklahoma City web search",
+      "market": "Lafayette web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Springfield web search",
+      "market": "Houston web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Baton Rouge web search",
+      "market": "Wichita web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Dallas-Fort Worth geographic directory",
+      "market": "Kansas City geographic directory",
+      "status": "ok",
+      "new": 1
+    },
+    {
+      "market": "Amarillo geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Lafayette geographic directory",
-      "status": "ok",
-      "new": 0
-    },
-    {
-      "market": "Tulsa geographic directory",
+      "market": "Baton Rouge geographic directory",
       "status": "ok",
       "new": 0
     }
   ],
   "website_reviews_this_run": 0,
-  "new_this_run": 0,
+  "new_this_run": 1,
   "leads": [
+    {
+      "id": "616d92bd764095c7",
+      "name": "KC Metal Worx LLC Fabrication Shop",
+      "city": "Kansas City",
+      "state": "MO",
+      "category": "Publicly mapped industrial business — capabilities unverified",
+      "why": "Named business located through public geographic business data. Confirm full-size plate buying and in-house processing.",
+      "website": null,
+      "source_url": "https://www.openstreetmap.org/node/4223967484",
+      "discovered_from": "OpenStreetMap Nominatim named business",
+      "verified_plate_buyer": false,
+      "first_seen": "2026-11-06"
+    },
     {
       "name": "Volks Constructors",
       "city": "Prairieville",
