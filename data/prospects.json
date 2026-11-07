@@ -1,56 +1,56 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T13:16:06.423465+00:00",
+  "updated_at": "2026-11-07T13:00:22.276597+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Victoria",
+      "market": "Ponca City",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Fayetteville",
+      "market": "Topeka",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Kansas City web search",
+      "market": "Shreveport web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Lafayette web search",
+      "market": "Amarillo web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Houston web search",
+      "market": "Tulsa web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita web search",
+      "market": "Little Rock web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Kansas City geographic directory",
-      "status": "ok",
-      "new": 1
-    },
-    {
-      "market": "Amarillo geographic directory",
+      "market": "Shreveport geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Baton Rouge geographic directory",
+      "market": "Springfield geographic directory",
+      "status": "ok",
+      "new": 0
+    },
+    {
+      "market": "Wichita geographic directory",
       "status": "ok",
       "new": 0
     }
   ],
   "website_reviews_this_run": 0,
-  "new_this_run": 1,
+  "new_this_run": 0,
   "leads": [
     {
       "id": "616d92bd764095c7",
