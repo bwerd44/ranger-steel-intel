@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T13:00:21.202653+00:00",
+  "updated_at": "2026-11-07T13:57:04.372405+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-07T13:00:21.202653+00:00",
+    "generated_at": "2026-11-07T13:57:04.372405+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-07T13:00:21.202653+00:00",
+        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-07T13:00:21.202653+00:00",
+        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,7 +171,7 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-07T13:00:21.202653+00:00",
+        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
