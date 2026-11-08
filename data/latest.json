@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T13:57:04.372405+00:00",
+  "updated_at": "2026-11-08T13:00:33.191620+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-07T13:57:04.372405+00:00",
+    "generated_at": "2026-11-08T13:00:33.191620+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
+        "retrieved_at": "2026-11-08T13:00:33.191620+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
+        "retrieved_at": "2026-11-08T13:00:33.191620+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,12 +171,32 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-07T13:57:04.372405+00:00",
+        "retrieved_at": "2026-11-08T13:00:33.191620+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "South Korea's Steel Industry Presses for Tariffs as Chinese HGI Imports Quadruple; Government Wary of Anti-Dumping Duties - BigGo Finance",
+      "date": "2026-11-07",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1MVVJsMVdGVFFVa2tQcHlYdGhXNFFzV1Zkb3pka2t6QURBMUZVYjYteUpsVXJzVjZaNWJvWUpUZUVOVDk1SFZJdzVlZzhfdC1fWURPX24wcmhKUFcxa080UGtodnBJVnhvQTUyanRHbnBpV0NDU1E?oc=5",
+      "publisher": "BigGo Finance",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Chinese steel floods Korea as government resists HGI anti-dumping tariffs - Chosunbiz",
+      "date": "2026-11-07",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbU5Mam5ZalRPR1o5NEI5QW54LUI2UENyM25zMlMwM0FsYVZCdld2azhtaFBTMjhNSWs3R0RqNXBuSmoyQ0lJWS1TMUE4RFI3LW5JdVdYQ0JCWko3U3ppU0YxQ2xhaEl5ZDl3RXVLMEV3bWlPSDBUR2FjeENRYmw2Zk530gGWAUFVX3lxTE1tUWV6cld4N2FmclFlb0w0blh1bmJzS2pjdm16VEtRbW1BNjUzTWplZFZhU2M2cmxSanpyS2lwN3pQaWtoMUR1ZDJMY0h5em9fYnhCWG00aFM5UEhSRndlb2xkQy1TNEZud0hlSVMtSTRCa1FvX2drbmNnbzBBRkNyRWxvWnpvZzB5Q2xHRFdoOUR2YjExZw?oc=5",
+      "publisher": "Chosunbiz",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
     {
       "title": "AD/CVD News: Aluminum Foil, Olives, Steel Plate, Tubular Goods, Wind Towers - Sandler, Travis & Rosenberg, P.A.",
       "date": "2026-11-06",
@@ -216,26 +236,6 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
-    },
-    {
-      "title": "AD/CVD News: Aluminum Foil, Steel Products, Strontium Chromate, Wind Towers - Sandler, Travis & Rosenberg, P.A.",
-      "date": "2026-11-02",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTG4xNGt3WldvQWpDckFubGp2X0hQZUU0QzlzamVVTnpjeGNxNHJ1ZVVnNmI4R1ZVZno3OVlxWm5BWTExbmZnVDk5Wm9tc3lQdFlIM0N5WHBiVkVINXJQN2U0c2h4Qy1faFBuUXpWbmV4Skg4UFhJa0RWN0JTcHBrYUYxdFdNckdlWVVlVUV2M2E1X213ejBSSVBqT0ZZSXotVnd3LWJwdmVObF8wejdPSUVqTTRGZExfM0lkMVVHX2tDbGw2WWd2OW1lQm1fR1pYN3dpM0g0OUVkXzg?oc=5",
-      "publisher": "Sandler, Travis & Rosenberg, P.A.",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
-    {
-      "title": "EU backs duties on cold-rolled steel from five countries - Металлургпром",
-      "date": "2026-11-02",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN3A3NF96cF9NVXV1LUpKVUtES3dZTHdOVFczNXFoR0RUVkZyLWdxd2Z1ZnFZWG5FQktrb2xqQVNlOEpNTTVsNzlFcG1WOE9hNEo0VHpzVmZLbTFBQzhZYnBPWm5GMmNhVVFfc3llYjAwcV8wYTRoR2EzMG1BUXkxRjA4eFY5SnNNdjJTdm5VTkF2RlMzMDZtdFE1N0RmOUZRbC1fM0VVZGhxOWNi0gG-AUFVX3lxTE5UM0dEdWphcjBmN1dDMndaWmoxdDZSZDljX1pfMFptSUlxZkxOejJXeUhGblBSSHlBYy1IeGlxRENlNjFiaDZPcTBMWF9hbTRGYlZsUEhuQi01WjVFYlNIQ0FyTXZxUTB0STN2RlA4dXdmR3JHdGdfWkxSSjFWWmZWWFVLMng3S3FDck5rY2xlcTVWOXpKZ3hwa0MyV2FuNG1DZ3JuSXk4bUlkNVpQQzFsYXZ6OFR6WlFYb0ZJR0E?oc=5",
-      "publisher": "Металлургпром",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
     },
     {
       "title": "Steel Coils Market Forecast to 2035: Construction and Infrastructure Demand Drive Growth - News and Statistics - IndexBox",

@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-07T13:57:05.324824+00:00",
+  "updated_at": "2026-11-08T13:00:35.040911+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Ponca City",
+      "market": "Springfield",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Topeka",
+      "market": "Lawton",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Shreveport web search",
+      "market": "Oklahoma City web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Amarillo web search",
+      "market": "Springfield web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Tulsa web search",
+      "market": "Baton Rouge web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Little Rock web search",
+      "market": "Dallas-Fort Worth web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Shreveport geographic directory",
+      "market": "Oklahoma City geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Springfield geographic directory",
+      "market": "Houston geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita geographic directory",
+      "market": "Little Rock geographic directory",
       "status": "ok",
       "new": 0
     }
