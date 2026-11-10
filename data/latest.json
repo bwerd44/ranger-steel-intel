@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-09T13:25:10.634739+00:00",
+  "updated_at": "2026-11-10T13:14:23.770435+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-09T13:25:10.634739+00:00",
+    "generated_at": "2026-11-10T13:14:23.770435+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -32,7 +32,7 @@
         "paragraphs": [
           {
             "kind": "reported",
-            "text": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability.",
+            "text": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability.",
             "source_ids": [
               "aisi-production"
             ]
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-09T13:25:10.634739+00:00",
+        "retrieved_at": "2026-11-10T13:14:23.770435+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-09T13:25:10.634739+00:00",
+        "retrieved_at": "2026-11-10T13:14:23.770435+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -164,19 +164,69 @@
         "publisher": "AISI",
         "url": "https://www.steel.org/industry-data/",
         "title": "Weekly raw steel production",
-        "period": "Week ending 2026-10-31",
-        "evidence_date": "2026-10-31",
+        "period": "Week ending 2026-11-07",
+        "evidence_date": "2026-11-07",
         "date_kind": "reporting period end",
         "max_age_days": 14,
         "observations": {
-          "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
+          "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-09T13:25:10.634739+00:00",
+        "retrieved_at": "2026-11-10T13:14:23.770435+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "Weathering Steel Market To 2035: Bridge and Cladding Demand Supports Growth - News and Statistics - IndexBox",
+      "date": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZDE2WVd0bEpZYndWNTZ5Y05pTkhsTG51WEFQeU1CUHo0dDRNRmpWVGlmOGR1WkgtTE9GS2dCZmVLMHV4bHh5dHZ0WUNFNXVnR1R1T0FGeWUtX291Rk8zVU5MM1FhOFF4TkFiRGV3dUZiZEFTQ1FwSUtUdFF4Z2w5czQ4TU9OSWFIdVhGYkdIOGVsUmVzanA0U2REdFdveHdUdEFrVW9oTC02eFR2eTBiQUwtRkc1WHVBX3BuYy1QTHFhNGtJZW9mMXBWOTdyU0E?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Steel Long Products Market Forecast 2026-2035: Construction Demand Supports Growth - News and Statistics - IndexBox",
+      "date": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZG56aUNwUi1HUW1xUlhHb0ZvdkhMOEViNzUybGZUdENvSWV3OHNEVnNzOWVveGpVX1lBSUhUTF9KcEpkcDVYdFNiRFp5ZUdFYnhGbDM4QXlHXzB5YUg2SHpCclNnY2RKakFNcmpUbkhDN3RfUGdaRkxRV29VNWxxRWRmR3Z3MDN0aWZPeU01M0xJSTdmeVR6QVVwY3ZraDhVUGxDd0RURGlrQ3dLQ2VLbzcydm9nOEx4OHJfSFVZSEhXbEE?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Structural Steel Beams Market To 2035: Infrastructure Demand Supports Growth - News and Statistics - IndexBox",
+      "date": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZFhLaGRTcVVmU0l3TFFPMFd4TW9tdWdvM3hOVEN0VXBYblRBUU1fSTVYR1VKd041azZ4YWRIb2l2b2Z4eXRkdE40QVl5MUhzOXh1aXViWERTVTEzT0NueDNZaV9MVWlMZmdSWFlGc3Zra1ZudWRBM3BDX2hVQ1lRaW0tdV9FZTlSV2xQNmlOU2dvZE90LXJtRjgzazJkU1VlV1dBVlJZV1pUVGVVUjNoenN5bWgzX3pfdGtncm5XVUUxc1BzcHdDd2dSRVJHWHRI?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Weathering Steel Plates Market To 2035: Bridge Construction Demand Drives Growth - News and Statistics - IndexBox",
+      "date": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa3Q2WFNDTjJOQlRFNmxsVEM1QXZxLTFJU2xOSzVnUEVhQVZJV1FoNjdETEJ0OFVvNVNsNHZzbFMtNXk3TnV5ZFRLU3RaOUJXQVp3eFNxa2N2TC1WNVhJMnRnLVp2S3FkSmtUcFVOV0dfNGlYeUxPSktxcGFpY2ctNGZFVGl1SV9sNXUtRGNWTFhJSkZLYjRoZkpGX28xdUJRbC1FYWhJd3B0Q0pCMHBVMG9RbHhERVEyVnc?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "AD/CVD News: Chromium Trioxide, Solar Cells, Steel Pipe, Tubular Goods, Wood Moldings - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNaU43MERuOGRtTS1kTml0bUdlX0NjUVhyQWF4aUxkdmozREl5VXFXRW4xWTE4bnptc3otWk4wWlNCT2lnZnRCeEV5SXNEeV9XUjFUbzlsY201M1FIMDZDTy1BZWdFdGlmS2UwdWY3NzByR1JJd3BCbk02Mk5FXzAxYUcyeGpkdW80dWJvT3Nwd0QwWU9wUTF1S0tCYzNVM1VkczVxamM5YnJwQy1oY1p5YzMwVnROci1lcGwwZzFGYzlxTDB0V2V5VEJ2Tmp6TDNwTF9RaDVzT1FlWnBpbG5yeWE1bVNDeW8?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
     {
       "title": "South Korea's Steel Industry Presses for Tariffs as Chinese HGI Imports Quadruple; Government Wary of Anti-Dumping Duties - BigGo Finance",
       "date": "2026-11-07",
@@ -276,36 +326,6 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "Import News"
-    },
-    {
-      "title": "American steel — not overseas dumping — dominates Canadian imports, trade data shows - CityNews Kitchener",
-      "date": "2026-10-27",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmdFZ0laZlNTaUFEUWlCTE4wUEVZVVlpaU9GWkZCTURUUFRWUFpVMEJ4bkdVRnRpNVBDeFdfX2ZFMlBiZm1CY3ZGNVd5NTlqV1RZcUxQQmpWOThsd0p5U2I4MThlZTJkeU0zU3dFZlVOTEZqVWpzZ21CZDZnd014OWNyeU1jc2FmT3BOMjB2R09tUUFHeWkxaUV1RU9ra09GWXpZNmUzVlNPb1RsOFkxWmp2VWlwZmYzMTgtWHln?oc=5",
-      "publisher": "CityNews Kitchener",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
-      "title": "Japan to Impose Anti-Dumping Duties of Up to 42.1% on Chinese, Taiwanese Stainless Steel Plate for 5 Years from Oct. 31 - BigGo Finance",
-      "date": "2026-10-27",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBseVhmRkhxQm8zd1FENnNOYTdMVVhkTkhUSGVkc2xtaHU5eW5oaHBUSFZPbFhhMUJFYWotdnlKeHVScm1kRVEzaERud1ZoazhidXFWYjJwNWZpUDAwbnhQR1Q2bVpTRTFobmprUjRNNWtJUHNDQ3c?oc=5",
-      "publisher": "BigGo Finance",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
-      "title": "Can Steel Dynamics (NASDAQ:STLD) Benefit From Rising American Metal Demand? - Kalkine Media",
-      "date": "2026-10-26",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaElOTzJ6NWFraERGS1RxRE1LbGdENUgzX19Ybm8zXy1naFhwUHBhVVdWcHE5SlJyOERzS1B3U2ljSnhlYXIwaEc3ZWhtdlNpbkp5Q0g5N3BPR0RGc2pMem9QYzQ1VUFkNlBqSGVuOEJLN3ZmYkE2RzlQVG9nOEhJbWRhcUhHb3pWc0JIYVZxdUR4Vk5Ra3lmeDZzYlp4eGFDMGRpLUtIUjRUSEZrR2RQN0tVLUhHYnRON3JodWNsZHY?oc=5",
-      "publisher": "Kalkine Media",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
     }
   ],
   "collection": {
@@ -351,7 +371,7 @@
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 5
+        "items": 7
       }
     ]
   }

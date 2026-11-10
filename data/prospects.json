@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T13:25:12.905692+00:00",
+  "updated_at": "2026-11-10T13:14:25.553577+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Fort Smith",
+      "market": "Joplin",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Tulsa",
+      "market": "Oklahoma City",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Lafayette web search",
+      "market": "Amarillo web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Houston web search",
+      "market": "Tulsa web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita web search",
+      "market": "Little Rock web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Kansas City web search",
+      "market": "Shreveport web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Lafayette geographic directory",
+      "market": "Amarillo geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Tulsa geographic directory",
+      "market": "Baton Rouge geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Dallas-Fort Worth geographic directory",
+      "market": "Kansas City geographic directory",
       "status": "ok",
       "new": 0
     }
