@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T15:22:53.853317+00:00",
+  "updated_at": "2026-11-12T15:30:38.867157+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
@@ -35,8 +35,8 @@
     },
     {
       "market": "Houston geographic directory",
-      "status": "unavailable",
-      "error": "TimeoutError"
+      "status": "ok",
+      "new": 0
     },
     {
       "market": "Little Rock geographic directory",
