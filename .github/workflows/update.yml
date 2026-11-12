@@ -77,9 +77,10 @@ jobs:
           p=Path('data/forecasts.json')
           d=json.loads(p.read_text())
           # Prior versions are removed from the published file as requested.
-          d['editions']=[]
-          d['latest_id']=None
-          p.write_text(json.dumps(d,indent=2)+'\\n')
+          if not any(e.get('model_version','').startswith('plate-direction-3.') for e in d['editions']):
+            d['editions']=[]
+            d['latest_id']=None
+            p.write_text(json.dumps(d,indent=2)+'\\n')
           PY
           python forecast.py
       - name: Update Market Pulse and preserve weekly observations
