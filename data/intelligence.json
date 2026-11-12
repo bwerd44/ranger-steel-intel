@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T15:18:32.354508+00:00",
+  "updated_at": "2026-11-12T15:24:18.126732+00:00",
   "pulse": [
     {
       "id": "pricing",
@@ -29,7 +29,7 @@
             "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
             "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
           },
-          "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
+          "retrieved_at": "2026-11-12T15:22:52.400176+00:00",
           "access": "Retrieved from primary source this collection"
         }
       ],
@@ -152,7 +152,7 @@
             "observations": {
               "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
             },
-            "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
+            "retrieved_at": "2026-11-12T15:22:52.400176+00:00",
             "access": "Retrieved from primary source this collection"
           }
         ]
@@ -171,7 +171,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:18:32.354508+00:00",
+      "checked_at": "2026-11-12T15:24:18.126732+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -187,7 +187,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:18:32.354508+00:00",
+      "checked_at": "2026-11-12T15:24:18.126732+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -210,7 +210,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
+            "retrieved_at": "2026-11-12T15:22:52.400176+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -230,7 +230,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:18:32.354508+00:00",
+      "checked_at": "2026-11-12T15:24:18.126732+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -264,7 +264,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:18:32.354508+00:00",
+      "checked_at": "2026-11-12T15:24:18.126732+00:00",
       "source_access": "retrieved",
       "developments": [
         {
