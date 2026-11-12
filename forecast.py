@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from collect import fetch, plain, date_of
 
 ROOT = Path(__file__).resolve().parent
-VERSION = 'plate-direction-1.1-historical-context'
+VERSION = 'plate-direction-2.0-plate-first'
 FED = 'https://www.federalreserve.gov/releases/g17/current/'
 EIA = 'https://www.eia.gov/outlooks/steo/report/'
 GRADES = ['A36', 'A572 Grade 50', 'A516 Grade 70']
@@ -132,23 +132,55 @@ def make_edition(sources, checks, now, edition_id, historical=None):
     historical = historical or {'status':'unavailable'}
     score_signals = signals(sources)
     direct = any(s['id'] == 'ssab-market' and 'pricing' in s.get('observations', {}) for s in sources)
-    raw_score = sum(s['weight'] for s in score_signals)
-    tested = historical.get('status') == 'evaluated' and historical.get('holdout_quarters',0) >= 12
+    # Plate-first directional factors. Weights are judgmental, not fitted.
+    # Missing plate-specific evidence remains missing; never interpreted as neutral.
+    observed = {s['id']: s for s in sources}
+    plate = observed.get('ssab-market', {})
+    obs = plate.get('observations', {})
+    pricing = obs.get('pricing', '').lower()
+    inventory = obs.get('domestic', '').lower()
+    factor_weights = {'domestic_plate_supply': .35, 'plate_price_momentum': .25,
+                      'plate_imports_trade': .20, 'end_user_plate_demand': .15,
+                      'historical_macro': .05}
+    factor_inputs = {
+        'domestic_plate_supply': {'value': 1 if 'somewhat low' in inventory else None,
+                                  'evidence': 'SSAB low distributor inventory assessment; no confirmed mill allocation or lead time'},
+        'plate_price_momentum': {'value': 1 if 'prices increased' in pricing else None,
+                                 'evidence': 'SSAB North American plate pricing commentary'},
+        'plate_imports_trade': {'value': None, 'evidence': 'No verified current discrete plate import flow or tariff change scored'},
+        'end_user_plate_demand': {'value': 1 if 'strong' in obs.get('demand', '').lower() else None,
+                                  'evidence': 'SSAB plate demand commentary; not order-level evidence'},
+        'historical_macro': {'value': None, 'evidence': 'Historical proxy withheld unless it beats the holdout baseline'}
+    }
+    tested = historical.get('status') == 'evaluated' and historical.get('holdout_quarters', 0) >= 12
     beats_baseline = (historical.get('directional_hit_rate') or 0) > (historical.get('majority_baseline_rate') or 1) + .05
-    historical_weight = .25 * (historical.get('signal_code') or 0) if tested and beats_baseline and direct else 0
-    raw_score += historical_weight
+    if tested and beats_baseline:
+        factor_inputs['historical_macro']['value'] = historical.get('signal_code')
+    historical_weight = 0
+    known_weight = sum(factor_weights[k] for k, v in factor_inputs.items() if v['value'] is not None)
+    # The score is on [-2,+2]. Do not rescale away missing evidence.
+    raw_score = round(2 * sum(factor_weights[k] * v['value'] for k, v in factor_inputs.items() if v['value'] is not None), 4)
+    direct = factor_inputs['plate_price_momentum']['value'] is not None
     quarter_rows = []
-    seasonal = {1: .15, 2: .25, 3: -.1, 4: -.5}
+    # Persistence is conditional on the absence of verified recovery, NOT an assumed mill restart.
+    # Longer horizons get weaker conviction, without mechanically forcing a neutral price call.
     for distance, (year, q) in enumerate(horizon(local.date())):
-        score = round(raw_score * .65 ** distance + seasonal[q], 4) if direct else None
-        confidence = 'Moderate' if direct and distance == 0 and any(s['id'] == 'fed-manufacturing' for s in sources) else 'Low'
+        score = round(raw_score, 4) if direct else None
         label = f'Q{q} {year}'
         price = direction(score) if score is not None else 'Insufficient evidence'
-        availability = ('Tightness risk' if distance < 2 else 'Gradual normalization assumed') if direct else 'Uncertain'
+        availability = ('Tightness persists in base case; recovery unverified'
+                        if factor_inputs['domestic_plate_supply']['value'] == 1 else 'Supply condition unverified')
+        coverage = round(known_weight, 2)
+        confidence = ('Moderate' if distance < 2 and coverage >= .6 else 'Low')
         current = distance == 0
-        analysis = (f'The base case for {label} is {price.lower()}, with {availability.lower()}. ' if direct else f'No supported directional base case is available for {label}; current plate-specific evidence is missing. ')
-        analysis += ('The remaining part of the current quarter carries the strongest link to the dated producer inventory and pricing evidence. ' if current else 'The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. ')
-        analysis += {1: 'Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.', 2: 'Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.', 3: 'Summer pauses and improving supply could moderate pressure; energy and power-equipment orders are the principal upside assumptions.', 4: 'Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.'}[q]
+        analysis = (f'The base case for {label} is {price.lower()}, with {availability.lower()}. '
+                    if direct else f'No supported directional base case is available for {label}; current plate-specific pricing evidence is missing. ')
+        analysis += ('Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. '
+                     'Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. ')
+        analysis += {1: 'Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.',
+                     2: 'Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.',
+                     3: 'Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.',
+                     4: 'Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.'}[q]
         spread = 1 + distance * .2
         scenarios = []
         for name, offset, text, avail in [
@@ -159,20 +191,21 @@ def make_edition(sources, checks, now, edition_id, historical=None):
             scenario_score = None if score is None else round(score + offset, 4)
             scenarios.append({'name': name, 'direction': direction(scenario_score) if direct else 'Conditional only', 'availability': avail, 'analysis': text, 'chart_value': ordinal(scenario_score) if direct else None})
         source_ids = [s['id'] for s in sources]
-        quarter_rows.append({'id': f'{year}-Q{q}', 'label': label, 'year': year, 'quarter': q, 'price_direction': price, 'availability': availability, 'analysis': analysis, 'confidence': confidence, 'confidence_reason': 'Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.', 'base_score': score, 'seasonal_adjustment': seasonal[q], 'decay': round(.65 ** distance, 5), 'scenarios': scenarios, 'drivers': drivers(sources, q, distance), 'indicators': [
+        quarter_rows.append({'id': f'{year}-Q{q}', 'label': label, 'year': year, 'quarter': q, 'price_direction': price, 'availability': availability, 'analysis': analysis, 'confidence': confidence, 'confidence_reason': 'Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.', 'base_score': score, 'seasonal_adjustment': 0, 'decay': 1.0, 'evidence_coverage': coverage, 'scenarios': scenarios, 'drivers': drivers(sources, q, distance), 'indicators': [
             'Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.',
             'Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.',
             'Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.',
             'Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.',
             'Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders.'
         ], 'source_ids': source_ids})
-    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'historical_validation': historical, 'historical_weight': historical_weight, 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
+    edition = {'id': edition_id, 'month': local.strftime('%Y-%m'), 'generated_at': now.isoformat(), 'as_of': local.date().isoformat(), 'model_version': VERSION, 'historical_validation': historical, 'historical_weight': historical_weight, 'factor_weights': factor_weights, 'factor_inputs': factor_inputs, 'evidence_coverage': round(known_weight,2), 'grades': GRADES, 'forecast_type': 'Directional scenarios; no dollar price targets', 'baseline': 'Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.', 'sources': sources, 'source_checks': checks, 'signals': score_signals, 'input_score': raw_score if direct else None, 'quarters': quarter_rows,
         'methodology': [
             'This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.',
-            'Only unexpired, dated primary evidence is eligible. A recognized SSAB plate-price increase contributes +2 directional points; its low distributor inventory assessment contributes +1. Broad manufacturing output adds at most +0.25 or -0.25. Missing inputs contribute nothing; missing plate-price evidence suppresses the directional base case.',
-            'For each successive quarter, the initial signal is multiplied by 0.65 to the power of the quarter offset. Judgmental seasonal adjustments are Q1 +0.15, Q2 +0.25, Q3 -0.10 and Q4 -0.50. These are scenario assumptions, not estimated price changes or an empirically calibrated seasonal pattern.',
-            'Scores at or above 1.5 mean Firming; 0.5 to below 1.5 Mild upward bias; above -0.5 to below 0.5 Broadly stable; above -1.5 to -0.5 Mild downward bias; at or below -1.5 Softening. The chart maps these labels to ordinal positions -2 to +2. It is not dollars, percentage change, a futures curve or a calibrated probability range.',
-            'Bullish and bearish cases shift the base score by plus/minus (1 + 0.2 times quarter offset). These are conditional stress scenarios, not probability-weighted forecasts. Availability normalization is a disclosed assumption, not a dated mill restart forecast.',
+            'Plate-first weighted factor model: domestic supply 35%, plate pricing 25%, plate-specific imports and trade 20%, end-user plate demand 15%, and validated historical/macro context 5%. These weights are judgmental and not statistically optimized.',
+            'Missing evidence is unscored rather than assumed neutral. Each factor is in [-1,+1] and the sum is scaled to a directional score in [-2,+2]; evidence coverage is reported separately.',
+            'Supply tightness is maintained as a conditional base case until verified plate-specific evidence supports recovery. No automatic 35% per-quarter mean reversion or speculative seasonal score is applied. Later-quarter confidence declines even if directional scores persist.',
+            'Historical momentum is eligible only if at least 12 nonoverlapping test quarters outperform a naive majority-class baseline by over five percentage points. Its contribution cannot exceed 5% of factor weights.',
+            'Bull and bear cases shift scores as illustrative stresses, not measured probabilities. Neither direction nor confidence is a statistically calibrated forecast.',
             'Trade policy, imports, all-steel output, energy, infrastructure, defense and data centers are disclosed scenario channels, not automatic numerical plate premiums. Raw-steel data cannot confirm plate availability. HRC futures and coil-price indexes are excluded.',
             'The same directional framework covers A36, A572 Grade 50 and A516 Grade 70. Grade, thickness, width, origin, heat treatment and testing requirements can create different availability. A516 Grade 70 pressure-vessel or normalized specifications can be more restrictive; no grade spread or specification premium is estimated.',
             'Each calendar month produces one immutable edition. Explicit revisions append a new edition and reason; prior snapshots remain unchanged. Forecasts are regenerated only with the inputs available at that edition, never backfilled to look historically accurate.',
