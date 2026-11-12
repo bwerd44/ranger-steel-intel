@@ -1,19 +1,26 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T18:12:54.586785+00:00",
+  "updated_at": "2026-11-12T18:15:01.048663+00:00",
   "pulse": [
     {
       "id": "pricing",
       "label": "Plate Pricing",
-      "condition": "Insufficient Data",
-      "color": "gray",
-      "arrow": "—",
-      "confidence": "Not rated",
-      "evidence_date": null,
-      "last_evidence_date": "2026-09-30",
-      "basis": "No eligible dated discrete plate price-direction evidence.",
-      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
-      "sources": [],
+      "condition": "Rising",
+      "color": "red",
+      "arrow": "↑",
+      "confidence": "Medium",
+      "evidence_date": "2026-11-10",
+      "basis": "Steel Market Update reported that sheet and plate prices continued to move higher amid limited availability and extended lead times. The direction refers specifically to reported plate price movement, not the hot-rolled coil price cited elsewhere in the article.",
+      "period": "November 10, 2026",
+      "limitation": "Qualitative published plate-price trend; no verified A36/A572-50/A516-70 transaction price or independent dollar-per-cwt benchmark. Expires after 21 days.",
+      "sources": [
+        {
+          "publisher": "Steel Market Update",
+          "title": "SMU Price Ranges rise on tight supply, no signs of a year-end slowdown",
+          "url": "https://www.steelmarketupdate.com/2026/11/10/smu-price-ranges-rise-on-no-signs-of-a-year-end-slowdown/",
+          "evidence_date": "2026-11-10"
+        }
+      ],
       "previous": {
         "condition": "Rising",
         "evidence_date": "2026-09-30",
@@ -116,17 +123,9 @@
   ],
   "weekly": {
     "status": "compared",
-    "summary": "2 evidence-supported changes versus the saved weekly baseline.",
+    "summary": "4 evidence-supported changes versus the saved weekly baseline.",
     "previous_date": "2026-11-05",
     "changes": [
-      {
-        "type": "coverage_change",
-        "label": "Plate Pricing",
-        "previous": "Rising",
-        "current": "Insufficient Data",
-        "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
-        "sources": []
-      },
       {
         "type": "coverage_change",
         "label": "Import Availability",
@@ -169,8 +168,38 @@
             "observations": {
               "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
             },
-            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+            "retrieved_at": "2026-11-12T18:13:45.771648+00:00",
             "access": "Retrieved from primary source this collection"
+          }
+        ]
+      },
+      {
+        "type": "reported_context",
+        "label": "Domestic plate context",
+        "previous": "No equivalent saved report",
+        "current": "SMU described limited plate availability and long lead times on November 10, alongside rising prices. This confirms a tight level, not necessarily additional tightening since the previous report.",
+        "explanation": "Do not score a tightening direction from a shortage level alone.",
+        "sources": [
+          {
+            "publisher": "Steel Market Update",
+            "title": "SMU Price Ranges rise on tight supply, no signs of a year-end slowdown",
+            "url": "https://www.steelmarketupdate.com/2026/11/10/smu-price-ranges-rise-on-no-signs-of-a-year-end-slowdown/",
+            "evidence_date": "2026-11-10"
+          }
+        ]
+      },
+      {
+        "type": "reported_context",
+        "label": "Import context",
+        "previous": "No equivalent saved report",
+        "current": "AISI reported October 2026 cut-length plate import permits 34% above September final imports. This compares permit applications with prior-month actual imports; it does not prove actual October arrivals, current availability, or a sustained trend.",
+        "explanation": "Do not score Import Availability from this single mixed-basis comparison. Confirm subsequent cut-length plate arrivals and consistent month-to-month series.",
+        "sources": [
+          {
+            "publisher": "American Iron and Steel Institute",
+            "title": "AISI Releases October SIMA Imports Data",
+            "url": "https://www.steel.org/2026/11/aisi-releases-october-sima-imports-data-7/",
+            "evidence_date": "2026-11-06"
           }
         ]
       }
@@ -188,8 +217,8 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T18:12:54.586785+00:00",
-      "source_access": "retrieved",
+      "checked_at": "2026-11-12T18:15:01.048663+00:00",
+      "source_access": "TimeoutError",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
     },
@@ -204,7 +233,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T18:12:54.586785+00:00",
+      "checked_at": "2026-11-12T18:15:01.048663+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -227,7 +256,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+            "retrieved_at": "2026-11-12T18:13:45.771648+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -247,7 +276,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T18:12:54.586785+00:00",
+      "checked_at": "2026-11-12T18:15:01.048663+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -281,7 +310,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T18:12:54.586785+00:00",
+      "checked_at": "2026-11-12T18:15:01.048663+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -310,6 +339,21 @@
     "condition": "Direction not independently verified",
     "product": "Cut-length carbon steel plate (not aggregate steel imports)",
     "developments": [
+      {
+        "event_id": "cut-length-plate-october-2026-permits",
+        "verified": true,
+        "evidence_date": "2026-11-06",
+        "max_age_days": 75,
+        "category": "Import context",
+        "summary": "AISI reported October 2026 cut-length plate import permits 34% above September final imports. This compares permit applications with prior-month actual imports; it does not prove actual October arrivals, current availability, or a sustained trend.",
+        "limitation": "Do not score Import Availability from this single mixed-basis comparison. Confirm subsequent cut-length plate arrivals and consistent month-to-month series.",
+        "source": {
+          "publisher": "American Iron and Steel Institute",
+          "title": "AISI Releases October SIMA Imports Data",
+          "url": "https://www.steel.org/2026/11/aisi-releases-october-sima-imports-data-7/",
+          "evidence_date": "2026-11-06"
+        }
+      },
       {
         "event_id": "cut-length-plate-august-2026-permits",
         "verified": true,
@@ -869,9 +913,39 @@
           "evidence_date": "2026-09-22"
         }
       ]
+    },
+    {
+      "as_of": "2026-11-12",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-11-10"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "evidence_date": "2026-10-27"
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Lengthening",
+          "evidence_date": "2026-10-29"
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Strengthening",
+          "evidence_date": "2026-09-22"
+        }
+      ]
     }
   ],
-  "history_count": 14,
+  "history_count": 15,
   "history_started": "2026-11-04",
   "rules": [
     "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",
