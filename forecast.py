@@ -193,7 +193,7 @@ def make_edition(sources, checks, now, edition_id, historical=None):
             ('Bearish', -spread, 'A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.', 'More available than base case'),
         ]:
             scenario_score = None if score is None else round(score + offset, 4)
-            scenarios.append({'name': name, 'direction': direction(scenario_score) if direct else 'Conditional only', 'availability': avail, 'analysis': text, 'chart_value': ordinal(scenario_score) if direct else None})
+            scenarios.append({'name': name, 'direction': direction(scenario_score) if scenario_score is not None else 'Conditional only', 'availability': avail, 'analysis': text, 'chart_value': ordinal(scenario_score) if scenario_score is not None else None})
         source_ids = [s['id'] for s in sources]
         quarter_rows.append({'id': f'{year}-Q{q}', 'label': label, 'year': year, 'quarter': q, 'price_direction': price, 'availability': availability, 'analysis': analysis, 'confidence': confidence, 'confidence_reason': 'Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.', 'base_score': score, 'seasonal_adjustment': 0, 'decay': horizon_strength[min(distance,4)], 'evidence_coverage': coverage, 'scenarios': scenarios, 'drivers': drivers(sources, q, distance), 'indicators': [
             'Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.',
