@@ -2,6 +2,25 @@
   "description": "Reviewed dated discrete-plate directional evidence and mill developments. Survey-based readings are identified with limitations; other metrics remain unverified until comparable plate-specific evidence is available.",
   "observations": [
     {
+      "metric": "pricing",
+      "condition": "Rising",
+      "scope": "discrete_plate",
+      "verified": true,
+      "evidence_date": "2026-11-10",
+      "max_age_days": 21,
+      "confidence": "Medium",
+      "period": "November 10, 2026",
+      "basis": "Steel Market Update reported that sheet and plate prices continued to move higher amid limited availability and extended lead times. The direction refers specifically to reported plate price movement, not the hot-rolled coil price cited elsewhere in the article.",
+      "limitation": "Qualitative published plate-price trend; no verified A36/A572-50/A516-70 transaction price or independent dollar-per-cwt benchmark. Expires after 21 days.",
+      "verification": "Dated plate-specific price direction explicitly stated in published industry reporting.",
+      "source": {
+        "publisher": "Steel Market Update",
+        "title": "SMU Price Ranges rise on tight supply, no signs of a year-end slowdown",
+        "url": "https://www.steelmarketupdate.com/2026/11/10/smu-price-ranges-rise-on-no-signs-of-a-year-end-slowdown/",
+        "evidence_date": "2026-11-10"
+      }
+    },
+    {
       "metric": "lead_times",
       "condition": "Lengthening",
       "scope": "discrete_plate",
@@ -61,6 +80,21 @@
   ],
   "quarterly_outcomes": [],
   "market_developments": [
+    {
+      "event_id": "cut-length-plate-october-2026-permits",
+      "verified": true,
+      "evidence_date": "2026-11-06",
+      "max_age_days": 75,
+      "category": "Import context",
+      "summary": "AISI reported October 2026 cut-length plate import permits 34% above September final imports. This compares permit applications with prior-month actual imports; it does not prove actual October arrivals, current availability, or a sustained trend.",
+      "limitation": "Do not score Import Availability from this single mixed-basis comparison. Confirm subsequent cut-length plate arrivals and consistent month-to-month series.",
+      "source": {
+        "publisher": "American Iron and Steel Institute",
+        "title": "AISI Releases October SIMA Imports Data",
+        "url": "https://www.steel.org/2026/11/aisi-releases-october-sima-imports-data-7/",
+        "evidence_date": "2026-11-06"
+      }
+    },
     {
       "event_id": "cut-length-plate-august-2026-permits",
       "verified": true,
