@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T13:22:05.442054+00:00",
+  "updated_at": "2026-11-12T01:03:10.316813+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Fayetteville",
+      "market": "Topeka",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Houston",
+      "market": "Dallas-Fort Worth",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Springfield web search",
+      "market": "Houston web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Baton Rouge web search",
+      "market": "Wichita web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Dallas-Fort Worth web search",
+      "market": "Kansas City web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Oklahoma City web search",
+      "market": "Lafayette web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Springfield geographic directory",
+      "market": "Houston geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita geographic directory",
+      "market": "Little Rock geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Shreveport geographic directory",
+      "market": "Oklahoma City geographic directory",
       "status": "ok",
       "new": 0
     }
