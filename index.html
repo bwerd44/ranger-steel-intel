@@ -40,7 +40,73 @@ th{color:#c0cedc;border-color:#435267}td{border-color:#344459;color:#dbe5ef}
 .hash,.forecast-source p,.driver small{color:#a8b8c9}
 button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible{outline-color:#ffa668}
 .forecast-section-head{margin:22px 0 12px;border-left:3px solid #ed8945;padding:3px 0 3px 15px}.forecast-section-head h3{margin:4px 0 5px;font-size:22px}.forecast-section-head p{margin:0}.forecast-section-head .eyebrow{letter-spacing:1px}#forecast .forecast-section-head:first-of-type{margin-top:16px}
-</style></head><body><div class="shell"><header><div class="brand">RANGER STEEL<strong>MARKET INTEL</strong></div><div class="date" id="date"></div></header><h1>Carbon steel plate intelligence</h1><div class="sub">Market conditions, developments and transparent quarterly outlooks.</div><div class="tabs"><button class="active" data-tab="brief">Morning Market Briefing</button><button data-tab="news">Latest News</button><button data-tab="forecast">Quarterly Forecast</button></div><main id="brief"><section class="news-front" aria-label="Top steel industry headlines"><div class="news-front-heading"><div><div class="eyebrow">Steel industry · latest coverage</div><h2>Top Stories</h2></div><a href="#" id="view-all-news">All news →</a></div><div class="news-front-layout"><div class="headline-hero" id="headline-hero" aria-live="off"><p>Loading latest headlines…</p></div><div class="headline-side" id="headline-side"></div></div><p class="headline-note">Headlines link to their publishers. Images appear only when a verified article image is supplied; no unrelated stock photography.</p></section><div class="report-header"><div class="eyebrow">Daily carbon steel plate report</div><h2>Morning Market Briefing</h2><div class="edition" id="edition">Loading the latest report…</div></div><div id="reportnotice" role="status"></div><section class="panel pulse-panel" aria-labelledby="pulse-title"><div class="row"><h3 id="pulse-title">Market Pulse</h3><span class="edition" id="pulse-updated">Loading evidence…</span></div><p class="compact-note">Colors show market pressure, not good or bad conditions.</p><div class="pulse-grid" id="pulse-grid"><p>Loading market indicators.</p></div><details class="quiet-details"><summary>Evidence, previous readings &amp; rules</summary><div id="pulse-evidence"></div><div id="pulse-rules"></div></details></section><section class="panel weekly-panel"><h3>What Changed This Week?</h3><p id="weekly-summary">Loading the saved weekly comparison.</p><details class="quiet-details"><summary>Supporting details</summary><div id="weekly-details"></div></details></section><div class="panel report" id="marketreport" aria-live="polite"><p class="empty">Retrieving the current market briefing.</p></div><details class="panel support-panel"><summary>Domestic Mill Tracker</summary><p class="compact-note">Dated developments are separate from current operating status. An expected outage end is not a verified restart.</p><div id="mill-tracker">Loading mill information.</div></details></main><main id="news" class="hidden"><div class="section">Steel industry news</div><p class="sub">Browse recent reporting by category. Articles are grouped by subject and sorted newest first.</p><div id="allstories"><div class="empty">Waiting for the first news collection.</div></div></main><main id="forecast" class="hidden"><div class="report-header"><div class="eyebrow">U.S. carbon steel plate · monthly outlook</div><h2>Quarterly Forecast</h2><p class="sub">Directional scenarios for A36, A572 Grade 50 and A516 Grade 70.</p></div><div class="forecast-toolbar"><label for="forecast-edition">Forecast edition</label><select id="forecast-edition" aria-label="Forecast edition"><option>Loading…</option></select></div><div id="forecast-status" role="status" class="edition"></div><section class="forecast-section-head"><div class="eyebrow">01 / Quantitative &amp; rules-based</div><h3>Market Model</h3><p class="compact-note">Current news and dated market evidence, historical price context, and transparent rules. The historical signal is used only when its test beats the baseline.</p></section><div id="forecast-content" aria-live="polite"><p class="empty">Loading the monthly forecast.</p></div><details class="panel support-panel"><summary>Historical data &amp; backtest</summary><div id="historical-validation" class="compact-note">Historical data loading…</div></details><section class="forecast-section-head"><div class="eyebrow">02 / Plate-specific analyst perspective</div><h3>AI Market Opinion</h3><p class="compact-note">Independent qualitative judgment focused on discrete carbon steel plate. Updated through scheduled monthly research and publishing. Each assessment is a dated qualitative judgment.</p></section><section class="panel"><div class="row"><h3>Plate Outlook</h3><span class="edition">Dated assessment</span></div><div id="ai-assessment" class="compact-note">Loading assessment…</div><p class="compact-note"><strong>Monthly update:</strong> Scheduled for the 1st of each month. The date above identifies the latest published research; failed updates retain the prior dated assessment.</p></section></main><footer><span id="updated">Not updated yet</span><br>Free prototype • Public sources only • Not affiliated with any official Ranger Steel IT system</footer></div><script>
+
+/* Ranger Intel: mobile-first editorial news experience */
+:root{--orange:#f28c45;--line:#2d4560;color-scheme:dark}
+body{background:#061a2e;color:#e9f2fc}
+.shell{max-width:1280px}
+header{padding:15px 0 18px;border-bottom:1px solid #28415d}
+.brand{font-weight:900;letter-spacing:2px;color:#f28c45}
+.brand strong{color:#fff;font-weight:900;letter-spacing:.7px}
+.mobile-home-kicker{display:none}
+.news-front{margin:20px 0 32px}
+.news-front-heading h2{font-size:clamp(29px,4vw,43px);font-weight:900;text-transform:uppercase;letter-spacing:-1.2px}
+.news-front-heading a{color:#ffb47f}
+.headline-hero{border:1px solid #365474;background:radial-gradient(ellipse at 80% 20%,#1c5073 0%,transparent 50%),linear-gradient(140deg,#102d48,#09192c 70%,#653a29);border-radius:14px;min-height:400px}
+.headline-hero h3{font-size:clamp(27px,3.4vw,40px);font-weight:850;letter-spacing:-.8px;line-height:1.16}
+.hero-kicker{color:#ffb47f}
+.headline-side{background:#10263c;border:1px solid #294764}
+.headline-side-story a{color:#edf5ff}
+.headline-side-story small{color:#b6cbe0}
+.mobile-story-rail,.mobile-story-label,.mobile-bottom-nav{display:none}
+@media(max-width:750px){
+ html{scroll-padding-top:15px}
+ body{background:#06192d;color:#f4f7fc}
+ .shell{padding:0 15px calc(125px + env(safe-area-inset-bottom));max-width:100%}
+ header{min-height:95px;display:flex;justify-content:center;border:0;padding:23px 0 12px}
+ .brand{font-size:10px;text-align:center;letter-spacing:1.8px}
+ .brand strong{font-size:20px;letter-spacing:.6px;margin-top:3px}
+ header .date{display:none}
+ .shell>h1,.shell>.sub{display:none}
+ .shell>.tabs{display:none}
+ .mobile-home-kicker{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1.4px;color:#afc9df;font-weight:750;padding:11px 2px 15px;border-top:1px solid #1d3a55}
+ #mobile-date{margin-left:auto;letter-spacing:0;color:#f4f7fc;font-size:11px}
+ .mobile-live-dot{width:7px;height:7px;background:#ed8848;border-radius:50%;box-shadow:0 0 9px #ed884866}
+ .news-front{margin:5px 0 25px}
+ .news-front-heading{margin:0 0 15px;align-items:center}
+ .news-front-heading h2{font-size:33px;line-height:1.1;margin:0;font-weight:950;letter-spacing:-1px}
+ .news-front-heading .eyebrow{display:none}
+ .news-front-heading a{font-size:12px;color:#ffb57f}
+ .news-front-layout{display:block}
+ .headline-hero{min-height:370px;padding:23px;border-radius:12px;justify-content:end;background:radial-gradient(circle at 70% 15%,#2a5474 0%,transparent 54%),linear-gradient(140deg,#183957,#0c2037 75%);border:1px solid #294765}
+ .headline-hero h3{font-size:clamp(26px,6.5vw,37px);line-height:1.15;margin:10px 0 13px}
+ .hero-byline{font-size:12px;color:#bed1e2}
+ .hero-controls{margin-top:16px}
+ .hero-controls button{min-width:39px;min-height:36px;border-color:#58728b}
+ .headline-side{display:none}
+ .mobile-story-label{display:flex;justify-content:space-between;align-items:center;margin:25px 0 13px;font-size:21px;font-weight:950;letter-spacing:-.5px;color:#fff}
+ .mobile-story-label span{font-size:10px;font-weight:750;letter-spacing:1px;color:#91b2cc}
+ .mobile-story-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 3px 16px 0;margin-right:-15px;scrollbar-width:none}
+ .mobile-story-rail::-webkit-scrollbar{display:none}
+ .mobile-story-card{flex:0 0 76%;max-width:315px;min-height:225px;background:#112b44;border:1px solid #31516d;border-radius:13px;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;color:#f5f9fd}
+ .mobile-story-image{height:110px;background:linear-gradient(130deg,#193d5b,#315c78 60%,#aa5b30);display:flex;align-items:end;padding:11px;color:#ffd0ab;font-size:10px;letter-spacing:1px;font-weight:800;text-transform:uppercase;background-position:center;background-size:cover}
+ .mobile-story-body{padding:12px 13px;display:flex;flex-direction:column;flex:1}
+ .mobile-story-title{font-size:16px;font-weight:800;line-height:1.3;color:#f4f8ff}
+ .mobile-story-meta{font-size:11px;color:#a9c2d9;margin-top:auto;padding-top:13px}
+ .report-header{margin:25px 0 12px}
+ .report-header h2{font-size:27px;line-height:1.15;font-weight:900}
+ .panel{padding:17px;margin-top:13px;border-radius:12px;background:#10263c;border:1px solid #294560;box-shadow:none}
+ .pulse-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+ .pulse-label{min-height:auto}
+ .report{padding:6px 17px 12px}
+ #news .section{font-size:29px;font-weight:900;line-height:1.2;margin-top:22px}
+ #forecast .report-header h2{font-size:29px}
+ .mobile-bottom-nav{display:flex;position:fixed;z-index:200;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(calc(100% - 24px),480px);padding:8px 9px;background:rgba(15,35,57,.94);border:1px solid #42617f;border-radius:28px;box-shadow:0 12px 40px #0009;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);justify-content:space-around}
+ .mobile-bottom-nav button{appearance:none;background:transparent;border:0;border-radius:18px;color:#b9cce0;min-width:65px;min-height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;font-weight:650;cursor:pointer}
+ .mobile-bottom-nav button.selected{background:#294760;color:#fff}
+ .nav-symbol{font-size:24px;line-height:1.1;font-weight:400}
+}
+</style></head><body><div class="shell"><header><div class="brand">RANGER STEEL<strong>MARKET INTEL</strong></div><div class="date" id="date"></div></header><h1>Carbon steel plate intelligence</h1><div class="sub">Market conditions, developments and transparent quarterly outlooks.</div><div class="tabs" aria-label="Main navigation"><button class="active" data-tab="brief">Morning Market Briefing</button><button data-tab="news">Latest News</button><button data-tab="forecast">Quarterly Forecast</button></div><main id="brief"><div class="mobile-home-kicker"><span class="mobile-live-dot"></span> U.S. STEEL MARKET INTELLIGENCE <span id="mobile-date"></span></div><section class="news-front" aria-label="Top steel industry headlines"><div class="news-front-heading"><div><div class="eyebrow">Steel industry · latest coverage</div><h2>Top Stories</h2></div><a href="#" id="view-all-news">All news →</a></div><div class="news-front-layout"><div class="headline-hero" id="headline-hero" aria-live="off"><p>Loading latest headlines…</p></div><div class="headline-side" id="headline-side"></div></div><div class="mobile-story-label">LATEST HEADLINES <span>SWIPE TO EXPLORE</span></div><div class="mobile-story-rail" id="mobile-story-rail" aria-label="Swipe through recent steel headlines"></div></section><div class="report-header"><div class="eyebrow">Daily carbon steel plate report</div><h2>Morning Market Briefing</h2><div class="edition" id="edition">Loading the latest report…</div></div><div id="reportnotice" role="status"></div><section class="panel pulse-panel" aria-labelledby="pulse-title"><div class="row"><h3 id="pulse-title">Market Pulse</h3><span class="edition" id="pulse-updated">Loading evidence…</span></div><p class="compact-note">Colors show market pressure, not good or bad conditions.</p><div class="pulse-grid" id="pulse-grid"><p>Loading market indicators.</p></div><details class="quiet-details"><summary>Evidence, previous readings &amp; rules</summary><div id="pulse-evidence"></div><div id="pulse-rules"></div></details></section><section class="panel weekly-panel"><h3>What Changed This Week?</h3><p id="weekly-summary">Loading the saved weekly comparison.</p><details class="quiet-details"><summary>Supporting details</summary><div id="weekly-details"></div></details></section><div class="panel report" id="marketreport" aria-live="polite"><p class="empty">Retrieving the current market briefing.</p></div><details class="panel support-panel"><summary>Domestic Mill Tracker</summary><p class="compact-note">Dated developments are separate from current operating status. An expected outage end is not a verified restart.</p><div id="mill-tracker">Loading mill information.</div></details></main><main id="news" class="hidden"><div class="section">Steel industry news</div><p class="sub">Browse recent reporting by category. Articles are grouped by subject and sorted newest first.</p><div id="allstories"><div class="empty">Waiting for the first news collection.</div></div></main><main id="forecast" class="hidden"><div class="report-header"><div class="eyebrow">U.S. carbon steel plate · monthly outlook</div><h2>Quarterly Forecast</h2><p class="sub">Directional scenarios for A36, A572 Grade 50 and A516 Grade 70.</p></div><div class="forecast-toolbar"><label for="forecast-edition">Forecast edition</label><select id="forecast-edition" aria-label="Forecast edition"><option>Loading…</option></select></div><div id="forecast-status" role="status" class="edition"></div><section class="forecast-section-head"><div class="eyebrow">01 / Quantitative &amp; rules-based</div><h3>Market Model</h3><p class="compact-note">Current news and dated market evidence, historical price context, and transparent rules. The historical signal is used only when its test beats the baseline.</p></section><div id="forecast-content" aria-live="polite"><p class="empty">Loading the monthly forecast.</p></div><details class="panel support-panel"><summary>Historical data &amp; backtest</summary><div id="historical-validation" class="compact-note">Historical data loading…</div></details><section class="forecast-section-head"><div class="eyebrow">02 / Plate-specific analyst perspective</div><h3>AI Market Opinion</h3><p class="compact-note">Independent qualitative judgment focused on discrete carbon steel plate. Updated through scheduled monthly research and publishing. Each assessment is a dated qualitative judgment.</p></section><section class="panel"><div class="row"><h3>Plate Outlook</h3><span class="edition">Dated assessment</span></div><div id="ai-assessment" class="compact-note">Loading assessment…</div><p class="compact-note"><strong>Monthly update:</strong> Scheduled for the 1st of each month. The date above identifies the latest published research; failed updates retain the prior dated assessment.</p></section></main><nav class="mobile-bottom-nav" aria-label="Mobile navigation"><button data-mobile-tab="brief" class="selected" aria-label="Home"><span class="nav-symbol">⌂</span><span>Home</span></button><button data-mobile-tab="news" aria-label="News"><span class="nav-symbol">▤</span><span>News</span></button><button data-mobile-tab="forecast" aria-label="Forecast"><span class="nav-symbol">▥</span><span>Forecast</span></button><button data-mobile-action="top" aria-label="Back to top"><span class="nav-symbol">↑</span><span>Top</span></button></nav><footer><span id="updated">Not updated yet</span><br>Free prototype • Public sources only • Not affiliated with any official Ranger Steel IT system</footer></div><script>
 const $ = id => document.getElementById(id);
 const dateFormat = new Intl.DateTimeFormat('en-US', {timeZone:'America/Chicago',month:'short',day:'numeric',year:'numeric'});
 $('date').textContent = dateFormat.format(new Date());
@@ -84,10 +150,30 @@ function showFeatured(index){
  $('hero-next').addEventListener('click',()=>{showFeatured(featuredIndex+1);restartFeatured()});
 }
 function restartFeatured(){if(featuredTimer)clearInterval(featuredTimer);featuredTimer=null;if(featuredStories.length>1&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)featuredTimer=setInterval(()=>{if(!document.hidden)showFeatured(featuredIndex+1)},7000)}
+
+$('mobile-date').textContent=dateFormat.format(new Date());
+function mobileNavigate(tab){
+ const target=document.querySelector('[data-tab="'+tab+'"]');
+ if(target)target.click();
+ document.querySelectorAll('[data-mobile-tab]').forEach(b=>{b.classList.toggle('selected',b.dataset.mobileTab===tab);b.setAttribute('aria-current',b.dataset.mobileTab===tab?'page':'false')});
+ window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+}
+document.querySelectorAll('[data-mobile-tab]').forEach(b=>b.addEventListener('click',()=>mobileNavigate(b.dataset.mobileTab)));
+document.querySelector('[data-mobile-action="top"]').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.querySelectorAll('.tabs [data-tab]').forEach(b=>b.addEventListener('click',()=>document.querySelectorAll('[data-mobile-tab]').forEach(m=>m.classList.toggle('selected',m.dataset.mobileTab===b.dataset.tab))));
+function renderMobileStoryRail(items){
+ const rail=$('mobile-story-rail');if(!rail)return;
+ rail.innerHTML=items.slice(0,10).map(a=>{
+ const photo=a.image_url||a.image||'';
+ const safePhoto=/^https:\/\//i.test(photo)?' style="background-image:linear-gradient(0deg,#06192d99,#06192d11),url(&quot;'+esc(photo)+'&quot;)"':'';
+ return '<a class="mobile-story-card" href="'+safeUrl(a.url)+'" target="_blank" rel="noopener noreferrer"><div class="mobile-story-image"'+safePhoto+'>'+esc(a.category||'Steel industry')+'</div><div class="mobile-story-body"><div class="mobile-story-title">'+esc(a.title)+'</div><div class="mobile-story-meta">'+esc(a.publisher||'Industry news')+' · '+esc(a.date||'')+'</div></div></a>';
+ }).join('');
+}
+
 function renderFeaturedNews(articles){
  featuredStories=uniqueNews(articles).filter(a=>a.title&&a.url).slice(0,8);featuredIndex=0;
  if(!featuredStories.length){$('headline-hero').innerHTML='<p>Headlines unavailable. Check the Latest News tab for previously collected coverage.</p>';$('headline-side').innerHTML='';restartFeatured();return}
- showFeatured(0);$('headline-side').innerHTML=featuredStories.slice(1,5).map(a=>'<article class="headline-side-story"><div class="eyebrow">'+esc(a.category||'Steel news')+'</div><a href="'+safeUrl(a.url)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title)+'</a><small>'+esc(a.publisher||'Publisher')+' · '+esc(a.date||'')+'</small></article>').join('');restartFeatured();
+ showFeatured(0);renderMobileStoryRail(featuredStories);$('headline-side').innerHTML=featuredStories.slice(1,5).map(a=>'<article class="headline-side-story"><div class="eyebrow">'+esc(a.category||'Steel news')+'</div><a href="'+safeUrl(a.url)+'" target="_blank" rel="noopener noreferrer">'+esc(a.title)+'</a><small>'+esc(a.publisher||'Publisher')+' · '+esc(a.date||'')+'</small></article>').join('');restartFeatured();
 }
 $('view-all-news').addEventListener('click',e=>{e.preventDefault();const b=document.querySelector('[data-tab="news"]');if(b)b.click()});
 
