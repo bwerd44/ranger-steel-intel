@@ -139,9 +139,6 @@ def make_edition(sources, checks, now, edition_id, historical=None):
     obs = plate.get('observations', {})
     pricing = obs.get('pricing', '').lower()
     inventory = obs.get('domestic', '').lower()
-    factor_weights = {'domestic_plate_supply': .35, 'plate_price_momentum': .25,
-                      'plate_imports_trade': .20, 'end_user_plate_demand': .15,
-                      'historical_macro': .05}
     # Inputs are scored only when dated, plate-specific observations exist.
     # An unverified recovery is a scenario risk, not a scored fact.
     demand_text = obs.get('demand', '').lower()
