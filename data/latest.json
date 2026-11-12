@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-12T15:10:35.849075+00:00",
+  "updated_at": "2026-11-12T15:17:06.188139+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-12T15:10:35.849075+00:00",
+    "generated_at": "2026-11-12T15:17:06.188139+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-12T15:10:35.849075+00:00",
+        "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-12T15:10:35.849075+00:00",
+        "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,22 +171,12 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-12T15:10:35.849075+00:00",
+        "retrieved_at": "2026-11-12T15:17:06.188139+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
-    {
-      "title": "Pickling Acids Market To 2035: Steel Pickling Demand and Recycling Mandates Drive Growth - News and Statistics - IndexBox",
-      "date": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOYVJwVGx6OUpnSXNGRWlUZmNVWEF2X1hTbk9senZQWnZuOURQNlB0UDJNaWxLQjM0c1U5ZnJ1TzFua2pDLU9iU2NsS2ZFbENNWnhuSlNTTnkxVF9uSnJVRjNYVDhDbGhjTnJrUnNlY2ZXMjNJeVZwSjRJM0t5czRXRFJrdkJ3cUd1YjFJaU5nMEJDYS1yaUZfNEJLQ0kxQkxxRktRS2UtOFF2ZFRhXzl2Z0RfWUpKOE0wZE1rekpfTlloMnJMbEJfbVdR?oc=5",
-      "publisher": "IndexBox",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
     {
       "title": "Weathering Steel Plates Market To 2035: Bridge Construction Demand Drives Growth - News and Statistics - IndexBox",
       "date": "2026-11-10",
@@ -351,7 +341,7 @@
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 6
+        "items": 5
       }
     ]
   }
