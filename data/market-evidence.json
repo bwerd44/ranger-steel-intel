@@ -7,11 +7,11 @@
       "scope": "discrete_plate",
       "verified": true,
       "evidence_date": "2026-10-29",
-      "max_age_days": 30,
+      "max_age_days": 21,
       "confidence": "Medium",
       "period": "Late October 2026",
       "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
-      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29.",
+      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29. Evidence expires after 21 days unless a newer plate-specific survey confirms direction.",
       "verification": "Reviewed SMU reporting; late-October survey described explicitly increasing plate lead times.",
       "source": {
         "publisher": "Steel Market Update",
