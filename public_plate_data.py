@@ -49,5 +49,5 @@ def collect(fetch=None):
 
 if __name__ == '__main__':
     path = ROOT/'data/public-plate-evidence.json'
-    path.write_text(json.dumps(collect(), indent=2)+'\\n')
+    path.write_text(json.dumps(collect(), indent=2)+'\n')
     print('Public plate evidence refreshed')
