@@ -28,6 +28,20 @@ class PulseTests(unittest.TestCase):
         reading=intel.derive_readings([obs(),obs(condition='Falling')],DAY)[0]
         self.assertEqual((reading['condition'],reading['color']),('Mixed','orange'))
 
+    def test_pulse_does_not_convert_missing_import_or_demand_data_to_stable(self):
+        with patch('intelligence.mill_tracker',return_value=[]):
+            result,_=intel.build({}, {'observations':[]}, {}, {'editions':[]}, {'schema_version':1,'snapshots':[]}, NOW, True)
+        by_id={x['id']:x for x in result['pulse']}
+        for key in ('imports','demand'):
+            self.assertEqual(by_id[key]['condition'],'Insufficient Data')
+            self.assertEqual(by_id[key]['color'],'gray')
+            self.assertEqual(by_id[key]['confidence'],'Not rated')
+
+    def test_quarterly_plate_price_evidence_expires_after_thirty_days(self):
+        brief={'briefing':{'sources':[{'id':'ssab-market','evidence_date':'2026-09-30','period':'Q3 2026','url':'https://example.com','observations':{'pricing':'Plate prices increased during Q3.'}}]}}
+        readings=intel.derive_readings(intel.observed_from_briefing(brief),dt.date(2026,11,12))
+        self.assertEqual(readings[0]['condition'],'Insufficient Data')
+
     def test_weekly_baseline_requires_real_saved_previous_week(self):
         self.assertIsNone(intel.baseline({'snapshots':[]},DAY))
         history={'snapshots':[{'as_of':'2026-10-28','generated_at':'a'},{'as_of':'2026-10-30','generated_at':'b'}]}
