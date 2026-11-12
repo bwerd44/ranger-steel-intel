@@ -28,6 +28,7 @@ on:
       - 'sw.js'
       - 'manifest.webmanifest'
       - 'icon.png'
+      - 'ranger-plate-banner.jpg'
       - 'data/forecast-context.json'
       - 'data/reviewed-evidence.json'
       - '.github/workflows/update.yml'
