@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from collect import fetch, plain, date_of
 
 ROOT = Path(__file__).resolve().parent
-VERSION = 'plate-direction-2.0-plate-first'
+VERSION = 'plate-direction-2.1-price-level-vs-change'
 FED = 'https://www.federalreserve.gov/releases/g17/current/'
 EIA = 'https://www.eia.gov/outlooks/steo/report/'
 GRADES = ['A36', 'A572 Grade 50', 'A516 Grade 70']
@@ -165,7 +165,20 @@ def make_edition(sources, checks, now, edition_id, historical=None):
     # Persistence is conditional on the absence of verified recovery, NOT an assumed mill restart.
     # Longer horizons get weaker conviction, without mechanically forcing a neutral price call.
     for distance, (year, q) in enumerate(horizon(local.date())):
-        score = round(raw_score, 4) if direct else None
+        # A current price increase is not evidence of repeated quarterly increases.
+        # Persistence applies to supply *level*, not to price acceleration.
+        # Horizon multipliers are explicit judgmental assumptions, not measured probabilities.
+        horizon_price_pressure = [1.0, .75, .50, .25, 0.0]
+        momentum = factor_weights['plate_price_momentum'] * (factor_inputs['plate_price_momentum']['value'] or 0)
+        demand = factor_weights['end_user_plate_demand'] * (factor_inputs['end_user_plate_demand']['value'] or 0)
+        supply = factor_weights['domestic_plate_supply'] * (factor_inputs['domestic_plate_supply']['value'] or 0)
+        # Inventory scarcity supports an elevated price level but does not
+        # independently establish another quarter-over-quarter price increase.
+        pressure = 2 * ((momentum + demand) * horizon_price_pressure[min(distance, 4)]
+                        + supply * (.50 if distance == 0 else .25)
+                        + factor_weights['plate_imports_trade'] * (factor_inputs['plate_imports_trade']['value'] or 0)
+                        + factor_weights['historical_macro'] * (factor_inputs['historical_macro']['value'] or 0))
+        score = round(pressure, 4) if direct else None
         label = f'Q{q} {year}'
         price = direction(score) if score is not None else 'Insufficient evidence'
         availability = ('Tightness persists in base case; recovery unverified'
@@ -175,7 +188,7 @@ def make_edition(sources, checks, now, edition_id, historical=None):
         current = distance == 0
         analysis = (f'The base case for {label} is {price.lower()}, with {availability.lower()}. '
                     if direct else f'No supported directional base case is available for {label}; current plate-specific pricing evidence is missing. ')
-        analysis += ('Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. '
+        analysis += ('Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. '
                      'Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. ')
         analysis += {1: 'Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.',
                      2: 'Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.',
@@ -191,7 +204,7 @@ def make_edition(sources, checks, now, edition_id, historical=None):
             scenario_score = None if score is None else round(score + offset, 4)
             scenarios.append({'name': name, 'direction': direction(scenario_score) if direct else 'Conditional only', 'availability': avail, 'analysis': text, 'chart_value': ordinal(scenario_score) if direct else None})
         source_ids = [s['id'] for s in sources]
-        quarter_rows.append({'id': f'{year}-Q{q}', 'label': label, 'year': year, 'quarter': q, 'price_direction': price, 'availability': availability, 'analysis': analysis, 'confidence': confidence, 'confidence_reason': 'Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.', 'base_score': score, 'seasonal_adjustment': 0, 'decay': 1.0, 'evidence_coverage': coverage, 'scenarios': scenarios, 'drivers': drivers(sources, q, distance), 'indicators': [
+        quarter_rows.append({'id': f'{year}-Q{q}', 'label': label, 'year': year, 'quarter': q, 'price_direction': price, 'availability': availability, 'analysis': analysis, 'confidence': confidence, 'confidence_reason': 'Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.', 'base_score': score, 'seasonal_adjustment': 0, 'decay': horizon_price_pressure[min(distance,4)], 'evidence_coverage': coverage, 'scenarios': scenarios, 'drivers': drivers(sources, q, distance), 'indicators': [
             'Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.',
             'Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.',
             'Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.',
@@ -203,7 +216,7 @@ def make_edition(sources, checks, now, edition_id, historical=None):
             'This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.',
             'Plate-first weighted factor model: domestic supply 35%, plate pricing 25%, plate-specific imports and trade 20%, end-user plate demand 15%, and validated historical/macro context 5%. These weights are judgmental and not statistically optimized.',
             'Missing evidence is unscored rather than assumed neutral. Each factor is in [-1,+1] and the sum is scaled to a directional score in [-2,+2]; evidence coverage is reported separately.',
-            'Supply tightness is maintained as a conditional base case until verified plate-specific evidence supports recovery. No automatic 35% per-quarter mean reversion or speculative seasonal score is applied. Later-quarter confidence declines even if directional scores persist.',
+            'Supply tightness supports an elevated price level, not indefinite quarterly price increases. Current pricing and demand momentum lose predictive force with horizon using explicitly judgmental multipliers 1.0, 0.75, 0.50, 0.25, 0.0. This is not evidence that supply recovers; later quarters require new evidence for a firming call.',
             'Historical momentum is eligible only if at least 12 nonoverlapping test quarters outperform a naive majority-class baseline by over five percentage points. Its contribution cannot exceed 5% of factor weights.',
             'Bull and bear cases shift scores as illustrative stresses, not measured probabilities. Neither direction nor confidence is a statistically calibrated forecast.',
             'Trade policy, imports, all-steel output, energy, infrastructure, defense and data centers are disclosed scenario channels, not automatic numerical plate premiums. Raw-steel data cannot confirm plate availability. HRC futures and coil-price indexes are excluded.',
