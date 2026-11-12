@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-12T01:55:43.064298+00:00",
+  "updated_at": "2026-11-12T14:55:10.994922+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-12T01:55:43.064298+00:00",
+    "generated_at": "2026-11-12T14:55:10.994922+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-12T01:55:43.064298+00:00",
+        "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-12T01:55:43.064298+00:00",
+        "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,16 +171,16 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-12T01:55:43.064298+00:00",
+        "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
     {
-      "title": "Weathering Steel Market To 2035: Bridge and Cladding Demand Supports Growth - News and Statistics - IndexBox",
+      "title": "Weathering Steel Plates Market To 2035: Bridge Construction Demand Drives Growth - News and Statistics - IndexBox",
       "date": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZDE2WVd0bEpZYndWNTZ5Y05pTkhsTG51WEFQeU1CUHo0dDRNRmpWVGlmOGR1WkgtTE9GS2dCZmVLMHV4bHh5dHZ0WUNFNXVnR1R1T0FGeWUtX291Rk8zVU5MM1FhOFF4TkFiRGV3dUZiZEFTQ1FwSUtUdFF4Z2w5czQ4TU9OSWFIdVhGYkdIOGVsUmVzanA0U2REdFdveHdUdEFrVW9oTC02eFR2eTBiQUwtRkc1WHVBX3BuYy1QTHFhNGtJZW9mMXBWOTdyU0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa3Q2WFNDTjJOQlRFNmxsVEM1QXZxLTFJU2xOSzVnUEVhQVZJV1FoNjdETEJ0OFVvNVNsNHZzbFMtNXk3TnV5ZFRLU3RaOUJXQVp3eFNxa2N2TC1WNVhJMnRnLVp2S3FkSmtUcFVOV0dfNGlYeUxPSktxcGFpY2ctNGZFVGl1SV9sNXUtRGNWTFhJSkZLYjRoZkpGX28xdUJRbC1FYWhJd3B0Q0pCMHBVMG9RbHhERVEyVnc?oc=5",
       "publisher": "IndexBox",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
@@ -191,26 +191,6 @@
       "title": "Steel Long Products Market Forecast 2026-2035: Construction Demand Supports Growth - News and Statistics - IndexBox",
       "date": "2026-11-10",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZG56aUNwUi1HUW1xUlhHb0ZvdkhMOEViNzUybGZUdENvSWV3OHNEVnNzOWVveGpVX1lBSUhUTF9KcEpkcDVYdFNiRFp5ZUdFYnhGbDM4QXlHXzB5YUg2SHpCclNnY2RKakFNcmpUbkhDN3RfUGdaRkxRV29VNWxxRWRmR3Z3MDN0aWZPeU01M0xJSTdmeVR6QVVwY3ZraDhVUGxDd0RURGlrQ3dLQ2VLbzcydm9nOEx4OHJfSFVZSEhXbEE?oc=5",
-      "publisher": "IndexBox",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
-    {
-      "title": "Structural Steel Beams Market To 2035: Infrastructure Demand Supports Growth - News and Statistics - IndexBox",
-      "date": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZFhLaGRTcVVmU0l3TFFPMFd4TW9tdWdvM3hOVEN0VXBYblRBUU1fSTVYR1VKd041azZ4YWRIb2l2b2Z4eXRkdE40QVl5MUhzOXh1aXViWERTVTEzT0NueDNZaV9MVWlMZmdSWFlGc3Zra1ZudWRBM3BDX2hVQ1lRaW0tdV9FZTlSV2xQNmlOU2dvZE90LXJtRjgzazJkU1VlV1dBVlJZV1pUVGVVUjNoenN5bWgzX3pfdGtncm5XVUUxc1BzcHdDd2dSRVJHWHRI?oc=5",
-      "publisher": "IndexBox",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
-    {
-      "title": "Weathering Steel Plates Market To 2035: Bridge Construction Demand Drives Growth - News and Statistics - IndexBox",
-      "date": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa3Q2WFNDTjJOQlRFNmxsVEM1QXZxLTFJU2xOSzVnUEVhQVZJV1FoNjdETEJ0OFVvNVNsNHZzbFMtNXk3TnV5ZFRLU3RaOUJXQVp3eFNxa2N2TC1WNVhJMnRnLVp2S3FkSmtUcFVOV0dfNGlYeUxPSktxcGFpY2ctNGZFVGl1SV9sNXUtRGNWTFhJSkZLYjRoZkpGX28xdUJRbC1FYWhJd3B0Q0pCMHBVMG9RbHhERVEyVnc?oc=5",
       "publisher": "IndexBox",
       "topic": "All Other Steel News",
       "verification": "Headline only; underlying article not independently verified.",
@@ -288,6 +268,26 @@
       "category": "All Other Steel News"
     },
     {
+      "title": "Low Alloy Steel Market To 2035: Automotive Lightweighting and Infrastructure to Drive Growth - News and Statistics - IndexBox",
+      "date": "2026-11-03",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRFNvNDJLM05Gb005YUVRX09USmRUc2VGZ2lpRlpOOHBqRnhhQjI5N0lvLS1JTXpxcTBMbjUxRGFzMHRIY3piTS1xUTg3dnhVV1hTazlPdWd3bnh2WTJIQlVfZmdFcjB4Q1NBcW1YRk5JbmFaYU5nTUxOMENHU1llQkVnLTZISU1vdTRNTFRlb2hxbVBZUkRjc3hGQ3UwQkE1bnNkX2pvVWtsVE1fZGRqS2FHcnQwajNNVVNtZ3h0RG52MEtLbGNxZVg2dw?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "AD/CVD News: Aluminum Foil, Steel Products, Strontium Chromate, Wind Towers - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-02",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTG4xNGt3WldvQWpDckFubGp2X0hQZUU0QzlzamVVTnpjeGNxNHJ1ZVVnNmI4R1ZVZno3OVlxWm5BWTExbmZnVDk5Wm9tc3lQdFlIM0N5WHBiVkVINXJQN2U0c2h4Qy1faFBuUXpWbmV4Skg4UFhJa0RWN0JTcHBrYUYxdFdNckdlWVVlVUV2M2E1X213ejBSSVBqT0ZZSXotVnd3LWJwdmVObF8wejdPSUVqTTRGZExfM0lkMVVHX2tDbGw2WWd2OW1lQm1fR1pYN3dpM0g0OUVkXzg?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
       "title": "Steel Coils Market Forecast to 2035: Construction and Infrastructure Demand Drive Growth - News and Statistics - IndexBox",
       "date": "2026-10-31",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZmRoaVB1aml2TENZcWVlbTJDNktMcm5TUEVpNlRjQkgtU0xaTUNiVjdRdkdCUHcyMGNtcHhyNEJQMzVpQzVSNXVNSTR4djZwQldRaXR6MkdGeTFmNXRtZW03d2RlUlhRTEJDYVU1MmI4bkZwT2lBOWw2d2RHanVIVW1qdXZ6cEY3TWVGdXFpV1dRTExuMk1TbmhUSnUyZHRCdVVZTk1iUnJNTTF5X19MYnFobndOaTJHVWxiQ0NNX1o5QlVMdjFr?oc=5",
@@ -306,26 +306,6 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "Import News"
-    },
-    {
-      "title": "Steel Industry Crisis: Conditions for Survival - 조선일보",
-      "date": "2026-10-29",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONmtSN18yS2Z6Q1dKQUNMSzNyalpncHBlN1ZUUGVGTEh1NzlpeWZlM29UQkMzZEt3c1RwMTNFQjAwUnhZRTZZRHhBeUtfU00xMXN2dzZocUFDNUNaZWloT1VVN1p6dUs4SENmQ2dTSVZuTFNIQmxaRHk2Mlp2WWtLTjUyV3RvdkU?oc=5",
-      "publisher": "조선일보",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
-    },
-    {
-      "title": "Top 10 Steel Fabrication Manufacturers and Suppliers: 2026 Comparison Guide - Thomasnet",
-      "date": "2026-10-29",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWi00R1BmLTZFaV9UT0RkY3NTMzZXc2xKOGtYbFZNaVdVa3prMEpDLVVlZjRMRVJPV0V6QjVMRXJUZ1UxYWI4bDk1R3VLMENnUGMyT29MOG9tMTFReWx0WERjbXlGY250VnRGRGhpb2tkZVVwTEg0UmlYSk5odGdzX1hVS1daUkdMeEdYS29TYw?oc=5",
-      "publisher": "Thomasnet",
-      "topic": "All Other Steel News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "All Other Steel News"
     }
   ],
   "collection": {
@@ -371,7 +351,7 @@
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 7
+        "items": 6
       }
     ]
   }

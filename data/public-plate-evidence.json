@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-11-12T14:56:18.381754+00:00",
+  "privacy": "Public sources only; no Ranger pricing, customer, allocation, RFQ or inventory records.",
+  "plate_price_proxy": {
+    "status": "unavailable",
+    "series": "WPU10170410",
+    "url": "https://fred.stlouisfed.org/series/WPU10170410",
+    "scope": "Carbon hot-rolled bars, plates and structural shapes; NOT discrete plate transaction prices.",
+    "error": "TimeoutError"
+  },
+  "plate_imports": {
+    "status": "not_machine_verified",
+    "url": "https://www.trade.gov/feature-article/sima-steel-tables",
+    "scope": "Commerce SIMA category-level license and Census tables. License permits are not arrivals.",
+    "note": "Import signal intentionally unscored until cut-length plate data can be parsed and validated."
+  }
+}

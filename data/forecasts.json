@@ -1,13 +1,64 @@
 {
   "schema_version": 1,
-  "latest_id": "2026-11-r3",
+  "latest_id": "2026-11",
   "editions": [
     {
       "id": "2026-11",
       "month": "2026-11",
-      "generated_at": "2026-11-04T17:00:29.076192+00:00",
-      "as_of": "2026-11-04",
-      "model_version": "plate-direction-1.0",
+      "generated_at": "2026-11-12T14:56:38.544029+00:00",
+      "as_of": "2026-11-12",
+      "model_version": "plate-direction-3.0-balance",
+      "historical_validation": {
+        "status": "evaluated",
+        "series": "WPU101",
+        "proxy": "U.S. steel mill products PPI (not discrete plate)",
+        "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WPU101",
+        "start": "1926-01-01",
+        "last_observation": "2026-09-01",
+        "observations": 1209,
+        "holdout_quarters": 19,
+        "directional_hits": 10,
+        "directional_hit_rate": 0.526,
+        "majority_baseline_hits": 11,
+        "majority_baseline_rate": 0.579,
+        "historical_signal": "Upward historical momentum",
+        "signal_code": 1,
+        "method": "Six- and twelve-month momentum, three-month forward directional evaluation; nonoverlapping quarterly test observations; fixed rules, no optimization; historical revised series may contain revision bias.",
+        "warning": "This is an all-steel price proxy, not plate prices. Historical accuracy does not establish future probability or forecast confidence.",
+        "retrieved_at": "2026-11-12T14:56:18.306495+00:00",
+        "data_status": "fresh"
+      },
+      "historical_weight": 0,
+      "factor_weights": {
+        "domestic_plate_supply": 0.3,
+        "plate_price_momentum": 0.2,
+        "plate_imports_trade": 0.2,
+        "end_user_plate_demand": 0.2,
+        "distributor_inventory": 0.1
+      },
+      "factor_inputs": {
+        "domestic_plate_supply": {
+          "value": null,
+          "evidence": "No independently verified plate allocation, mill output or lead-time series"
+        },
+        "plate_price_momentum": {
+          "value": 1,
+          "evidence": "Dated SSAB North American plate pricing commentary"
+        },
+        "plate_imports_trade": {
+          "value": null,
+          "evidence": "No verified current discrete plate arrivals or landed-price trend"
+        },
+        "end_user_plate_demand": {
+          "value": 1,
+          "evidence": "Dated producer plate demand commentary; no end-user order book"
+        },
+        "distributor_inventory": {
+          "value": 1,
+          "evidence": "SSAB distributor inventory assessment"
+        }
+      },
+      "evidence_coverage": 0.5,
       "grades": [
         "A36",
         "A572 Grade 50",
@@ -31,7 +82,7 @@
             "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
             "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
           },
-          "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+          "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
           "access": "Retrieved from primary source this collection",
           "scope": "Direct plate commentary"
         },
@@ -47,7 +98,7 @@
           "observations": {
             "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
           },
-          "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+          "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
           "access": "Retrieved from primary source this collection",
           "scope": "Broad steel context; not discrete plate supply"
         },
@@ -56,21 +107,21 @@
           "publisher": "AISI",
           "url": "https://www.steel.org/industry-data/",
           "title": "Weekly raw steel production",
-          "period": "Week ending 2026-10-31",
-          "evidence_date": "2026-10-31",
+          "period": "Week ending 2026-11-07",
+          "evidence_date": "2026-11-07",
           "date_kind": "reporting period end",
           "max_age_days": 14,
           "observations": {
-            "domestic": "AISI estimates U.S. raw steel output at 2,053,000 net tons and capacity utilization at 88.9% for the week ending 2026-10-31. These figures cover all raw steel and do not measure discrete plate availability."
+            "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
           },
-          "retrieved_at": "2026-11-04T16:36:06.641224+00:00",
+          "retrieved_at": "2026-11-12T14:55:10.994922+00:00",
           "access": "Retrieved from primary source this collection",
           "scope": "Broad steel context; not discrete plate supply"
         },
         {
           "evidence_date": "2026-10-16",
           "max_age_days": 60,
-          "retrieved_at": "2026-11-04T17:00:29.076192+00:00",
+          "retrieved_at": "2026-11-12T14:56:38.544029+00:00",
           "access": "Retrieved this forecast edition",
           "scope": "Indirect; not plate tonnage or transaction prices",
           "id": "fed-manufacturing",
@@ -81,9 +132,9 @@
           "manufacturing_change": 0.3
         },
         {
-          "evidence_date": "2026-10-06",
+          "evidence_date": "2026-11-10",
           "max_age_days": 60,
-          "retrieved_at": "2026-11-04T17:00:29.076192+00:00",
+          "retrieved_at": "2026-11-12T14:56:38.544029+00:00",
           "access": "Retrieved this forecast edition",
           "scope": "Indirect; not plate tonnage or transaction prices",
           "id": "eia-energy",
@@ -128,41 +179,23 @@
           "status": "ok"
         }
       ],
-      "signals": [
-        {
-          "name": "Reported plate price momentum",
-          "weight": 2.0,
-          "source_id": "ssab-market",
-          "basis": "SSAB reported an increase in its dated North American plate commentary."
-        },
-        {
-          "name": "Distributor inventory constraint",
-          "weight": 1.0,
-          "source_id": "ssab-market",
-          "basis": "Producer assessment of inventories; not a verified allocation percentage."
-        },
-        {
-          "name": "Manufacturing demand context",
-          "weight": 0.25,
-          "source_id": "fed-manufacturing",
-          "basis": "Broad manufacturing; capped at one quarter of a directional point."
-        }
-      ],
-      "input_score": 3.25,
+      "signals": [],
+      "input_score": 1.0,
       "quarters": [
         {
           "id": "2026-Q4",
           "label": "Q4 2026",
           "year": 2026,
           "quarter": 4,
-          "price_direction": "Firming",
-          "availability": "Tightness risk",
-          "analysis": "The base case for Q4 2026 is firming, with tightness risk. The remaining part of the current quarter carries the strongest link to the dated producer inventory and pricing evidence. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-          "confidence": "Moderate",
+          "price_direction": "Mild upward bias",
+          "availability": "Supply condition unverified",
+          "analysis": "The base case for Q4 2026 is mild upward bias, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+          "confidence": "Low",
           "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 2.75,
-          "seasonal_adjustment": -0.5,
+          "base_score": 1.0,
+          "seasonal_adjustment": 0,
           "decay": 1.0,
+          "evidence_coverage": 0.5,
           "scenarios": [
             {
               "name": "Bullish",
@@ -173,17 +206,17 @@
             },
             {
               "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness risk",
-              "analysis": "The base case for Q4 2026 is firming, with tightness risk. The remaining part of the current quarter carries the strongest link to the dated producer inventory and pricing evidence. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-              "chart_value": 2
+              "direction": "Mild upward bias",
+              "availability": "Supply condition unverified",
+              "analysis": "The base case for Q4 2026 is mild upward bias, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+              "chart_value": 1
             },
             {
               "name": "Bearish",
-              "direction": "Firming",
+              "direction": "Broadly stable",
               "availability": "More available than base case",
               "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 2
+              "chart_value": 0
             }
           ],
           "drivers": [
@@ -267,238 +300,15 @@
           "label": "Q1 2027",
           "year": 2027,
           "quarter": 1,
-          "price_direction": "Firming",
-          "availability": "Tightness risk",
-          "analysis": "The base case for Q1 2027 is firming, with tightness risk. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
+          "price_direction": "Mild upward bias",
+          "availability": "Supply condition unverified",
+          "analysis": "The base case for Q1 2027 is mild upward bias, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
           "confidence": "Low",
           "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 2.2625,
-          "seasonal_adjustment": 0.15,
+          "base_score": 0.65,
+          "seasonal_adjustment": 0,
           "decay": 0.65,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness risk",
-              "analysis": "The base case for Q1 2027 is firming, with tightness risk. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Mild upward bias",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 1
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows modest first-quarter restocking support, conditional on real orders. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q2",
-          "label": "Q2 2027",
-          "year": 2027,
-          "quarter": 2,
-          "price_direction": "Firming",
-          "availability": "Gradual normalization assumed",
-          "analysis": "The base case for Q2 2027 is firming, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.6231,
-          "seasonal_adjustment": 0.25,
-          "decay": 0.4225,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Gradual normalization assumed",
-              "analysis": "The base case for Q2 2027 is firming, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows modest spring construction and equipment support, conditional on project execution. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q3",
-          "label": "Q3 2027",
-          "year": 2027,
-          "quarter": 3,
-          "price_direction": "Mild upward bias",
-          "availability": "Gradual normalization assumed",
-          "analysis": "The base case for Q3 2027 is mild upward bias, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Summer pauses and improving supply could moderate pressure; energy and power-equipment orders are the principal upside assumptions.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.7925,
-          "seasonal_adjustment": -0.1,
-          "decay": 0.27463,
+          "evidence_coverage": 0.5,
           "scenarios": [
             {
               "name": "Bullish",
@@ -510,8 +320,8 @@
             {
               "name": "Base case",
               "direction": "Mild upward bias",
-              "availability": "Gradual normalization assumed",
-              "analysis": "The base case for Q3 2027 is mild upward bias, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Summer pauses and improving supply could moderate pressure; energy and power-equipment orders are the principal upside assumptions.",
+              "availability": "Supply condition unverified",
+              "analysis": "The base case for Q1 2027 is mild upward bias, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
               "chart_value": 1
             },
             {
@@ -526,7 +336,7 @@
             {
               "name": "Mill production, allocations & shutdowns",
               "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
+              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
               "source_ids": [
                 "ssab-market",
                 "aisi-production"
@@ -577,7 +387,7 @@
             {
               "name": "Historical cycles & seasonality",
               "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a small summer activity drag; it does not assume a mill outage. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
+              "analysis": "The model allows modest first-quarter restocking support, conditional on real orders. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
               "source_ids": []
             }
           ],
@@ -599,18 +409,19 @@
           ]
         },
         {
-          "id": "2027-Q4",
-          "label": "Q4 2027",
+          "id": "2027-Q2",
+          "label": "Q2 2027",
           "year": 2027,
-          "quarter": 4,
+          "quarter": 2,
           "price_direction": "Broadly stable",
-          "availability": "Gradual normalization assumed",
-          "analysis": "The base case for Q4 2027 is broadly stable, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+          "availability": "Supply condition unverified",
+          "analysis": "The base case for Q2 2027 is broadly stable, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
           "confidence": "Low",
           "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.0801,
-          "seasonal_adjustment": -0.5,
-          "decay": 0.17851,
+          "base_score": 0.35,
+          "seasonal_adjustment": 0,
+          "decay": 0.35,
+          "evidence_coverage": 0.5,
           "scenarios": [
             {
               "name": "Bullish",
@@ -622,1339 +433,9 @@
             {
               "name": "Base case",
               "direction": "Broadly stable",
-              "availability": "Gradual normalization assumed",
-              "analysis": "The base case for Q4 2027 is broadly stable, with gradual normalization assumed. The initial plate signal is deliberately reduced as the horizon extends; no specific mill recovery or import arrival is treated as confirmed. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+              "availability": "Supply condition unverified",
+              "analysis": "The base case for Q2 2027 is broadly stable, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
               "chart_value": 0
-            },
-            {
-              "name": "Bearish",
-              "direction": "Softening",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": -2
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a year-end inventory and holiday drag, even when supply is constrained. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        }
-      ],
-      "methodology": [
-        "This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.",
-        "Only unexpired, dated primary evidence is eligible. A recognized SSAB plate-price increase contributes +2 directional points; its low distributor inventory assessment contributes +1. Broad manufacturing output adds at most +0.25 or -0.25. Missing inputs contribute nothing; missing plate-price evidence suppresses the directional base case.",
-        "For each successive quarter, the initial signal is multiplied by 0.65 to the power of the quarter offset. Judgmental seasonal adjustments are Q1 +0.15, Q2 +0.25, Q3 -0.10 and Q4 -0.50. These are scenario assumptions, not estimated price changes or an empirically calibrated seasonal pattern.",
-        "Scores at or above 1.5 mean Firming; 0.5 to below 1.5 Mild upward bias; above -0.5 to below 0.5 Broadly stable; above -1.5 to -0.5 Mild downward bias; at or below -1.5 Softening. The chart maps these labels to ordinal positions -2 to +2. It is not dollars, percentage change, a futures curve or a calibrated probability range.",
-        "Bullish and bearish cases shift the base score by plus/minus (1 + 0.2 times quarter offset). These are conditional stress scenarios, not probability-weighted forecasts. Availability normalization is a disclosed assumption, not a dated mill restart forecast.",
-        "Trade policy, imports, all-steel output, energy, infrastructure, defense and data centers are disclosed scenario channels, not automatic numerical plate premiums. Raw-steel data cannot confirm plate availability. HRC futures and coil-price indexes are excluded.",
-        "The same directional framework covers A36, A572 Grade 50 and A516 Grade 70. Grade, thickness, width, origin, heat treatment and testing requirements can create different availability. A516 Grade 70 pressure-vessel or normalized specifications can be more restrictive; no grade spread or specification premium is estimated.",
-        "Each calendar month produces one immutable edition. Explicit revisions append a new edition and reason; prior snapshots remain unchanged. Forecasts are regenerated only with the inputs available at that edition, never backfilled to look historically accurate."
-      ],
-      "content_hash": "bc9c412e40941f84aecb4645e1daeaefc66519e849406fdfff21159521ae346f"
-    },
-    {
-      "id": "2026-11-r2",
-      "month": "2026-11",
-      "generated_at": "2026-11-12T01:45:28.053747+00:00",
-      "as_of": "2026-11-11",
-      "model_version": "plate-direction-2.0-plate-first",
-      "historical_validation": {
-        "status": "evaluated",
-        "series": "WPU101",
-        "proxy": "U.S. steel mill products PPI (not discrete plate)",
-        "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WPU101",
-        "start": "1926-01-01",
-        "last_observation": "2026-09-01",
-        "observations": 1209,
-        "holdout_quarters": 19,
-        "directional_hits": 10,
-        "directional_hit_rate": 0.526,
-        "majority_baseline_hits": 11,
-        "majority_baseline_rate": 0.579,
-        "historical_signal": "Upward historical momentum",
-        "signal_code": 1,
-        "method": "Six- and twelve-month momentum, three-month forward directional evaluation; nonoverlapping quarterly test observations; fixed rules, no optimization; historical revised series may contain revision bias.",
-        "warning": "This is an all-steel price proxy, not plate prices. Historical accuracy does not establish future probability or forecast confidence.",
-        "retrieved_at": "2026-11-12T01:45:27.930005+00:00",
-        "data_status": "fresh"
-      },
-      "historical_weight": 0,
-      "factor_weights": {
-        "domestic_plate_supply": 0.35,
-        "plate_price_momentum": 0.25,
-        "plate_imports_trade": 0.2,
-        "end_user_plate_demand": 0.15,
-        "historical_macro": 0.05
-      },
-      "factor_inputs": {
-        "domestic_plate_supply": {
-          "value": 1,
-          "evidence": "SSAB low distributor inventory assessment; no confirmed mill allocation or lead time"
-        },
-        "plate_price_momentum": {
-          "value": 1,
-          "evidence": "SSAB North American plate pricing commentary"
-        },
-        "plate_imports_trade": {
-          "value": null,
-          "evidence": "No verified current discrete plate import flow or tariff change scored"
-        },
-        "end_user_plate_demand": {
-          "value": 1,
-          "evidence": "SSAB plate demand commentary; not order-level evidence"
-        },
-        "historical_macro": {
-          "value": null,
-          "evidence": "Historical proxy withheld unless it beats the holdout baseline"
-        }
-      },
-      "evidence_coverage": 0.75,
-      "grades": [
-        "A36",
-        "A572 Grade 50",
-        "A516 Grade 70"
-      ],
-      "forecast_type": "Directional scenarios; no dollar price targets",
-      "baseline": "Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.",
-      "sources": [
-        {
-          "id": "ssab-market",
-          "publisher": "SSAB",
-          "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
-          "title": "Market situation and outlook",
-          "period": "Q3 2026",
-          "evidence_date": "2026-09-30",
-          "date_kind": "period end; publication date not supplied on page",
-          "max_age_days": 105,
-          "observations": {
-            "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
-            "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
-            "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
-            "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
-          },
-          "retrieved_at": "2026-11-12T01:44:34.152313+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Direct plate commentary"
-        },
-        {
-          "id": "aisi-imports",
-          "publisher": "AISI / preliminary Census data",
-          "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
-          "title": "Monthly steel import report",
-          "period": "September 2026",
-          "evidence_date": "2026-10-27",
-          "date_kind": "publication date",
-          "max_age_days": 45,
-          "observations": {
-            "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
-          },
-          "retrieved_at": "2026-11-12T01:44:34.152313+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Broad steel context; not discrete plate supply"
-        },
-        {
-          "id": "aisi-production",
-          "publisher": "AISI",
-          "url": "https://www.steel.org/industry-data/",
-          "title": "Weekly raw steel production",
-          "period": "Week ending 2026-11-07",
-          "evidence_date": "2026-11-07",
-          "date_kind": "reporting period end",
-          "max_age_days": 14,
-          "observations": {
-            "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
-          },
-          "retrieved_at": "2026-11-12T01:44:34.152313+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Broad steel context; not discrete plate supply"
-        },
-        {
-          "evidence_date": "2026-10-16",
-          "max_age_days": 60,
-          "retrieved_at": "2026-11-12T01:45:28.053747+00:00",
-          "access": "Retrieved this forecast edition",
-          "scope": "Indirect; not plate tonnage or transaction prices",
-          "id": "fed-manufacturing",
-          "publisher": "Federal Reserve",
-          "title": "Industrial Production and Capacity Utilization",
-          "url": "https://www.federalreserve.gov/releases/g17/20261016/",
-          "summary": "The Federal Reserve reports manufacturing output rose 0.3% in September. Defense and space equipment output rose 0.4% in that release.",
-          "manufacturing_change": 0.3
-        },
-        {
-          "evidence_date": "2026-11-10",
-          "max_age_days": 60,
-          "retrieved_at": "2026-11-12T01:45:28.053747+00:00",
-          "access": "Retrieved this forecast edition",
-          "scope": "Indirect; not plate tonnage or transaction prices",
-          "id": "eia-energy",
-          "publisher": "EIA",
-          "title": "Short-Term Energy Outlook",
-          "url": "https://www.eia.gov/outlooks/steo/report/",
-          "summary": "EIA’s dated outlook projects a lower Brent price next year; this is an energy forecast, not a plate forecast.",
-          "oil_outlook": "lower"
-        },
-        {
-          "id": "trade-policy",
-          "publisher": "White House",
-          "title": "June 2026 adjustment to Section 232 metals tariff regimes",
-          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states/",
-          "evidence_date": "2026-06-01",
-          "reviewed_at": "2026-11-04",
-          "max_age_days": 210,
-          "scope": "Direct trade-policy channel, but product and country treatment requires current verification",
-          "summary": "The June 1 proclamation amended the Section 232 metals framework and differentiated metals articles from certain derivatives. This dated document is context, not a determination of the current tariff on any plate shipment. The model assigns no numerical tariff premium. Future changes remain scenario risks.",
-          "access": "Dated reviewed context; not reverified by the monthly parser"
-        },
-        {
-          "id": "data-centers",
-          "publisher": "DOE / Lawrence Berkeley National Laboratory",
-          "title": "United States Data Center Energy Usage Report: 2025 Update",
-          "url": "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
-          "evidence_date": "2026-06-18",
-          "reviewed_at": "2026-11-04",
-          "max_age_days": 540,
-          "scope": "Electricity-demand scenarios; not a plate demand forecast",
-          "summary": "DOE/LBNL research projects substantial data-center electricity-demand growth with a wide scenario range. It does not estimate carbon steel plate tonnage. The forecast treats demand for selected power equipment, tanks and generator skids as a conditional plate channel; building frames and other steel products are distinguished.",
-          "access": "Dated reviewed context; not reverified by the monthly parser"
-        }
-      ],
-      "source_checks": [
-        {
-          "source": "https://www.federalreserve.gov/releases/g17/current/",
-          "status": "ok"
-        },
-        {
-          "source": "https://www.eia.gov/outlooks/steo/report/",
-          "status": "ok"
-        }
-      ],
-      "signals": [
-        {
-          "name": "Reported plate price momentum",
-          "weight": 2.0,
-          "source_id": "ssab-market",
-          "basis": "SSAB reported an increase in its dated North American plate commentary."
-        },
-        {
-          "name": "Distributor inventory constraint",
-          "weight": 1.0,
-          "source_id": "ssab-market",
-          "basis": "Producer assessment of inventories; not a verified allocation percentage."
-        },
-        {
-          "name": "Manufacturing demand context",
-          "weight": 0.25,
-          "source_id": "fed-manufacturing",
-          "basis": "Broad manufacturing; capped at one quarter of a directional point."
-        }
-      ],
-      "input_score": 1.5,
-      "quarters": [
-        {
-          "id": "2026-Q4",
-          "label": "Q4 2026",
-          "year": 2026,
-          "quarter": 4,
-          "price_direction": "Firming",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q4 2026 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-          "confidence": "Moderate",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.5,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q4 2026 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Mild upward bias",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 1
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a year-end inventory and holiday drag, even when supply is constrained. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q1",
-          "label": "Q1 2027",
-          "year": 2027,
-          "quarter": 1,
-          "price_direction": "Firming",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q1 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
-          "confidence": "Moderate",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.5,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q1 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows modest first-quarter restocking support, conditional on real orders. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q2",
-          "label": "Q2 2027",
-          "year": 2027,
-          "quarter": 2,
-          "price_direction": "Firming",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q2 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.5,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q2 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows modest spring construction and equipment support, conditional on project execution. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q3",
-          "label": "Q3 2027",
-          "year": 2027,
-          "quarter": 3,
-          "price_direction": "Firming",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q3 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.5,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q3 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a small summer activity drag; it does not assume a mill outage. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q4",
-          "label": "Q4 2027",
-          "year": 2027,
-          "quarter": 4,
-          "price_direction": "Firming",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q4 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.5,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Firming",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q4 2027 is firming, with tightness persists in base case; recovery unverified. Plate supply tightness is carried forward as a conditional scenario, not assumed to disappear on a calendar date. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-              "chart_value": 2
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a year-end inventory and holiday drag, even when supply is constrained. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        }
-      ],
-      "methodology": [
-        "This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.",
-        "Plate-first weighted factor model: domestic supply 35%, plate pricing 25%, plate-specific imports and trade 20%, end-user plate demand 15%, and validated historical/macro context 5%. These weights are judgmental and not statistically optimized.",
-        "Missing evidence is unscored rather than assumed neutral. Each factor is in [-1,+1] and the sum is scaled to a directional score in [-2,+2]; evidence coverage is reported separately.",
-        "Supply tightness is maintained as a conditional base case until verified plate-specific evidence supports recovery. No automatic 35% per-quarter mean reversion or speculative seasonal score is applied. Later-quarter confidence declines even if directional scores persist.",
-        "Historical momentum is eligible only if at least 12 nonoverlapping test quarters outperform a naive majority-class baseline by over five percentage points. Its contribution cannot exceed 5% of factor weights.",
-        "Bull and bear cases shift scores as illustrative stresses, not measured probabilities. Neither direction nor confidence is a statistically calibrated forecast.",
-        "Trade policy, imports, all-steel output, energy, infrastructure, defense and data centers are disclosed scenario channels, not automatic numerical plate premiums. Raw-steel data cannot confirm plate availability. HRC futures and coil-price indexes are excluded.",
-        "The same directional framework covers A36, A572 Grade 50 and A516 Grade 70. Grade, thickness, width, origin, heat treatment and testing requirements can create different availability. A516 Grade 70 pressure-vessel or normalized specifications can be more restrictive; no grade spread or specification premium is estimated.",
-        "Each calendar month produces one immutable edition. Explicit revisions append a new edition and reason; prior snapshots remain unchanged. Forecasts are regenerated only with the inputs available at that edition, never backfilled to look historically accurate."
-      ],
-      "revision_reason": "Upgrade to plate-first weighted rules model v2.0; original November edition retained",
-      "content_hash": "bfb7bd708ff26df5ad77139cb8465667a3eb2996ace46a8c3bc3ffd4bcecba7f"
-    },
-    {
-      "id": "2026-11-r3",
-      "month": "2026-11",
-      "generated_at": "2026-11-12T01:51:32.990479+00:00",
-      "as_of": "2026-11-11",
-      "model_version": "plate-direction-2.1-price-level-vs-change",
-      "historical_validation": {
-        "status": "evaluated",
-        "series": "WPU101",
-        "proxy": "U.S. steel mill products PPI (not discrete plate)",
-        "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WPU101",
-        "start": "1926-01-01",
-        "last_observation": "2026-09-01",
-        "observations": 1209,
-        "holdout_quarters": 19,
-        "directional_hits": 10,
-        "directional_hit_rate": 0.526,
-        "majority_baseline_hits": 11,
-        "majority_baseline_rate": 0.579,
-        "historical_signal": "Upward historical momentum",
-        "signal_code": 1,
-        "method": "Six- and twelve-month momentum, three-month forward directional evaluation; nonoverlapping quarterly test observations; fixed rules, no optimization; historical revised series may contain revision bias.",
-        "warning": "This is an all-steel price proxy, not plate prices. Historical accuracy does not establish future probability or forecast confidence.",
-        "retrieved_at": "2026-11-12T01:51:32.889613+00:00",
-        "data_status": "fresh"
-      },
-      "historical_weight": 0,
-      "factor_weights": {
-        "domestic_plate_supply": 0.35,
-        "plate_price_momentum": 0.25,
-        "plate_imports_trade": 0.2,
-        "end_user_plate_demand": 0.15,
-        "historical_macro": 0.05
-      },
-      "factor_inputs": {
-        "domestic_plate_supply": {
-          "value": 1,
-          "evidence": "SSAB low distributor inventory assessment; no confirmed mill allocation or lead time"
-        },
-        "plate_price_momentum": {
-          "value": 1,
-          "evidence": "SSAB North American plate pricing commentary"
-        },
-        "plate_imports_trade": {
-          "value": null,
-          "evidence": "No verified current discrete plate import flow or tariff change scored"
-        },
-        "end_user_plate_demand": {
-          "value": 1,
-          "evidence": "SSAB plate demand commentary; not order-level evidence"
-        },
-        "historical_macro": {
-          "value": null,
-          "evidence": "Historical proxy withheld unless it beats the holdout baseline"
-        }
-      },
-      "evidence_coverage": 0.75,
-      "grades": [
-        "A36",
-        "A572 Grade 50",
-        "A516 Grade 70"
-      ],
-      "forecast_type": "Directional scenarios; no dollar price targets",
-      "baseline": "Each quarter describes price pressure versus the preceding quarter; the current quarter describes its remaining period versus prevailing conditions. It is not an absolute price path.",
-      "sources": [
-        {
-          "id": "ssab-market",
-          "publisher": "SSAB",
-          "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
-          "title": "Market situation and outlook",
-          "period": "Q3 2026",
-          "evidence_date": "2026-09-30",
-          "date_kind": "period end; publication date not supplied on page",
-          "max_age_days": 105,
-          "observations": {
-            "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
-            "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
-            "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
-            "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
-          },
-          "retrieved_at": "2026-11-12T01:50:25.899945+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Direct plate commentary"
-        },
-        {
-          "id": "aisi-imports",
-          "publisher": "AISI / preliminary Census data",
-          "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
-          "title": "Monthly steel import report",
-          "period": "September 2026",
-          "evidence_date": "2026-10-27",
-          "date_kind": "publication date",
-          "max_age_days": 45,
-          "observations": {
-            "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
-          },
-          "retrieved_at": "2026-11-12T01:50:25.899945+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Broad steel context; not discrete plate supply"
-        },
-        {
-          "id": "aisi-production",
-          "publisher": "AISI",
-          "url": "https://www.steel.org/industry-data/",
-          "title": "Weekly raw steel production",
-          "period": "Week ending 2026-11-07",
-          "evidence_date": "2026-11-07",
-          "date_kind": "reporting period end",
-          "max_age_days": 14,
-          "observations": {
-            "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
-          },
-          "retrieved_at": "2026-11-12T01:50:25.899945+00:00",
-          "access": "Retrieved from primary source this collection",
-          "scope": "Broad steel context; not discrete plate supply"
-        },
-        {
-          "evidence_date": "2026-10-16",
-          "max_age_days": 60,
-          "retrieved_at": "2026-11-12T01:51:32.990479+00:00",
-          "access": "Retrieved this forecast edition",
-          "scope": "Indirect; not plate tonnage or transaction prices",
-          "id": "fed-manufacturing",
-          "publisher": "Federal Reserve",
-          "title": "Industrial Production and Capacity Utilization",
-          "url": "https://www.federalreserve.gov/releases/g17/20261016/",
-          "summary": "The Federal Reserve reports manufacturing output rose 0.3% in September. Defense and space equipment output rose 0.4% in that release.",
-          "manufacturing_change": 0.3
-        },
-        {
-          "evidence_date": "2026-11-10",
-          "max_age_days": 60,
-          "retrieved_at": "2026-11-12T01:51:32.990479+00:00",
-          "access": "Retrieved this forecast edition",
-          "scope": "Indirect; not plate tonnage or transaction prices",
-          "id": "eia-energy",
-          "publisher": "EIA",
-          "title": "Short-Term Energy Outlook",
-          "url": "https://www.eia.gov/outlooks/steo/report/",
-          "summary": "EIA’s dated outlook projects a lower Brent price next year; this is an energy forecast, not a plate forecast.",
-          "oil_outlook": "lower"
-        },
-        {
-          "id": "trade-policy",
-          "publisher": "White House",
-          "title": "June 2026 adjustment to Section 232 metals tariff regimes",
-          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states/",
-          "evidence_date": "2026-06-01",
-          "reviewed_at": "2026-11-04",
-          "max_age_days": 210,
-          "scope": "Direct trade-policy channel, but product and country treatment requires current verification",
-          "summary": "The June 1 proclamation amended the Section 232 metals framework and differentiated metals articles from certain derivatives. This dated document is context, not a determination of the current tariff on any plate shipment. The model assigns no numerical tariff premium. Future changes remain scenario risks.",
-          "access": "Dated reviewed context; not reverified by the monthly parser"
-        },
-        {
-          "id": "data-centers",
-          "publisher": "DOE / Lawrence Berkeley National Laboratory",
-          "title": "United States Data Center Energy Usage Report: 2025 Update",
-          "url": "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
-          "evidence_date": "2026-06-18",
-          "reviewed_at": "2026-11-04",
-          "max_age_days": 540,
-          "scope": "Electricity-demand scenarios; not a plate demand forecast",
-          "summary": "DOE/LBNL research projects substantial data-center electricity-demand growth with a wide scenario range. It does not estimate carbon steel plate tonnage. The forecast treats demand for selected power equipment, tanks and generator skids as a conditional plate channel; building frames and other steel products are distinguished.",
-          "access": "Dated reviewed context; not reverified by the monthly parser"
-        }
-      ],
-      "source_checks": [
-        {
-          "source": "https://www.federalreserve.gov/releases/g17/current/",
-          "status": "ok"
-        },
-        {
-          "source": "https://www.eia.gov/outlooks/steo/report/",
-          "status": "ok"
-        }
-      ],
-      "signals": [
-        {
-          "name": "Reported plate price momentum",
-          "weight": 2.0,
-          "source_id": "ssab-market",
-          "basis": "SSAB reported an increase in its dated North American plate commentary."
-        },
-        {
-          "name": "Distributor inventory constraint",
-          "weight": 1.0,
-          "source_id": "ssab-market",
-          "basis": "Producer assessment of inventories; not a verified allocation percentage."
-        },
-        {
-          "name": "Manufacturing demand context",
-          "weight": 0.25,
-          "source_id": "fed-manufacturing",
-          "basis": "Broad manufacturing; capped at one quarter of a directional point."
-        }
-      ],
-      "input_score": 1.5,
-      "quarters": [
-        {
-          "id": "2026-Q4",
-          "label": "Q4 2026",
-          "year": 2026,
-          "quarter": 4,
-          "price_direction": "Mild upward bias",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q4 2026 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-          "confidence": "Moderate",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 1.15,
-          "seasonal_adjustment": 0,
-          "decay": 1.0,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Mild upward bias",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q4 2026 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-              "chart_value": 1
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a year-end inventory and holiday drag, even when supply is constrained. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q1",
-          "label": "Q1 2027",
-          "year": 2027,
-          "quarter": 1,
-          "price_direction": "Mild upward bias",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q1 2027 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
-          "confidence": "Moderate",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.775,
-          "seasonal_adjustment": 0,
-          "decay": 0.75,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Mild upward bias",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q1 2027 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Restocking could support orders after year-end, but weak factory demand or financing constraints could offset it.",
-              "chart_value": 1
-            },
-            {
-              "name": "Bearish",
-              "direction": "Broadly stable",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": 0
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "Near-term inventory tightness can sustain price pressure if mills cannot replenish distributors. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows modest first-quarter restocking support, conditional on real orders. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q2",
-          "label": "Q2 2027",
-          "year": 2027,
-          "quarter": 2,
-          "price_direction": "Mild upward bias",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q2 2027 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.575,
-          "seasonal_adjustment": 0,
-          "decay": 0.5,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Mild upward bias",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q2 2027 is mild upward bias, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Spring construction and equipment activity could support plate consumption if funded projects move into fabrication.",
-              "chart_value": 1
             },
             {
               "name": "Bearish",
@@ -2045,149 +526,149 @@
           "label": "Q3 2027",
           "year": 2027,
           "quarter": 3,
-          "price_direction": "Broadly stable",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q3 2027 is broadly stable, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
-          "confidence": "Low",
+          "price_direction": "Insufficient evidence",
+          "availability": "Supply condition unverified",
+          "analysis": "The base case for Q3 2027 is insufficient evidence, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
+          "confidence": "Insufficient evidence",
           "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.375,
-          "seasonal_adjustment": 0,
-          "decay": 0.25,
-          "evidence_coverage": 0.75,
-          "scenarios": [
-            {
-              "name": "Bullish",
-              "direction": "Firming",
-              "availability": "Tighter than base case",
-              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
-            },
-            {
-              "name": "Base case",
-              "direction": "Broadly stable",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q3 2027 is broadly stable, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
-              "chart_value": 0
-            },
-            {
-              "name": "Bearish",
-              "direction": "Mild downward bias",
-              "availability": "More available than base case",
-              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": -1
-            }
-          ],
-          "drivers": [
-            {
-              "name": "Mill production, allocations & shutdowns",
-              "scope": "Direct plate risk; current mill schedules unverified",
-              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
-              "source_ids": [
-                "ssab-market",
-                "aisi-production"
-              ]
-            },
-            {
-              "name": "Imports, Section 232 & trade policy",
-              "scope": "Direct plate channel; current shipment treatment unverified",
-              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
-              "source_ids": [
-                "trade-policy",
-                "aisi-imports"
-              ]
-            },
-            {
-              "name": "Economy, manufacturing & fabrication",
-              "scope": "Broad indicator with a plate demand channel",
-              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
-              "source_ids": [
-                "fed-manufacturing"
-              ]
-            },
-            {
-              "name": "Energy, oil & gas",
-              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
-              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
-              "source_ids": [
-                "eia-energy"
-              ]
-            },
-            {
-              "name": "Infrastructure, defense & government policy",
-              "scope": "Direct plate applications and broader structural-steel demand",
-              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
-              "source_ids": [
-                "fed-manufacturing",
-                "trade-policy"
-              ]
-            },
-            {
-              "name": "Data centers & power infrastructure",
-              "scope": "Mostly indirect; building frames are primarily structural products",
-              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
-              "source_ids": [
-                "data-centers"
-              ]
-            },
-            {
-              "name": "Historical cycles & seasonality",
-              "scope": "Explicit model assumption; not a fitted historical relationship",
-              "analysis": "The model allows a small summer activity drag; it does not assume a mill outage. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
-              "source_ids": []
-            }
-          ],
-          "indicators": [
-            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
-            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
-            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
-            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
-            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
-          ],
-          "source_ids": [
-            "ssab-market",
-            "aisi-imports",
-            "aisi-production",
-            "fed-manufacturing",
-            "eia-energy",
-            "trade-policy",
-            "data-centers"
-          ]
-        },
-        {
-          "id": "2027-Q4",
-          "label": "Q4 2027",
-          "year": 2027,
-          "quarter": 4,
-          "price_direction": "Broadly stable",
-          "availability": "Tightness persists in base case; recovery unverified",
-          "analysis": "The base case for Q4 2027 is broadly stable, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-          "confidence": "Low",
-          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
-          "base_score": 0.175,
+          "base_score": null,
           "seasonal_adjustment": 0,
           "decay": 0.0,
-          "evidence_coverage": 0.75,
+          "evidence_coverage": 0.5,
           "scenarios": [
             {
               "name": "Bullish",
-              "direction": "Firming",
+              "direction": "Conditional only",
               "availability": "Tighter than base case",
               "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
-              "chart_value": 2
+              "chart_value": null
             },
             {
               "name": "Base case",
-              "direction": "Broadly stable",
-              "availability": "Tightness persists in base case; recovery unverified",
-              "analysis": "The base case for Q4 2027 is broadly stable, with tightness persists in base case; recovery unverified. Existing supply tightness supports an elevated price level, but is not counted as proof of a fresh price increase every quarter. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
-              "chart_value": 0
+              "direction": "Conditional only",
+              "availability": "Supply condition unverified",
+              "analysis": "The base case for Q3 2027 is insufficient evidence, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Summer activity and import arrivals may reduce pressure, but neither is scored as a verified recovery.",
+              "chart_value": null
             },
             {
               "name": "Bearish",
-              "direction": "Softening",
+              "direction": "Conditional only",
               "availability": "More available than base case",
               "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
-              "chart_value": -2
+              "chart_value": null
+            }
+          ],
+          "drivers": [
+            {
+              "name": "Mill production, allocations & shutdowns",
+              "scope": "Direct plate risk; current mill schedules unverified",
+              "analysis": "The base case assumes some supply adjustment over time, without assigning an opening date to any mill. Raw-steel utilization is broader context. No allocation percentage, shutdown duration or restart is assumed as a confirmed fact.",
+              "source_ids": [
+                "ssab-market",
+                "aisi-production"
+              ]
+            },
+            {
+              "name": "Imports, Section 232 & trade policy",
+              "scope": "Direct plate channel; current shipment treatment unverified",
+              "analysis": "The base case holds the reviewed trade framework unchanged as a scenario assumption. Duties, exclusions, antidumping orders and origin rules can alter landed plate competition. All-steel import totals do not prove plate arrivals. Policy easing or a surge in plate-specific licenses would shift this outlook downward; tighter restrictions would shift it upward.",
+              "source_ids": [
+                "trade-policy",
+                "aisi-imports"
+              ]
+            },
+            {
+              "name": "Economy, manufacturing & fabrication",
+              "scope": "Broad indicator with a plate demand channel",
+              "analysis": "Factory activity and financing conditions influence equipment orders, fabrication backlogs and inventory cycles. Broad manufacturing output supplies only a small model adjustment; it does not measure A36, Grade 50 or pressure-vessel plate orders. A sustained contraction would outweigh the assumed seasonal support.",
+              "source_ids": [
+                "fed-manufacturing"
+              ]
+            },
+            {
+              "name": "Energy, oil & gas",
+              "scope": "Plate for tanks, vessels and process equipment; indirect cost effects",
+              "analysis": "Energy projects can support A516 Grade 70 and structural plate demand, while oil, natural gas, electricity and diesel affect investment and operating costs in different ways. The base case does not translate oil prices one-for-one into plate demand. Project sanctions, drilling budgets, LNG equipment orders and freight costs could change the outcome.",
+              "source_ids": [
+                "eia-energy"
+              ]
+            },
+            {
+              "name": "Infrastructure, defense & government policy",
+              "scope": "Direct plate applications and broader structural-steel demand",
+              "analysis": "Bridges, heavy equipment and eligible defense fabrication can consume plate. Funding announcements become demand only after appropriations, procurement and fabrication orders. Domestic-content rules may shift sourcing. No unverified policy change, election outcome or announced project is counted as a confirmed plate order.",
+              "source_ids": [
+                "fed-manufacturing",
+                "trade-policy"
+              ]
+            },
+            {
+              "name": "Data centers & power infrastructure",
+              "scope": "Mostly indirect; building frames are primarily structural products",
+              "analysis": "DOE research supports an electricity-demand growth scenario, not a plate-tonnage estimate. Plate exposure is concentrated in generator skids, tanks, enclosures and selected power equipment. Structural frames, rebar, electrical steel and coil-based products are separate markets. Grid constraints, delayed interconnections or cancelled projects could reduce the expected pull-through.",
+              "source_ids": [
+                "data-centers"
+              ]
+            },
+            {
+              "name": "Historical cycles & seasonality",
+              "scope": "Explicit model assumption; not a fitted historical relationship",
+              "analysis": "The model allows a small summer activity drag; it does not assume a mill outage. Restocking and destocking can amplify steel cycles. The seasonal weights and mean reversion are judgmental, not a backtested plate-price model. No HRC futures or coil index enters the calculation.",
+              "source_ids": []
+            }
+          ],
+          "indicators": [
+            "Plate-specific mill lead times shortening or lengthening for two consecutive reporting periods; authenticated allocation or outage notices.",
+            "Plate-specific import licenses, actual arrivals and landed offers changing direction; a new official Section 232 or AD/CVD action.",
+            "Two successive monthly contractions or expansions in manufacturing output, accompanied by changes in fabrication orders.",
+            "Energy, LNG, infrastructure, defense or data-center power projects advancing to procurement—or being delayed or cancelled.",
+            "Verified plate transaction assessments reversing direction; inventory replenishment exceeding or falling short of end-user orders."
+          ],
+          "source_ids": [
+            "ssab-market",
+            "aisi-imports",
+            "aisi-production",
+            "fed-manufacturing",
+            "eia-energy",
+            "trade-policy",
+            "data-centers"
+          ]
+        },
+        {
+          "id": "2027-Q4",
+          "label": "Q4 2027",
+          "year": 2027,
+          "quarter": 4,
+          "price_direction": "Insufficient evidence",
+          "availability": "Supply condition unverified",
+          "analysis": "The base case for Q4 2027 is insufficient evidence, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+          "confidence": "Insufficient evidence",
+          "confidence_reason": "Qualitative evidence strength, not a probability. Confidence declines with distance and missing plate-specific allocation, lead-time and transaction data.",
+          "base_score": null,
+          "seasonal_adjustment": 0,
+          "decay": 0.0,
+          "evidence_coverage": 0.5,
+          "scenarios": [
+            {
+              "name": "Bullish",
+              "direction": "Conditional only",
+              "availability": "Tighter than base case",
+              "analysis": "Longer plate lead times, an extended outage, tighter trade restrictions or executed energy, infrastructure and power-equipment orders would strengthen prices. Data-center spending matters only where it creates actual plate fabrication orders.",
+              "chart_value": null
+            },
+            {
+              "name": "Base case",
+              "direction": "Conditional only",
+              "availability": "Supply condition unverified",
+              "analysis": "The base case for Q4 2027 is insufficient evidence, with supply condition unverified. Current inventory and pricing evidence does not prove repeated quarterly increases or a future supply recovery. Confidence declines with the forecast horizon because current evidence cannot establish next year’s actual mill output, imports or orders. Year-end inventory reduction could restrain demand, while constrained supply could limit price relief.",
+              "chart_value": null
+            },
+            {
+              "name": "Bearish",
+              "direction": "Conditional only",
+              "availability": "More available than base case",
+              "analysis": "A manufacturing slowdown, destocking, cancelled capital projects, improved mill availability or greater landed import competition would weaken prices. Cheaper HRC by itself is not sufficient evidence of cheaper discrete plate.",
+              "chart_value": null
             }
           ],
           "drivers": [
@@ -2269,17 +750,16 @@
       ],
       "methodology": [
         "This is a deterministic, rules-based scenario model. No AI model, paid service, market-data subscription or AI API is running.",
-        "Plate-first weighted factor model: domestic supply 35%, plate pricing 25%, plate-specific imports and trade 20%, end-user plate demand 15%, and validated historical/macro context 5%. These weights are judgmental and not statistically optimized.",
-        "Missing evidence is unscored rather than assumed neutral. Each factor is in [-1,+1] and the sum is scaled to a directional score in [-2,+2]; evidence coverage is reported separately.",
-        "Supply tightness supports an elevated price level, not indefinite quarterly price increases. Current pricing and demand momentum lose predictive force with horizon using explicitly judgmental multipliers 1.0, 0.75, 0.50, 0.25, 0.0. This is not evidence that supply recovers; later quarters require new evidence for a firming call.",
-        "Historical momentum is eligible only if at least 12 nonoverlapping test quarters outperform a naive majority-class baseline by over five percentage points. Its contribution cannot exceed 5% of factor weights.",
-        "Bull and bear cases shift scores as illustrative stresses, not measured probabilities. Neither direction nor confidence is a statistically calibrated forecast.",
+        "Version 3.0 plate balance factors: domestic plate supply 30%, pricing 20%, plate imports 20%, end-user plate demand 20%, distributor inventory 10%. Weights are provisional and not backtested.",
+        "Missing mill allocation, plate lead-time and import data are explicitly unscored, not assumed neutral. Coverage is disclosed and no model confidence is calibrated.",
+        "Near-term observed momentum is discounted for Q1 and Q2 ahead; Q3 and Q4 ahead show insufficient evidence instead of mechanically projecting a trend. This is not a claim of supply recovery.",
+        "Broad steel PPI historical proxy is excluded because its holdout accuracy did not beat the majority baseline.",
+        "Bullish and bearish stress cases are conditional, not calibrated probability forecasts.",
         "Trade policy, imports, all-steel output, energy, infrastructure, defense and data centers are disclosed scenario channels, not automatic numerical plate premiums. Raw-steel data cannot confirm plate availability. HRC futures and coil-price indexes are excluded.",
         "The same directional framework covers A36, A572 Grade 50 and A516 Grade 70. Grade, thickness, width, origin, heat treatment and testing requirements can create different availability. A516 Grade 70 pressure-vessel or normalized specifications can be more restrictive; no grade spread or specification premium is estimated.",
         "Each calendar month produces one immutable edition. Explicit revisions append a new edition and reason; prior snapshots remain unchanged. Forecasts are regenerated only with the inputs available at that edition, never backfilled to look historically accurate."
       ],
-      "revision_reason": "Correct v2 persistence bias: elevated price level does not imply quarterly price increases; retain prior editions",
-      "content_hash": "b89e22d85f3e4fd7c68a867ac58dfa976f5f41ab02dd4eb52fcd2ec955c1db82"
+      "content_hash": "0e0cf94d0887189ee4f6c32b2bc9480afb47559f6c8ef78c027d3cf100c924dc"
     }
   ]
 }
