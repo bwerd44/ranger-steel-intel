@@ -11,7 +11,7 @@ from collect import fetch, plain, date_of
 from forecast import digest
 
 ROOT = Path(__file__).resolve().parent
-RULE_VERSION = 'plate-pulse-1.0'
+RULE_VERSION = 'plate-pulse-1.1-evidence-first'
 METRICS = {
     'pricing': ('Plate Pricing', ('Rising', 'Stable', 'Falling')),
     'supply': ('Domestic Mill Supply', ('Tightening', 'Stable', 'Improving')),
@@ -48,7 +48,7 @@ def observed_from_briefing(data):
         statement = source.get('observations',{}).get('pricing','')
         condition = 'Rising' if re.search(r'plate prices increased', statement, re.I) else 'Falling' if re.search(r'plate prices (decreased|fell)',statement,re.I) else 'Stable' if re.search(r'plate prices (were|remained) stable',statement,re.I) else None
         if condition:
-            observations.append({'metric':'pricing','condition':condition,'scope':'discrete_plate','verified':True,'evidence_date':source['evidence_date'],'max_age_days':45,'confidence':'Low','period':source.get('period'),'basis':statement,'limitation':'Latest reported quarterly trend, not a daily spot quote. Eligible for 45 days from period end.','source':copy.deepcopy(source),'verification':'Dated producer report; not independently measured transaction prices'})
+            observations.append({'metric':'pricing','condition':condition,'scope':'discrete_plate','verified':True,'evidence_date':source['evidence_date'],'max_age_days':30,'confidence':'Low','period':source.get('period'),'basis':statement,'limitation':'Latest reported quarterly trend, not a daily spot quote. Eligible for 30 days from period end.','source':copy.deepcopy(source),'verification':'Dated producer report; not independently measured transaction prices'})
     return observations
 
 
@@ -205,7 +205,7 @@ def build(data, reviewed, context, forecasts, history, now, offline=False):
     validate_history(history)
     day=now.astimezone(ZoneInfo('America/Chicago')).date()
     observations=observed_from_briefing(data)+copy.deepcopy(reviewed.get('observations',[]))
-    snapshot={'id':now.isoformat(),'as_of':day.isoformat(),'generated_at':now.isoformat(),'rule_version':RULE_VERSION,'readings':apply_editorial_assessments(derive_readings(observations,day),day),'mills':mill_tracker(data,reviewed,now,offline),'observations':observations}
+    snapshot={'id':now.isoformat(),'as_of':day.isoformat(),'generated_at':now.isoformat(),'rule_version':RULE_VERSION,'readings':derive_readings(observations,day),'mills':mill_tracker(data,reviewed,now,offline),'observations':observations}
     snapshot['developments']=[]
     for source in data.get('briefing',{}).get('sources',[]):
         if source['id'] in ('aisi-production','aisi-imports') and usable(source,day,45):
@@ -231,8 +231,8 @@ def build(data, reviewed, context, forecasts, history, now, offline=False):
     return {'schema_version':1,'updated_at':now.isoformat(),'pulse':presentation['readings'],'weekly':comparison,'mills':presentation['mills'],'imports_detail':import_intelligence(reviewed,now),'demand_drivers':demand_drivers(context,now),'accuracy':accuracy(forecasts,reviewed.get('quarterly_outcomes',[]),day),'recent_history':[{'as_of':h['as_of'],'readings':[{'label':r['label'],'condition':r['condition'],'evidence_date':r.get('evidence_date')} for r in h['readings']]} for h in new_history['snapshots'][-30:]],'history_count':len(new_history['snapshots']),'history_started':new_history['snapshots'][0]['as_of'] if new_history['snapshots'] else day.isoformat(),'rules':[
         'Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.',
         'Only explicit dated discrete-plate directional observations qualify. Low inventories, strong demand levels, all-steel production and aggregate imports cannot establish a change in plate supply or demand.',
-        'Recognized producer quarterly plate-price direction is eligible for 45 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.',
-        'Conflicting eligible readings on the same evidence date show Mixed at Low confidence. Missing data never defaults to Stable.',
+        'Recognized producer quarterly plate-price direction is eligible for 30 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.',
+        'Conflicting eligible readings on the same evidence date show Mixed at Low confidence. Missing data never defaults to Stable. Editorial neutral judgments are not scored as observations.',
         'Daily snapshots preserve evidence and readings. The weekly baseline is the latest saved snapshot on or before seven days ago, no more than fourteen days old. Missing weeks are not backfilled. Coverage changes are separate from physical market changes.',
         'Mill webpages are checked daily, but only recognized or reviewed dated developments are shown. A planned outage end is never treated as a confirmed restart. Capabilities pages do not verify current operations or allocations.',
         'Forecast accuracy needs a completed quarter and reviewed like-for-like observations for discrete plate. A current-quarter forecast requires the matching remaining-period baseline; a full-quarter result cannot substitute. Coil/HRC, all-steel output, within-quarter price changes and unverified headlines do not qualify. No suitable automated actual-price series is configured.',
