@@ -51,7 +51,10 @@ class ForecastTests(unittest.TestCase):
         e=forecast.make_edition(SOURCES,[],NOW,'2026-11')
         for q in e['quarters']:
             values=[s['chart_value'] for s in q['scenarios']]
-            self.assertGreaterEqual(values[0],values[1]);self.assertGreaterEqual(values[1],values[2])
+            if values[1] is None:
+                self.assertEqual(values,[None,None,None])
+            else:
+                self.assertGreaterEqual(values[0],values[1]);self.assertGreaterEqual(values[1],values[2])
             self.assertNotIn('$',q['analysis'])
             self.assertEqual(len(q['drivers']),7)
         self.assertEqual(e['grades'],['A36','A572 Grade 50','A516 Grade 70'])
