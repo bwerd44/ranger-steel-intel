@@ -2,25 +2,6 @@
   "description": "Reviewed dated discrete-plate directional evidence and mill developments. Survey-based readings are identified with limitations; other metrics remain unverified until comparable plate-specific evidence is available.",
   "observations": [
     {
-      "metric": "supply",
-      "condition": "Tightening",
-      "scope": "discrete_plate",
-      "verified": true,
-      "evidence_date": "2026-11-10",
-      "max_age_days": 21,
-      "confidence": "Low",
-      "period": "November 10, 2026",
-      "basis": "Steel Market Update described continued limited availability of plate alongside longer lead times and rising plate prices. This is a report of spot-market scarcity, not a measured week-over-week change in national plate output.",
-      "limitation": "Qualitative supply-pressure indicator; current shortage does not necessarily establish additional tightening. Source overlaps the pricing observation, so these are not independent confirmations.",
-      "verification": "Reviewed dated industry reporting on plate availability; directional assessment limited to reported spot-market pressure.",
-      "source": {
-        "publisher": "Steel Market Update",
-        "title": "SMU Price Ranges rise on tight supply, no signs of a year-end slowdown",
-        "url": "https://www.steelmarketupdate.com/2026/11/10/smu-price-ranges-rise-on-no-signs-of-a-year-end-slowdown/",
-        "evidence_date": "2026-11-10"
-      }
-    },
-    {
       "metric": "pricing",
       "condition": "Rising",
       "scope": "discrete_plate",
@@ -99,6 +80,21 @@
   ],
   "quarterly_outcomes": [],
   "market_developments": [
+    {
+      "event_id": "plate-spot-scarcity-november-2026",
+      "verified": true,
+      "evidence_date": "2026-11-10",
+      "max_age_days": 21,
+      "category": "Domestic plate context",
+      "summary": "SMU described limited plate availability and long lead times on November 10, alongside rising prices. This confirms a tight level, not necessarily additional tightening since the previous report.",
+      "limitation": "Do not score a tightening direction from a shortage level alone.",
+      "source": {
+        "publisher": "Steel Market Update",
+        "title": "SMU Price Ranges rise on tight supply, no signs of a year-end slowdown",
+        "url": "https://www.steelmarketupdate.com/2026/11/10/smu-price-ranges-rise-on-no-signs-of-a-year-end-slowdown/",
+        "evidence_date": "2026-11-10"
+      }
+    },
     {
       "event_id": "cut-length-plate-october-2026-permits",
       "verified": true,
