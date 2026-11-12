@@ -76,7 +76,12 @@ jobs:
           if [ -n "$FORECAST_REVISION_REASON" ]; then
             python forecast.py --revision-reason "$FORECAST_REVISION_REASON"
           else
-            python forecast.py
+            # One-time upgrade: append a revision only while November still uses v1.
+            if python -c "import json,sys; d=json.load(open('data/forecasts.json')); e=next(x for x in d['editions'] if x['id']==d['latest_id']); sys.exit(0 if e.get('model_version')=='plate-direction-1.0' else 1)"; then
+              python forecast.py --revision-reason "Upgrade to plate-first weighted rules model v2.0; original November edition retained"
+            else
+              python forecast.py
+            fi
           fi
       - name: Update Market Pulse and preserve weekly observations
         if: steps.clock.outputs.run == 'true'
