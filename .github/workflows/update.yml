@@ -68,21 +68,20 @@ jobs:
       - name: Refresh free historical steel-price proxy and evaluate holdout
         if: steps.clock.outputs.run == 'true'
         run: python historical_forecast.py
-      - name: Maintain monthly forecast history
+      - name: Publish single current v3 forecast
         if: steps.clock.outputs.run == 'true'
-        env:
-          FORECAST_REVISION_REASON: ${{ inputs.revision_reason }}
         run: |
-          if [ -n "$FORECAST_REVISION_REASON" ]; then
-            python forecast.py --revision-reason "$FORECAST_REVISION_REASON"
-          else
-            # One-time correction to the active November v2 edition.
-            if python -c "import json,sys; d=json.load(open('data/forecasts.json')); e=next(x for x in d['editions'] if x['id']==d['latest_id']); sys.exit(0 if e.get('model_version') in ('plate-direction-1.0','plate-direction-2.0-plate-first') else 1)"; then
-              python forecast.py --revision-reason "Correct v2 persistence bias: elevated price level does not imply quarterly price increases; retain prior editions"
-            else
-              python forecast.py
-            fi
-          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/forecasts.json')
+          d=json.loads(p.read_text())
+          # Prior versions are removed from the published file as requested.
+          d['editions']=[]
+          d['latest_id']=None
+          p.write_text(json.dumps(d,indent=2)+'\\n')
+          PY
+          python forecast.py
       - name: Update Market Pulse and preserve weekly observations
         if: steps.clock.outputs.run == 'true'
         run: python intelligence.py
