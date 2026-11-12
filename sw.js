@@ -1,4 +1,4 @@
-const CACHE = 'ranger-intel-mobile-news-v7';
+const CACHE = 'ranger-intel-forecast-v3';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
