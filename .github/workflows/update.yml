@@ -18,6 +18,7 @@ on:
       - 'data/prospect-profile.json'
       - 'data/prospect-seeds.json'
       - 'forecast.py'
+      - 'public_plate_data.py'
       - 'data/ai-assessment.json'
       - 'historical_forecast.py'
       - 'intelligence.py'
@@ -68,6 +69,9 @@ jobs:
       - name: Refresh free historical steel-price proxy and evaluate holdout
         if: steps.clock.outputs.run == 'true'
         run: python historical_forecast.py
+      - name: Collect public carbon steel price evidence
+        if: steps.clock.outputs.run == 'true'
+        run: python public_plate_data.py
       - name: Publish single current v3 forecast
         if: steps.clock.outputs.run == 'true'
         run: |
@@ -80,7 +84,7 @@ jobs:
           if not any(e.get('model_version','').startswith('plate-direction-3.') for e in d['editions']):
             d['editions']=[]
             d['latest_id']=None
-            p.write_text(json.dumps(d,indent=2)+'\\n')
+            p.write_text(json.dumps(d,indent=2)+'\n')
           PY
           python forecast.py
       - name: Update Market Pulse and preserve weekly observations
@@ -91,7 +95,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json
+          git add data/public-plate-evidence.json data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update plate intelligence and preserve observation history'
             git push
@@ -103,7 +107,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html sw.js manifest.webmanifest icon.png _site/
-          cp data/ai-assessment.json data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
+          cp data/public-plate-evidence.json data/ai-assessment.json data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
         with:
