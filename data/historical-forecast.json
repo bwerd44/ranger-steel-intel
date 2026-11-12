@@ -15,6 +15,6 @@
   "signal_code": 1,
   "method": "Six- and twelve-month momentum, three-month forward directional evaluation; nonoverlapping quarterly test observations; fixed rules, no optimization; historical revised series may contain revision bias.",
   "warning": "This is an all-steel price proxy, not plate prices. Historical accuracy does not establish future probability or forecast confidence.",
-  "retrieved_at": "2026-11-12T15:08:51.832103+00:00",
+  "retrieved_at": "2026-11-12T15:11:37.489456+00:00",
   "data_status": "fresh"
 }
