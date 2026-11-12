@@ -106,7 +106,7 @@ jobs:
         if: steps.clock.outputs.run == 'true'
         run: |
           mkdir -p _site/data
-          cp index.html sw.js manifest.webmanifest icon.png _site/
+          cp index.html sw.js manifest.webmanifest icon.png ranger-plate-banner.jpg _site/
           cp data/public-plate-evidence.json data/ai-assessment.json data/historical-forecast.json data/latest.json data/forecasts.json data/intelligence.json data/pulse-history.json data/prospects.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         if: steps.clock.outputs.run == 'true'
