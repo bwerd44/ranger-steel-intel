@@ -4777,6 +4777,382 @@
         }
       ],
       "content_hash": "0a0ecd51b5dbfea309fe14c6d7cae34095b494c797c986840e03b35606a79480"
+    },
+    {
+      "id": "2026-11-12T18:12:54.586785+00:00",
+      "as_of": "2026-11-12",
+      "generated_at": "2026-11-12T18:12:54.586785+00:00",
+      "rule_version": "plate-pulse-1.1-evidence-first",
+      "readings": [
+        {
+          "id": "pricing",
+          "label": "Plate Pricing",
+          "condition": "Insufficient Data",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "evidence_date": null,
+          "last_evidence_date": "2026-09-30",
+          "basis": "No eligible dated discrete plate price-direction evidence.",
+          "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+          "sources": []
+        },
+        {
+          "id": "supply",
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "color": "red",
+          "arrow": "↑",
+          "confidence": "Low",
+          "evidence_date": "2026-10-27",
+          "basis": "SMU reported shrinking remaining 2026 domestic spot tonnage for plate and sheet, with steel buyers struggling to find domestic mills offering spot availability. This indicates tightening spot access, not a measured decline in total U.S. plate production.",
+          "period": "Late October 2026",
+          "limitation": "Qualitative buyer reports; cannot infer exact mill allocation percentages or all-grade availability. Supply direction here refers to domestic spot-order availability.",
+          "sources": [
+            {
+              "publisher": "Steel Market Update",
+              "title": "Sheet and plate price gains accelerate as 2026 tons dry up",
+              "url": "https://www.steelmarketupdate.com/category/sheet/",
+              "evidence_date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "id": "lead_times",
+          "label": "Mill Lead Times",
+          "condition": "Lengthening",
+          "color": "red",
+          "arrow": "↑",
+          "confidence": "Medium",
+          "evidence_date": "2026-10-29",
+          "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
+          "period": "Late October 2026",
+          "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29. Evidence expires after 21 days unless a newer plate-specific survey confirms direction.",
+          "sources": [
+            {
+              "publisher": "Steel Market Update",
+              "title": "Mill lead times climb to new highs, buyers expect little relief",
+              "url": "https://www.steelmarketupdate.com/category/sheet/",
+              "evidence_date": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "imports",
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "evidence_date": null,
+          "last_evidence_date": null,
+          "basis": "All-steel imports and license totals do not establish discrete plate availability.",
+          "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+          "sources": []
+        },
+        {
+          "id": "demand",
+          "label": "Plate Demand",
+          "condition": "Strengthening",
+          "color": "red",
+          "arrow": "↑",
+          "confidence": "Low",
+          "evidence_date": "2026-09-22",
+          "basis": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
+          "period": "September 2026",
+          "limitation": "Low confidence: qualitative analyst assessment from September, not a current plate-specific demand series. Supply restrictions can magnify apparent demand strength.",
+          "sources": [
+            {
+              "publisher": "Steel Market Update",
+              "title": "Plate feels the squeeze, outages well underway",
+              "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
+              "evidence_date": "2026-09-22"
+            }
+          ]
+        }
+      ],
+      "mills": [
+        {
+          "id": "nucor",
+          "name": "Nucor",
+          "url": "https://nucor.com/products/plate/",
+          "coverage": "U.S. discrete plate mills; sheet projects excluded",
+          "last_confirmed_date": null,
+          "days_since_confirmation": null,
+          "condition": "Current status unverified",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "checked_at": "2026-11-12T18:12:54.586785+00:00",
+          "source_access": "retrieved",
+          "developments": [],
+          "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+        },
+        {
+          "id": "ssab",
+          "name": "SSAB Americas",
+          "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+          "coverage": "North American plate commentary; individual plant operation not inferred",
+          "last_confirmed_date": "2026-09-30",
+          "days_since_confirmation": 43,
+          "condition": "Current status unverified",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "checked_at": "2026-11-12T18:12:54.586785+00:00",
+          "source_access": "retrieved",
+          "developments": [
+            {
+              "event_id": "ssab-2026-09-30",
+              "evidence_date": "2026-09-30",
+              "date_kind": "reporting period end",
+              "summary": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+              "source": {
+                "id": "ssab-market",
+                "publisher": "SSAB",
+                "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+                "title": "Market situation and outlook",
+                "period": "Q3 2026",
+                "evidence_date": "2026-09-30",
+                "date_kind": "period end; publication date not supplied on page",
+                "max_age_days": 105,
+                "observations": {
+                  "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+                  "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+                  "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+                  "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
+                },
+                "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+                "access": "Retrieved from primary source this collection"
+              },
+              "status": "Dated quarterly market commentary, not a plant operating report",
+              "access": "Dated reviewed development; not freshly reverified"
+            }
+          ],
+          "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+        },
+        {
+          "id": "jsw",
+          "name": "JSW Steel USA",
+          "url": "https://jswsteel.us/baytown/",
+          "coverage": "Baytown plate; Mingo coil/slab context kept separate",
+          "last_confirmed_date": "2026-09-01",
+          "days_since_confirmation": 72,
+          "condition": "Current status unverified",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "checked_at": "2026-11-12T18:12:54.586785+00:00",
+          "source_access": "retrieved",
+          "developments": [
+            {
+              "event_id": "jsw-baytown-september-2026-plan",
+              "mill_id": "jsw",
+              "evidence_date": "2026-09-01",
+              "date_kind": "publication date",
+              "max_age_days": 90,
+              "reviewed_at": "2026-11-04",
+              "summary": "A public report quoting JSW’s CEO described a planned 45-day Baytown plate-mill outage starting in September for upgrades. Completion and present production status have not been verified; the scheduled duration is not a restart confirmation.",
+              "status": "Historical reported plan; current status unverified",
+              "source": {
+                "publisher": "Steel Market Update, quoting JSW management",
+                "title": "JSW Steel USA moves 45-day outage to September",
+                "url": "https://www.steelmarketupdate.com/2026/09/01/jsw-steel-usa-moves-45-day-outage-to-sept-amid-value-add-push/",
+                "evidence_date": "2026-09-01"
+              },
+              "access": "Dated reviewed development; not freshly reverified"
+            }
+          ],
+          "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+        },
+        {
+          "id": "cliffs",
+          "name": "Cleveland-Cliffs",
+          "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
+          "coverage": "U.S. plate footprint; sheet and electrical-steel projects excluded",
+          "last_confirmed_date": "2026-09-30",
+          "days_since_confirmation": 43,
+          "condition": "Current status unverified",
+          "color": "gray",
+          "arrow": "—",
+          "confidence": "Not rated",
+          "checked_at": "2026-11-12T18:12:54.586785+00:00",
+          "source_access": "retrieved",
+          "developments": [
+            {
+              "event_id": "cliffs-q3-2026-plate-footprint",
+              "mill_id": "cliffs",
+              "evidence_date": "2026-09-30",
+              "date_kind": "reporting period end; changes described in the Q3 10-Q",
+              "max_age_days": 90,
+              "reviewed_at": "2026-11-04",
+              "summary": "The Q3 2026 filing describes idling the Gary plate finishing line and one Burns Harbor plate mill during Q2, consolidating capabilities at one Burns Harbor mill. The company said capability and steel output were not compromised. This is a dated footprint change, not proof of current spot availability or allocations.",
+              "verification_anchor": "idling our Gary plate finishing line",
+              "status": "Dated company filing; current availability unverified",
+              "source": {
+                "publisher": "Cleveland-Cliffs",
+                "title": "Form 10-Q for period ended September 30, 2026",
+                "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
+                "evidence_date": "2026-09-30"
+              },
+              "access": "Primary statement rechecked this collection"
+            }
+          ],
+          "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
+        }
+      ],
+      "observations": [
+        {
+          "metric": "pricing",
+          "condition": "Rising",
+          "scope": "discrete_plate",
+          "verified": true,
+          "evidence_date": "2026-09-30",
+          "max_age_days": 30,
+          "confidence": "Low",
+          "period": "Q3 2026",
+          "basis": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+          "limitation": "Latest reported quarterly trend, not a daily spot quote. Eligible for 30 days from period end.",
+          "source": {
+            "id": "ssab-market",
+            "publisher": "SSAB",
+            "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
+            "title": "Market situation and outlook",
+            "period": "Q3 2026",
+            "evidence_date": "2026-09-30",
+            "date_kind": "period end; publication date not supplied on page",
+            "max_age_days": 105,
+            "observations": {
+              "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
+              "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
+              "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
+              "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
+            },
+            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+            "access": "Retrieved from primary source this collection"
+          },
+          "verification": "Dated producer report; not independently measured transaction prices"
+        },
+        {
+          "metric": "lead_times",
+          "condition": "Lengthening",
+          "scope": "discrete_plate",
+          "verified": true,
+          "evidence_date": "2026-10-29",
+          "max_age_days": 21,
+          "confidence": "Medium",
+          "period": "Late October 2026",
+          "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
+          "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29. Evidence expires after 21 days unless a newer plate-specific survey confirms direction.",
+          "verification": "Reviewed SMU reporting; late-October survey described explicitly increasing plate lead times.",
+          "source": {
+            "publisher": "Steel Market Update",
+            "title": "Mill lead times climb to new highs, buyers expect little relief",
+            "url": "https://www.steelmarketupdate.com/category/sheet/",
+            "evidence_date": "2026-10-29"
+          }
+        },
+        {
+          "metric": "supply",
+          "condition": "Tightening",
+          "scope": "discrete_plate",
+          "verified": true,
+          "evidence_date": "2026-10-27",
+          "max_age_days": 30,
+          "confidence": "Low",
+          "period": "Late October 2026",
+          "basis": "SMU reported shrinking remaining 2026 domestic spot tonnage for plate and sheet, with steel buyers struggling to find domestic mills offering spot availability. This indicates tightening spot access, not a measured decline in total U.S. plate production.",
+          "limitation": "Qualitative buyer reports; cannot infer exact mill allocation percentages or all-grade availability. Supply direction here refers to domestic spot-order availability.",
+          "verification": "Reviewed SMU late-October reporting on domestic plate spot availability.",
+          "source": {
+            "publisher": "Steel Market Update",
+            "title": "Sheet and plate price gains accelerate as 2026 tons dry up",
+            "url": "https://www.steelmarketupdate.com/category/sheet/",
+            "evidence_date": "2026-10-27"
+          }
+        },
+        {
+          "metric": "demand",
+          "condition": "Strengthening",
+          "scope": "discrete_plate",
+          "verified": true,
+          "evidence_date": "2026-09-22",
+          "max_age_days": 60,
+          "confidence": "Low",
+          "period": "September 2026",
+          "basis": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
+          "limitation": "Low confidence: qualitative analyst assessment from September, not a current plate-specific demand series. Supply restrictions can magnify apparent demand strength.",
+          "verification": "Published plate-specific industry analysis explicitly attributes the squeeze to improved demand.",
+          "source": {
+            "publisher": "Steel Market Update",
+            "title": "Plate feels the squeeze, outages well underway",
+            "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
+            "evidence_date": "2026-09-22"
+          }
+        }
+      ],
+      "developments": [
+        {
+          "event_id": "aisi-imports-2026-10-27",
+          "evidence_date": "2026-10-27",
+          "category": "Import context",
+          "summary": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone.",
+          "limitation": "Broad steel context, not a verified change in discrete plate availability. Date is the source’s evidence/reporting date.",
+          "source": {
+            "id": "aisi-imports",
+            "publisher": "AISI / preliminary Census data",
+            "url": "https://www.steel.org/2026/10/steel-imports-down-2-9-in-september-vs-august/",
+            "title": "Monthly steel import report",
+            "period": "September 2026",
+            "evidence_date": "2026-10-27",
+            "date_kind": "publication date",
+            "max_age_days": 45,
+            "observations": {
+              "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
+            },
+            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+            "access": "Retrieved from primary source this collection"
+          }
+        },
+        {
+          "event_id": "aisi-production-2026-11-07",
+          "evidence_date": "2026-11-07",
+          "category": "Broad steel production",
+          "summary": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability.",
+          "limitation": "Broad steel context, not a verified change in discrete plate availability. Date is the source’s evidence/reporting date.",
+          "source": {
+            "id": "aisi-production",
+            "publisher": "AISI",
+            "url": "https://www.steel.org/industry-data/",
+            "title": "Weekly raw steel production",
+            "period": "Week ending 2026-11-07",
+            "evidence_date": "2026-11-07",
+            "date_kind": "reporting period end",
+            "max_age_days": 14,
+            "observations": {
+              "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
+            },
+            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
+            "access": "Retrieved from primary source this collection"
+          }
+        },
+        {
+          "event_id": "cut-length-plate-august-2026-permits",
+          "verified": true,
+          "evidence_date": "2026-09-10",
+          "max_age_days": 90,
+          "category": "Import context",
+          "summary": "AISI reported August cut-length plate import permits rose 72% versus July final imports. Permits are intended tonnage, not confirmed arrivals or currently available plate. September broad steel imports do not establish a later cut-length plate trend.",
+          "limitation": "Do not infer import availability is improving from permits alone; check subsequent cut-length plate arrivals and comparable permit data.",
+          "source": {
+            "publisher": "American Iron and Steel Institute",
+            "title": "AISI Releases August SIMA Imports Data",
+            "url": "https://www.steel.org/2026/09/aisi-releases-august-sima-imports-data-7/",
+            "evidence_date": "2026-09-10"
+          }
+        }
+      ],
+      "content_hash": "3c52c6365fc66165ee0a68f7e28c08943005245177d37050d3f41bcd2da0e489"
     }
   ]
 }

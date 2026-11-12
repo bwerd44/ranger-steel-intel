@@ -1,38 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T15:37:17.616599+00:00",
+  "updated_at": "2026-11-12T18:12:54.586785+00:00",
   "pulse": [
     {
       "id": "pricing",
       "label": "Plate Pricing",
-      "condition": "Rising",
-      "color": "red",
-      "arrow": "↑",
-      "confidence": "Low",
-      "evidence_date": "2026-09-30",
-      "basis": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
-      "period": "Q3 2026",
-      "limitation": "Latest reported quarterly trend, not a daily spot quote. Eligible for 45 days from period end.",
-      "sources": [
-        {
-          "id": "ssab-market",
-          "publisher": "SSAB",
-          "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
-          "title": "Market situation and outlook",
-          "period": "Q3 2026",
-          "evidence_date": "2026-09-30",
-          "date_kind": "period end; publication date not supplied on page",
-          "max_age_days": 105,
-          "observations": {
-            "overview": "SSAB describes a strong North American plate market in Q3 2026, alongside rising prices.",
-            "pricing": "SSAB reports that North American plate prices increased during Q3 2026. This describes a quarterly trend, not a current spot quote or a price for a particular grade or size.",
-            "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
-            "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
-          },
-          "retrieved_at": "2026-11-12T15:35:53.438402+00:00",
-          "access": "Retrieved from primary source this collection"
-        }
-      ],
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": "2026-09-30",
+      "basis": "No eligible dated discrete plate price-direction evidence.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
       "previous": {
         "condition": "Rising",
         "evidence_date": "2026-09-30",
@@ -74,7 +55,7 @@
       "evidence_date": "2026-10-29",
       "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
       "period": "Late October 2026",
-      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29.",
+      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29. Evidence expires after 21 days unless a newer plate-specific survey confirms direction.",
       "sources": [
         {
           "publisher": "Steel Market Update",
@@ -92,16 +73,15 @@
     {
       "id": "imports",
       "label": "Import Availability",
-      "condition": "Stable",
-      "color": "orange",
-      "arrow": "→",
-      "confidence": "Editorial assessment",
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
       "evidence_date": null,
       "last_evidence_date": null,
-      "basis": "Current industry assessment: import availability is broadly neutral. This is an editorial judgment, not a verified month-over-month plate import trend.",
-      "limitation": "Not independently verified. Expires after 14 days unless reassessed. Published evidence remains available in source history.",
+      "basis": "All-steel imports and license totals do not establish discrete plate availability.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
       "sources": [],
-      "assessment_date": "2026-11-04",
       "previous": {
         "condition": "Stable",
         "evidence_date": null,
@@ -111,16 +91,22 @@
     {
       "id": "demand",
       "label": "Plate Demand",
-      "condition": "Stable",
-      "color": "orange",
-      "arrow": "→",
-      "confidence": "Editorial assessment",
-      "evidence_date": null,
-      "basis": "Current industry assessment: plate demand is broadly neutral. Earlier reporting of improved demand does not establish that demand is still strengthening today.",
+      "condition": "Strengthening",
+      "color": "red",
+      "arrow": "↑",
+      "confidence": "Low",
+      "evidence_date": "2026-09-22",
+      "basis": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
       "period": "September 2026",
-      "limitation": "Not independently verified. Expires after 14 days unless reassessed. Published evidence remains available in source history.",
-      "sources": [],
-      "assessment_date": "2026-11-04",
+      "limitation": "Low confidence: qualitative analyst assessment from September, not a current plate-specific demand series. Supply restrictions can magnify apparent demand strength.",
+      "sources": [
+        {
+          "publisher": "Steel Market Update",
+          "title": "Plate feels the squeeze, outages well underway",
+          "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
+          "evidence_date": "2026-09-22"
+        }
+      ],
       "previous": {
         "condition": "Stable",
         "evidence_date": null,
@@ -130,9 +116,40 @@
   ],
   "weekly": {
     "status": "compared",
-    "summary": "1 evidence-supported change versus the saved weekly baseline.",
+    "summary": "2 evidence-supported changes versus the saved weekly baseline.",
     "previous_date": "2026-11-05",
     "changes": [
+      {
+        "type": "coverage_change",
+        "label": "Plate Pricing",
+        "previous": "Rising",
+        "current": "Insufficient Data",
+        "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
+        "sources": []
+      },
+      {
+        "type": "coverage_change",
+        "label": "Import Availability",
+        "previous": "Stable",
+        "current": "Insufficient Data",
+        "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
+        "sources": []
+      },
+      {
+        "type": "market_change",
+        "label": "Plate Demand",
+        "previous": "Stable",
+        "current": "Strengthening",
+        "explanation": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
+        "sources": [
+          {
+            "publisher": "Steel Market Update",
+            "title": "Plate feels the squeeze, outages well underway",
+            "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
+            "evidence_date": "2026-09-22"
+          }
+        ]
+      },
       {
         "type": "reported_context",
         "label": "Broad steel production",
@@ -152,7 +169,7 @@
             "observations": {
               "domestic": "AISI estimates U.S. raw steel output at 1,778,000 net tons and capacity utilization at 77.0% for the week ending 2026-11-07. These figures cover all raw steel and do not measure discrete plate availability."
             },
-            "retrieved_at": "2026-11-12T15:35:53.438402+00:00",
+            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
             "access": "Retrieved from primary source this collection"
           }
         ]
@@ -171,7 +188,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:37:17.616599+00:00",
+      "checked_at": "2026-11-12T18:12:54.586785+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -187,7 +204,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:37:17.616599+00:00",
+      "checked_at": "2026-11-12T18:12:54.586785+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -210,7 +227,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-12T15:35:53.438402+00:00",
+            "retrieved_at": "2026-11-12T18:11:26.968275+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -230,7 +247,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:37:17.616599+00:00",
+      "checked_at": "2026-11-12T18:12:54.586785+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -264,7 +281,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-12T15:37:17.616599+00:00",
+      "checked_at": "2026-11-12T18:12:54.586785+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -822,15 +839,45 @@
           "evidence_date": null
         }
       ]
+    },
+    {
+      "as_of": "2026-11-12",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "evidence_date": "2026-10-27"
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Lengthening",
+          "evidence_date": "2026-10-29"
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Strengthening",
+          "evidence_date": "2026-09-22"
+        }
+      ]
     }
   ],
-  "history_count": 13,
+  "history_count": 14,
   "history_started": "2026-11-04",
   "rules": [
     "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",
     "Only explicit dated discrete-plate directional observations qualify. Low inventories, strong demand levels, all-steel production and aggregate imports cannot establish a change in plate supply or demand.",
-    "Recognized producer quarterly plate-price direction is eligible for 45 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.",
-    "Conflicting eligible readings on the same evidence date show Mixed at Low confidence. Missing data never defaults to Stable.",
+    "Recognized producer quarterly plate-price direction is eligible for 30 days from period end, at Low confidence. Other reviewed observations default to 30 days unless their record documents a different window. Future dates and expired observations are excluded.",
+    "Conflicting eligible readings on the same evidence date show Mixed at Low confidence. Missing data never defaults to Stable. Editorial neutral judgments are not scored as observations.",
     "Daily snapshots preserve evidence and readings. The weekly baseline is the latest saved snapshot on or before seven days ago, no more than fourteen days old. Missing weeks are not backfilled. Coverage changes are separate from physical market changes.",
     "Mill webpages are checked daily, but only recognized or reviewed dated developments are shown. A planned outage end is never treated as a confirmed restart. Capabilities pages do not verify current operations or allocations.",
     "Forecast accuracy needs a completed quarter and reviewed like-for-like observations for discrete plate. A current-quarter forecast requires the matching remaining-period baseline; a full-quarter result cannot substitute. Coil/HRC, all-steel output, within-quarter price changes and unverified headlines do not qualify. No suitable automated actual-price series is configured."
