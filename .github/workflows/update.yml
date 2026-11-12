@@ -76,9 +76,9 @@ jobs:
           if [ -n "$FORECAST_REVISION_REASON" ]; then
             python forecast.py --revision-reason "$FORECAST_REVISION_REASON"
           else
-            # One-time upgrade: append a revision only while November still uses v1.
-            if python -c "import json,sys; d=json.load(open('data/forecasts.json')); e=next(x for x in d['editions'] if x['id']==d['latest_id']); sys.exit(0 if e.get('model_version')=='plate-direction-1.0' else 1)"; then
-              python forecast.py --revision-reason "Upgrade to plate-first weighted rules model v2.0; original November edition retained"
+            # One-time correction to the active November v2 edition.
+            if python -c "import json,sys; d=json.load(open('data/forecasts.json')); e=next(x for x in d['editions'] if x['id']==d['latest_id']); sys.exit(0 if e.get('model_version') in ('plate-direction-1.0','plate-direction-2.0-plate-first') else 1)"; then
+              python forecast.py --revision-reason "Correct v2 persistence bias: elevated price level does not imply quarterly price increases; retain prior editions"
             else
               python forecast.py
             fi
