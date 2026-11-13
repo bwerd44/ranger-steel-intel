@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T18:13:46.817849+00:00",
+  "updated_at": "2026-11-13T13:21:22.347035+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Topeka",
+      "market": "Lawton",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Dallas-Fort Worth",
+      "market": "Little Rock",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Houston web search",
+      "market": "Tulsa web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita web search",
+      "market": "Little Rock web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Kansas City web search",
+      "market": "Shreveport web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Lafayette web search",
+      "market": "Amarillo web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Houston geographic directory",
+      "market": "Tulsa geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Little Rock geographic directory",
+      "market": "Dallas-Fort Worth geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Oklahoma City geographic directory",
+      "market": "Lafayette geographic directory",
       "status": "ok",
       "new": 0
     }
