@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-17T13:22:26.352636+00:00",
+  "updated_at": "2026-11-18T13:26:46.247863+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-17T13:22:26.352636+00:00",
+    "generated_at": "2026-11-18T13:26:46.247863+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-17T13:22:26.352636+00:00",
+        "retrieved_at": "2026-11-18T13:26:46.247863+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-17T13:22:26.352636+00:00",
+        "retrieved_at": "2026-11-18T13:26:46.247863+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,12 +171,72 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,886,000 net tons and capacity utilization at 81.7% for the week ending 2026-11-14. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-17T13:22:26.352636+00:00",
+        "retrieved_at": "2026-11-18T13:26:46.247863+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "UK Steel Import Rules: Melt and Pour Reporting Starts April 2027 - News and Statistics - IndexBox",
+      "date": "2026-11-18",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORUZwQS05NWtVRlJwWDNSRFZEZzZUZFFHTVZPZ1VQUk5QOTRZTWtqb0lJajBtVHA4dXBMSnQ1RllmZEFwajVBQlhlbUhrMGF0dkNHWXl0RjVIVXJpVi1QaEpaWlQxbTF4UEI5RTJqekoyS005S203bmt6OFZMVm1FSm5JOHlHUS05UXd6V1NDamZKcGc1MlRFaU05OGlFWmJMQ0NWMlVkSmxmRjUtbmFNN0ZESFJFaXBHd1F0NGtCTQ?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "UK Steel Importers Face Melt and Pour Reporting from April 2027 - News and Statistics - IndexBox",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSUhMd21iaDllekZZWHA3bTNFcTA2dFo5cjliSnRMdW1BNEstOEtvRDdXNlRYa2tEZExndGhXdUdKRTJsbmtoQ2lHNE96Tlk5M05hcnBQMUNzYjBRbXhMVUNXYjUwUmJySjNEbWRMdnhNeHpFZFN4TXZOZHJ5RTlwOTV5NkFoMHd1RFpHX08yR0x3M1E5WnQwNkc1SzcxMmpTY0ZVeTdJRXg?oc=5",
+      "publisher": "IndexBox",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "Steel Stocks After a Trade Duty: Act or Wait? A 4-Step Framework - Value Research",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNW9JVGdfeWtpMW81SlJ2bUM3SEIxdTByTmEwcDlJc2pKalRvT3VaUHVFMkR1VlNhNXlaUnppN0RPZFlpZXdtaWR5SWNUbmdzakU0U3g4bDhhS1RiMW5saUdIcmx6NDR4UDdHS2MwQUZTR3VGR0E2OXl4bHhBeEk1U2Fob1hWMU95YmN6MU9jTkRaX21SUVRNam5zUFJieFpfeXdid3pNLS1mOERDOUpRZE5TbllQRVNi?oc=5",
+      "publisher": "Value Research",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "AD/CVD News: Aluminum Foil, Amine Compounds, Steel Bar, Threaded Rod, Truck Bed Covers - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPbVV1MFBIWlBPeDRvTmZSbXFueVlJcU9sU0xNTWlkWmlxeldpR3RMc3NUdF9ZYzQza0tCSWc1WGZ3WGhjUkdlcjZyWmNHaHREVzY0VkhKcTlkOEVoRDNKc3l6Mm9pN1ZwUW5HZWdUd3JxbW10ak1LVXpFWUZXMnJoUFBldUpvWEQzS0tTdFl3SkVjZW9pbmtMTVg4UGZtYTZndTJfdjBFZHh0SjVLZ3pXT3FPWFhoREd5bDNXNWpVczFKWmJ2WXRfSEg2Nk9pUWZuVDQwNjRqczRFV2JaT3NCYVNiNDRnSXhi?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Recycled Steel Construction Materials Market To 2035: Green Building Codes Drive Expansion - News and Statistics - IndexBox",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPeTY5ZVV0Y1lVM0RHdkFid1JTMjVzWDNNV1lxbFQyWW1IazlTZ0lMN3NvWEhqd1paTHJjOHZITlVSS29OUWluS3dVbjhMZVB2M1RxanZGV2cyRF83MllMTWdadHM4MEJqT1BRY3VaZkJVcVVXeklEWGxEdnk1UUtmRlNQWTM2WmJTYnJob1ZHaUNseEppS1M2ODhZdlNHWktTM3o2cTBSNkpwcFN5M0txVkVxaGk3c05vdWNiaVMxWHNFTk9jbXRmZEs1YkRKbXl3NlJQbjNzTmJMbThtTDB4REczX1hOTVU?oc=5",
+      "publisher": "IndexBox",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Is Nucor (NYSE:NUE) Ready For Another Strong Performance Cycle? - Kalkine Media",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdjZ5MDBjVThJYzFkd2pFSTd1dDBMdUw0WlYzcy00UGZnUjZKalM5TkJhYU1udXNZSUhzXzFPSDhTRFdRdkVVOXJta3lORWZDb1F4TzlVdnlEQUhUcGxSRDhIOW1hWUwzWUlsMl83dXpPa3loZnYtekE2aWdVaDZUMUQ3NDcwYUR2U3o2Smd0VU90czViR2xZZEdNNFBsOVYyMmpQMVowQkU0MlBZQ0hCaA?oc=5",
+      "publisher": "Kalkine Media",
+      "topic": "All Other Steel News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Domestic Mill News"
+    },
     {
       "title": "Mild Steel Market in Japan: Size, Trends and Forecast to 2035 - IndexBox",
       "date": "2026-11-17",
@@ -218,19 +278,19 @@
       "category": "Import News"
     },
     {
-      "title": "Structural Steel Beams Market To 2035: Infrastructure Demand Supports Growth - News and Statistics - IndexBox",
-      "date": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZFhLaGRTcVVmU0l3TFFPMFd4TW9tdWdvM3hOVEN0VXBYblRBUU1fSTVYR1VKd041azZ4YWRIb2l2b2Z4eXRkdE40QVl5MUhzOXh1aXViWERTVTEzT0NueDNZaV9MVWlMZmdSWFlGc3Zra1ZudWRBM3BDX2hVQ1lRaW0tdV9FZTlSV2xQNmlOU2dvZE90LXJtRjgzazJkU1VlV1dBVlJZV1pUVGVVUjNoenN5bWgzX3pfdGtncm5XVUUxc1BzcHdDd2dSRVJHWHRI?oc=5",
-      "publisher": "IndexBox",
-      "topic": "All Other Steel News",
+      "title": "AD/CVD News: Carbon Bricks, Mattresses, Pulp, Solar Cells, Steel Pipe - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-12",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbDNFLVZSOWVpMnFvSEdZWmphWUJxUUItUGJrLUtCa3VNWTBFY0o1anM3Q1h1YzlVYnVadnJkeVFiMnEtMDVyUmtaMzVzOTNkN01xVDBjQnBrNjhtc0ItUEs5RDFRODFEb2NEemw5XzRFNlFURFBBODBLdU5saEZvbENscDBJakF1OEZwS3JEa0JybDFaUmlONUVoM01fN1pZMnR3NS04dFdFR1Nuc3d2ZTNoOG9ianRCTjhtNmFxbXhxMGZqajY1NnEtWkpaT3VudkE?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
     },
     {
-      "title": "Weathering Steel Market To 2035: Bridge and Cladding Demand Supports Growth - News and Statistics - IndexBox",
+      "title": "Structural Steel Beams Market To 2035: Infrastructure Demand Supports Growth - News and Statistics - IndexBox",
       "date": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZDE2WVd0bEpZYndWNTZ5Y05pTkhsTG51WEFQeU1CUHo0dDRNRmpWVGlmOGR1WkgtTE9GS2dCZmVLMHV4bHh5dHZ0WUNFNXVnR1R1T0FGeWUtX291Rk8zVU5MM1FhOFF4TkFiRGV3dUZiZEFTQ1FwSUtUdFF4Z2w5czQ4TU9OSWFIdVhGYkdIOGVsUmVzanA0U2REdFdveHdUdEFrVW9oTC02eFR2eTBiQUwtRkc1WHVBX3BuYy1QTHFhNGtJZW9mMXBWOTdyU0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZFhLaGRTcVVmU0l3TFFPMFd4TW9tdWdvM3hOVEN0VXBYblRBUU1fSTVYR1VKd041azZ4YWRIb2l2b2Z4eXRkdE40QVl5MUhzOXh1aXViWERTVTEzT0NueDNZaV9MVWlMZmdSWFlGc3Zra1ZudWRBM3BDX2hVQ1lRaW0tdV9FZTlSV2xQNmlOU2dvZE90LXJtRjgzazJkU1VlV1dBVlJZV1pUVGVVUjNoenN5bWgzX3pfdGtncm5XVUUxc1BzcHdDd2dSRVJHWHRI?oc=5",
       "publisher": "IndexBox",
       "topic": "All Other Steel News",
       "verification": "Headline only; underlying article not independently verified.",
@@ -336,12 +396,12 @@
       {
         "source": "Import News RSS",
         "status": "ok",
-        "items": 8
+        "items": 13
       },
       {
         "source": "All Other Steel News RSS",
         "status": "ok",
-        "items": 4
+        "items": 5
       }
     ]
   }
