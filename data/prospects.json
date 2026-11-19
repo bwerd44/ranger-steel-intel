@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T13:26:48.620919+00:00",
+  "updated_at": "2026-11-19T13:29:08.087722+00:00",
   "method": "Free public business directories, rotating geographic discovery and manufacturer websites. No paid API required. Purchasing history is unverified.",
   "checks": [
     {
-      "market": "Little Rock",
+      "market": "Wichita",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Shreveport",
+      "market": "Jackson",
       "status": "unavailable",
       "error": "TimeoutError"
     },
     {
-      "market": "Kansas City web search",
+      "market": "Shreveport web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Lafayette web search",
+      "market": "Amarillo web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Houston web search",
+      "market": "Tulsa web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Wichita web search",
+      "market": "Little Rock web search",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Kansas City geographic directory",
+      "market": "Shreveport geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Amarillo geographic directory",
+      "market": "Springfield geographic directory",
       "status": "ok",
       "new": 0
     },
     {
-      "market": "Baton Rouge geographic directory",
+      "market": "Wichita geographic directory",
       "status": "ok",
       "new": 0
     }
