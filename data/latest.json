@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-19T13:29:06.973573+00:00",
+  "updated_at": "2026-11-20T13:25:27.218001+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-19T13:29:06.973573+00:00",
+    "generated_at": "2026-11-20T13:25:27.218001+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-19T13:29:06.973573+00:00",
+        "retrieved_at": "2026-11-20T13:25:27.218001+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-19T13:29:06.973573+00:00",
+        "retrieved_at": "2026-11-20T13:25:27.218001+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,12 +171,32 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,886,000 net tons and capacity utilization at 81.7% for the week ending 2026-11-14. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-19T13:29:06.973573+00:00",
+        "retrieved_at": "2026-11-20T13:25:27.218001+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "Are Chinese steel imports a threat to India’s hopes for industrial expansion? - Global Times",
+      "date": "2026-11-19",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9qUFlneUdsRUlZR1hmVDdmWEZpcWF4MW5DX1R1TGRxdnhKM0FUZnVIdXgybWRsOURLODdEYkxYbXk0ZzVralE2enlRSWFFZ21CWDVHSkdFU2hkdFBtLTQtLWJB?oc=5",
+      "publisher": "Global Times",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "UK applies anti-dumping duties to South Korean hot-rolled steel plate imports - Traders Union",
+      "date": "2026-11-19",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcnVCNHhpcmowUDRTQldWVDNlQkVkLVpjejZacXJOMDN1Nm1FWklnYU03Y1JfU3BYdTBiQVl2RVdraGdEdjZGQ0pZRlpoMVF0U1lvUU9GYmRTekVObDVJemZ4cTB6S3lCTTZTXzU1Rl9fWFl1UEhUenhRQ2s2ZUxCcWI2UDVMLVdhT0V1S1Jpcjd3bk5qa3lPNDNRWF8?oc=5",
+      "publisher": "Traders Union",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
     {
       "title": "UK Steel Import Rules: Melt and Pour Reporting Starts April 2027 - News and Statistics - IndexBox",
       "date": "2026-11-18",
@@ -268,16 +288,6 @@
       "category": "Import News"
     },
     {
-      "title": "Pakistan extends 40.47% anti-dumping duty to Galvalume steel imports from China - Profit by Pakistan Today",
-      "date": "2026-11-14",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNWHpkWWk0SmktX05XYUVOdDRmYkZqQlRzT0s3RXIzSzhsb2xjRFd0am5pSTNmVHBFZkM4Vzl4alF5WXhCdnpiaVhBVzVhVWZROW13RkJNZ1NDdDA3NFA5WWFOUTFVd3ZyZzNHN0VnUWlRYmdSODhmckxqNXNaZkVfM3ZhSVdqUmUtNVR2V2NjMGgxdW8xVTNkdnJwZzJFVDFFOFZ3QUpJSkJpNjA0bkM0bEdMTklvTVJCR2hWcE90RFI4UWQ4MFlKaVF4aw?oc=5",
-      "publisher": "Profit by Pakistan Today",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
       "title": "AD/CVD News: Carbon Bricks, Mattresses, Pulp, Solar Cells, Steel Pipe - Sandler, Travis & Rosenberg, P.A.",
       "date": "2026-11-12",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbDNFLVZSOWVpMnFvSEdZWmphWUJxUUItUGJrLUtCa3VNWTBFY0o1anM3Q1h1YzlVYnVadnJkeVFiMnEtMDVyUmtaMzVzOTNkN01xVDBjQnBrNjhtc0ItUEs5RDFRODFEb2NEemw5XzRFNlFURFBBODBLdU5saEZvbENscDBJakF1OEZwS3JEa0JybDFaUmlONUVoM01fN1pZMnR3NS04dFdFR1Nuc3d2ZTNoOG9ianRCTjhtNmFxbXhxMGZqajY1NnEtWkpaT3VudkE?oc=5",
@@ -306,6 +316,16 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
+    },
+    {
+      "title": "Canada extends tariff relief program beyond U.S. steel imports - Global News",
+      "date": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdk5Jb1NUVl9vVFB2YjFSU0ppZE9QTGFQdDV4TUpxN1RwZXBwcDlyOERsUTVzcmR4T0pTdXVuTFdIWWRHN0VkdXlBcmI3NnFXUUVvYnFWSDJaOEJvX1BhVEVBZ045Nm1pRGhER1EtZV9pZnNpcHh1RTVxX2NMcVNxRlpVcDZPM3BzeDd3?oc=5",
+      "publisher": "Global News",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
     },
     {
       "title": "AD/CVD News: Chromium Trioxide, Solar Cells, Steel Pipe, Tubular Goods, Wood Moldings - Sandler, Travis & Rosenberg, P.A.",
@@ -376,7 +396,7 @@
       {
         "source": "Import News RSS",
         "status": "ok",
-        "items": 13
+        "items": 15
       },
       {
         "source": "All Other Steel News RSS",

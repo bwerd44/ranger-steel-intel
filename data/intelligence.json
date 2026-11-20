@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T13:30:18.621719+00:00",
+  "updated_at": "2026-11-20T13:26:52.593267+00:00",
   "pulse": [
     {
       "id": "pricing",
@@ -24,7 +24,7 @@
       "previous": {
         "condition": "Rising",
         "evidence_date": "2026-11-10",
-        "observed_at": "2026-11-12"
+        "observed_at": "2026-11-13"
       }
     },
     {
@@ -49,32 +49,25 @@
       "previous": {
         "condition": "Tightening",
         "evidence_date": "2026-10-27",
-        "observed_at": "2026-11-12"
+        "observed_at": "2026-11-13"
       }
     },
     {
       "id": "lead_times",
       "label": "Mill Lead Times",
-      "condition": "Lengthening",
-      "color": "red",
-      "arrow": "↑",
-      "confidence": "Medium",
-      "evidence_date": "2026-10-29",
-      "basis": "SMU's late-October buyer survey reported that sheet and plate mill lead times continued to lengthen; plate exceeded its 2021 peak and set a record for its survey series beginning in 2018. Its October 16 report placed average plate lead times at 11 weeks.",
-      "period": "Late October 2026",
-      "limitation": "Survey-based U.S. market trend, not a guaranteed lead time from any specific plate mill, grade or thickness. The 11-week average was reported October 16, not October 29. Evidence expires after 21 days unless a newer plate-specific survey confirms direction.",
-      "sources": [
-        {
-          "publisher": "Steel Market Update",
-          "title": "Mill lead times climb to new highs, buyers expect little relief",
-          "url": "https://www.steelmarketupdate.com/category/sheet/",
-          "evidence_date": "2026-10-29"
-        }
-      ],
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": "2026-10-29",
+      "basis": "No comparable dated plate-mill delivery schedules were verified.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
       "previous": {
         "condition": "Lengthening",
         "evidence_date": "2026-10-29",
-        "observed_at": "2026-11-12"
+        "observed_at": "2026-11-13"
       }
     },
     {
@@ -92,7 +85,7 @@
       "previous": {
         "condition": "Insufficient Data",
         "evidence_date": null,
-        "observed_at": "2026-11-12"
+        "observed_at": "2026-11-13"
       }
     },
     {
@@ -117,15 +110,23 @@
       "previous": {
         "condition": "Strengthening",
         "evidence_date": "2026-09-22",
-        "observed_at": "2026-11-12"
+        "observed_at": "2026-11-13"
       }
     }
   ],
   "weekly": {
     "status": "compared",
     "summary": "1 evidence-supported change versus the saved weekly baseline.",
-    "previous_date": "2026-11-12",
+    "previous_date": "2026-11-13",
     "changes": [
+      {
+        "type": "coverage_change",
+        "label": "Mill Lead Times",
+        "previous": "Lengthening",
+        "current": "Insufficient Data",
+        "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
+        "sources": []
+      },
       {
         "type": "reported_context",
         "label": "Broad steel production",
@@ -145,7 +146,7 @@
             "observations": {
               "domestic": "AISI estimates U.S. raw steel output at 1,886,000 net tons and capacity utilization at 81.7% for the week ending 2026-11-14. These figures cover all raw steel and do not measure discrete plate availability."
             },
-            "retrieved_at": "2026-11-19T13:29:06.973573+00:00",
+            "retrieved_at": "2026-11-20T13:25:27.218001+00:00",
             "access": "Retrieved from primary source this collection"
           }
         ]
@@ -164,7 +165,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-19T13:30:18.621719+00:00",
+      "checked_at": "2026-11-20T13:26:52.593267+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -175,12 +176,12 @@
       "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
       "coverage": "North American plate commentary; individual plant operation not inferred",
       "last_confirmed_date": "2026-09-30",
-      "days_since_confirmation": 50,
+      "days_since_confirmation": 51,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-19T13:30:18.621719+00:00",
+      "checked_at": "2026-11-20T13:26:52.593267+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -203,7 +204,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-19T13:29:06.973573+00:00",
+            "retrieved_at": "2026-11-20T13:25:27.218001+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -218,12 +219,12 @@
       "url": "https://jswsteel.us/baytown/",
       "coverage": "Baytown plate; Mingo coil/slab context kept separate",
       "last_confirmed_date": "2026-09-01",
-      "days_since_confirmation": 79,
+      "days_since_confirmation": 80,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-19T13:30:18.621719+00:00",
+      "checked_at": "2026-11-20T13:26:52.593267+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -252,12 +253,12 @@
       "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
       "coverage": "U.S. plate footprint; sheet and electrical-steel projects excluded",
       "last_confirmed_date": "2026-09-30",
-      "days_since_confirmation": 50,
+      "days_since_confirmation": 51,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-19T13:30:18.621719+00:00",
+      "checked_at": "2026-11-20T13:26:52.593267+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -1070,9 +1071,39 @@
           "evidence_date": "2026-09-22"
         }
       ]
+    },
+    {
+      "as_of": "2026-11-20",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-11-10"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "evidence_date": "2026-10-27"
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Strengthening",
+          "evidence_date": "2026-09-22"
+        }
+      ]
     }
   ],
-  "history_count": 21,
+  "history_count": 22,
   "history_started": "2026-11-04",
   "rules": [
     "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",
