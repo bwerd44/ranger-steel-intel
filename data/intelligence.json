@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T13:09:56.412076+00:00",
+  "updated_at": "2026-11-22T13:08:22.860550+00:00",
   "pulse": [
     {
       "id": "pricing",
@@ -24,7 +24,7 @@
       "previous": {
         "condition": "Rising",
         "evidence_date": "2026-11-10",
-        "observed_at": "2026-11-14"
+        "observed_at": "2026-11-15"
       }
     },
     {
@@ -49,7 +49,7 @@
       "previous": {
         "condition": "Tightening",
         "evidence_date": "2026-10-27",
-        "observed_at": "2026-11-14"
+        "observed_at": "2026-11-15"
       }
     },
     {
@@ -67,7 +67,7 @@
       "previous": {
         "condition": "Lengthening",
         "evidence_date": "2026-10-29",
-        "observed_at": "2026-11-14"
+        "observed_at": "2026-11-15"
       }
     },
     {
@@ -85,44 +85,45 @@
       "previous": {
         "condition": "Insufficient Data",
         "evidence_date": null,
-        "observed_at": "2026-11-14"
+        "observed_at": "2026-11-15"
       }
     },
     {
       "id": "demand",
       "label": "Plate Demand",
-      "condition": "Strengthening",
-      "color": "red",
-      "arrow": "↑",
-      "confidence": "Low",
-      "evidence_date": "2026-09-22",
-      "basis": "Steel Market Update attributed the domestic plate squeeze partly to improved plate demand, alongside tariffs and planned outages. This is a qualitative September directional assessment, not a measured October/November plate-order index.",
-      "period": "September 2026",
-      "limitation": "Low confidence: qualitative analyst assessment from September, not a current plate-specific demand series. Supply restrictions can magnify apparent demand strength.",
-      "sources": [
-        {
-          "publisher": "Steel Market Update",
-          "title": "Plate feels the squeeze, outages well underway",
-          "url": "https://www.steelmarketupdate.com/2026/09/22/plate-feels-the-squeeze-outages-well-underway/",
-          "evidence_date": "2026-09-22"
-        }
-      ],
+      "condition": "Insufficient Data",
+      "color": "gray",
+      "arrow": "—",
+      "confidence": "Not rated",
+      "evidence_date": null,
+      "last_evidence_date": "2026-09-22",
+      "basis": "A strong market is a level, not proof of strengthening demand. Sector activity is not plate order volume.",
+      "limitation": "Missing, expired or non-comparable evidence is never treated as stable.",
+      "sources": [],
       "previous": {
         "condition": "Strengthening",
         "evidence_date": "2026-09-22",
-        "observed_at": "2026-11-14"
+        "observed_at": "2026-11-15"
       }
     }
   ],
   "weekly": {
     "status": "compared",
     "summary": "No material verified change was identified versus the saved weekly baseline. Missing information is not proof that conditions are unchanged.",
-    "previous_date": "2026-11-14",
+    "previous_date": "2026-11-15",
     "changes": [
       {
         "type": "coverage_change",
         "label": "Mill Lead Times",
         "previous": "Lengthening",
+        "current": "Insufficient Data",
+        "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
+        "sources": []
+      },
+      {
+        "type": "coverage_change",
+        "label": "Plate Demand",
+        "previous": "Strengthening",
         "current": "Insufficient Data",
         "explanation": "Evidence coverage changed. This does not establish a physical change in the market.",
         "sources": []
@@ -141,7 +142,7 @@
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-21T13:09:56.412076+00:00",
+      "checked_at": "2026-11-22T13:08:22.860550+00:00",
       "source_access": "retrieved",
       "developments": [],
       "limitations": "Production, active outages, allocations, current price announcements and lead times are not inferred from a capabilities page, earnings headlines or a scheduled outage end date."
@@ -152,12 +153,12 @@
       "url": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
       "coverage": "North American plate commentary; individual plant operation not inferred",
       "last_confirmed_date": "2026-09-30",
-      "days_since_confirmation": 52,
+      "days_since_confirmation": 53,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-21T13:09:56.412076+00:00",
+      "checked_at": "2026-11-22T13:08:22.860550+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -180,7 +181,7 @@
               "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
               "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
             },
-            "retrieved_at": "2026-11-21T13:08:44.398327+00:00",
+            "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
             "access": "Retrieved from primary source this collection"
           },
           "status": "Dated quarterly market commentary, not a plant operating report",
@@ -195,12 +196,12 @@
       "url": "https://jswsteel.us/baytown/",
       "coverage": "Baytown plate; Mingo coil/slab context kept separate",
       "last_confirmed_date": "2026-09-01",
-      "days_since_confirmation": 81,
+      "days_since_confirmation": 82,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-21T13:09:56.412076+00:00",
+      "checked_at": "2026-11-22T13:08:22.860550+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -229,12 +230,12 @@
       "url": "https://www.clevelandcliffs.com/investors/sec-filings/all-sec-filings/content/0000764065-26-000115/clf-20260930.htm",
       "coverage": "U.S. plate footprint; sheet and electrical-steel projects excluded",
       "last_confirmed_date": "2026-09-30",
-      "days_since_confirmation": 52,
+      "days_since_confirmation": 53,
       "condition": "Current status unverified",
       "color": "gray",
       "arrow": "—",
       "confidence": "Not rated",
-      "checked_at": "2026-11-21T13:09:56.412076+00:00",
+      "checked_at": "2026-11-22T13:08:22.860550+00:00",
       "source_access": "retrieved",
       "developments": [
         {
@@ -1107,9 +1108,39 @@
           "evidence_date": "2026-09-22"
         }
       ]
+    },
+    {
+      "as_of": "2026-11-22",
+      "readings": [
+        {
+          "label": "Plate Pricing",
+          "condition": "Rising",
+          "evidence_date": "2026-11-10"
+        },
+        {
+          "label": "Domestic Mill Supply",
+          "condition": "Tightening",
+          "evidence_date": "2026-10-27"
+        },
+        {
+          "label": "Mill Lead Times",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Import Availability",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        },
+        {
+          "label": "Plate Demand",
+          "condition": "Insufficient Data",
+          "evidence_date": null
+        }
+      ]
     }
   ],
-  "history_count": 23,
+  "history_count": 24,
   "history_started": "2026-11-04",
   "rules": [
     "Red / ↑ = increasing pressure. Orange / → or ↔ = stable or mixed. Green / ↓ = easing pressure. Gray / — = insufficient or expired evidence. Colors do not mean good or bad.",

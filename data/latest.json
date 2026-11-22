@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-21T13:08:44.398327+00:00",
+  "updated_at": "2026-11-22T13:06:55.002115+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-21T13:08:44.398327+00:00",
+    "generated_at": "2026-11-22T13:06:55.002115+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-21T13:08:44.398327+00:00",
+        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-21T13:08:44.398327+00:00",
+        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,12 +171,22 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,886,000 net tons and capacity utilization at 81.7% for the week ending 2026-11-14. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-21T13:08:44.398327+00:00",
+        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
+    {
+      "title": "Britain imposes duties of up to 23.07% on steel from South Korea - Металлургпром",
+      "date": "2026-11-21",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWjRqS1dVdHZ4eW9mcjZ4d1JwanpBZUQwWnVaN2xMQ1NBYjdJRWFzRjluLUxpOGVJTmVSLU1BT0FfV2VvREtqOHBuaW1lVHVLOWxORXFWdVQyWHN3SVMzNXpGbGp3OVJrdUNpSk9XVFZIQmlwdzNfUEVSM2cySWdtYzlxWEZHNmNQMlVkeW1kc1A4NkN1YW9oLW16V1BBSjVGQVN6Nmt0d0w2ZTNwZm5hU1NzajPSAcYBQVVfeXFMTnhpZ3NCQmJNeGM3NF92dTYyRVBYSklfRlpfMkpxVTFrSld5ZTlqYXR2eHpSYlJwYUs2c0gtN2oyTlBDbzFsZFU1Sl9KLTloanR2RVJuMW5NWF9jdmV3REg3MnNvMWxNLVdkVmktVG1qWjVqMHFmVkZ6WXhibFFueFFqZW9YcEl4QzkyWDhQbkdPVWdyaVQ3WjBia21zZnFPNFdpNzR5ZkluOVdqblBnSFU4OEY5dEJLVHloQWU4cUtrdS1XZ1ZB?oc=5",
+      "publisher": "Металлургпром",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
     {
       "title": "Latin America Steel Imports Up 46.1% to 72 Mt as Chinese Share Reaches 39% - News and Statistics - IndexBox",
       "date": "2026-11-20",
@@ -208,9 +218,19 @@
       "category": "Import News"
     },
     {
+      "title": "Indian exporters worried over US tariff hikes on steel, aluminium goods - ET Manufacturing",
+      "date": "2026-11-19",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNa0gzc3lnTzhqaDR0TFhTTnc2N0lzSnZKdjk0a3FtRk9SVFZGYXNDdW43MWpOSUR2VkpBTG9RajFTcHB6LVN2Nk1rU0ZGOE03dkw1ak1ybU4tSmZFS1pycmhWb294OXNvMFhkeGl1bW42Mnp1cHllb2ZHUGJ4R0lzcnVtQ05MOUx0d3hkaUZiSlZObUF3MUxfY2hydFVWdjIwQzZjckdVVUUyNGg4TEJnNWtpQW1GczdTVmI3djJLY2pNNXlWOVY2TTgxQXNiWUxDTEk2M0xzQnJCSkpCeFpNWkdod0tFR0nSAeIBQVVfeXFMUGlmNkJWZE16QzRwX3VUS05fSkh4U0l0VlBSZ1dzWFRqUFQ5V0pHeG1ieHhRMFBNS0lpV0lzaFU5U1JrWno0MHl6NmEtMFFJTWJnRDNIWklnaUdQT3l0WUtJM1dvLTF0T1M4Nl9hMFFNOTRmWjFzZUluUDRsSHp0OXA5aXJ1QjBMYTVPUGxMdy1FbEEyOE82clZfSUl1QU5wRTc4cEJfc0tldHpyV0lOcFdwYlBvRjlwemlLSVNFQ2ZXdU9KOUFCeVg1ZVV4NnVwQi03ZTV4REdyLUtzdDVUbjV3QQ?oc=5",
+      "publisher": "ET Manufacturing",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
       "title": "Here's Why You Should Retain Steel Dynamics Stock in Your Portfolio - TradingView",
       "date": "2026-11-19",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQjI0YXExZFl0RUN6RVdYUjNBbmp1Nm9wcm9JM3dMMG83eWg5SmYxaTduRW9FUmpJekt6X3dnaURkUUdRNEV0OWE4b1lsT05rUjRyYTlLTG9oUlo4RWh1RXRYellRSzFlRy1GQ01VbGV0S0MxT09RQVBCY0ktTFlWQlNRbjZ2T0hUeDUtY0lOSjdGM1kyWGlHMFZzOEJ4ODRLMHAtS2lpN0hjS0xrR3pFTy0xVzBNblBjcUtmcFBYWEM?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRFdLUWRtQ3FwWmFEVE96OXdSUEotRmU2eUI2bUVQQkc0Z1J5bnBRV2RqOWxaSmpwTUFLLTRXbGhzeWNZMUdmZFNSRWwyU1d6d2ZoZ3F5c1lwYWJCb21GQnlnYzlhS2ZhdE9xd1dwSlFGRi1CeFUzazhfaElQRkFvODV0M1J5QUlCYXh5X1B3UGRyWWRnV1ZvQjBueGg4dWtydHByQ1dSUmtUR0hzeVhwbXJpYjdHaGtPY1NiZVhXTQ?oc=5",
       "publisher": "TradingView",
       "topic": "All Other Steel News",
       "verification": "Headline only; underlying article not independently verified.",
@@ -238,26 +258,6 @@
       "category": "Import News"
     },
     {
-      "title": "UK Steel Importers Face Melt and Pour Reporting from April 2027 - News and Statistics - IndexBox",
-      "date": "2026-11-17",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSUhMd21iaDllekZZWHA3bTNFcTA2dFo5cjliSnRMdW1BNEstOEtvRDdXNlRYa2tEZExndGhXdUdKRTJsbmtoQ2lHNE96Tlk5M05hcnBQMUNzYjBRbXhMVUNXYjUwUmJySjNEbWRMdnhNeHpFZFN4TXZOZHJ5RTlwOTV5NkFoMHd1RFpHX08yR0x3M1E5WnQwNkc1SzcxMmpTY0ZVeTdJRXg?oc=5",
-      "publisher": "IndexBox",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
-      "title": "Steel Stocks After a Trade Duty: Act or Wait? A 4-Step Framework - Value Research",
-      "date": "2026-11-17",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNW9JVGdfeWtpMW81SlJ2bUM3SEIxdTByTmEwcDlJc2pKalRvT3VaUHVFMkR1VlNhNXlaUnppN0RPZFlpZXdtaWR5SWNUbmdzakU0U3g4bDhhS1RiMW5saUdIcmx6NDR4UDdHS2MwQUZTR3VGR0E2OXl4bHhBeEk1U2Fob1hWMU95YmN6MU9jTkRaX21SUVRNam5zUFJieFpfeXdid3pNLS1mOERDOUpRZE5TbllQRVNi?oc=5",
-      "publisher": "Value Research",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
-    },
-    {
       "title": "Recycled Steel Construction Materials Market To 2035: Green Building Codes Drive Expansion - News and Statistics - IndexBox",
       "date": "2026-11-17",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPeTY5ZVV0Y1lVM0RHdkFid1JTMjVzWDNNV1lxbFQyWW1IazlTZ0lMN3NvWEhqd1paTHJjOHZITlVSS29OUWluS3dVbjhMZVB2M1RxanZGV2cyRF83MllMTWdadHM4MEJqT1BRY3VaZkJVcVVXeklEWGxEdnk1UUtmRlNQWTM2WmJTYnJob1ZHaUNseEppS1M2ODhZdlNHWktTM3o2cTBSNkpwcFN5M0txVkVxaGk3c05vdWNiaVMxWHNFTk9jbXRmZEs1YkRKbXl3NlJQbjNzTmJMbThtTDB4REczX1hOTVU?oc=5",
@@ -278,10 +278,10 @@
       "category": "Domestic Mill News"
     },
     {
-      "title": "European Union Slaps Duties On Steel Imports From India, 4 Others - News18",
-      "date": "2026-11-16",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUVUtclFSX0ZLTUkta0dNQTVKdkNlN1VkTFAzVTdYR0RhUS1HVkx1Zm4wbVNBOXV2Uk9qVmVvVnNndFJuY0kzZlJSVUR6dFpObjhiaHZCRXNrSE1TWjNYZVpKbnJram9sMHpvSEpJei1lQUhPcnA5a2FYbTJMZXJZYWNuMDNkcmhNbmZWRXR6UkF1YVhJLU5NTElZa3FPYWZ4eWVrMVozTzhjUmPSAbABQVVfeXFMT0ttSExkcE5kVGp2d3ktS0tJX3hBaExGdVVTVmQ0dHJ3RnA4dnRNeWl3by16cXMtYjQ2cm5vZWZEUGxpQ2FodE9YUDlvTkt3TDNwN2twM0hFVkNodENjc0dtQkFGR09ONDAyUUpZMzVQenZoZlJ3WldQQ2s3amRNLUdncWptT0ktTjRyYVNaS3BReHREcDltOGFFS1B6UHJ1a2RuV0RNTHc2OHhLZjVOY1M?oc=5",
-      "publisher": "News18",
+      "title": "Vietnamese steel imports surge as Korea’s China tariffs backfire - Chosunbiz",
+      "date": "2026-11-13",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeVNLS25NRVdqM3RLbWtyYzhCUWhKMGJiemZKYWNSQWktYklsWVBBWFk3Q0RZdUdiRnVVOFlFV1VLM1k4RlhQZUFMSk80dExNYkctc2NDTWd4Vjc5T0NXUEUyVU9XUjNIYnNHRFZrdWxoYjN6Y3dNTDNmeHowcnBmYl9B0gGWAUFVX3lxTFBvekZGYWhZZk5sakM2aTNFOEFZczg0a2Q2X2VyV0UtdWVzVnBSSlZqZG9MWVB2cWhJNEFJTGEtUFJVSjVFTWZ3Z1lnWGhGVFI4T0hvUXFISExtZ1JleHBRTTVyeFhxUEVMMjVkUk1PQms5XzRDTzFpNzN4cHFRa1E5S3JleXlCeXZtT1dEdmMtRkJZdGVzZw?oc=5",
+      "publisher": "Chosunbiz",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
@@ -306,6 +306,16 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "Import News"
+    },
+    {
+      "title": "US Midterm Elections: potential effects on steel - EUROMETAL",
+      "date": "2026-11-11",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1oR01vaW8waWVVSjg0LTIxbEFoaFlpbG84VGpaQlhKcWZud29CcGM1RWUzc3g5d095N3F2dmRVSFE1cGduQ2hDaFFiS1VCLWRGcElWdXdkY3hJdUV1dzhsUWdsU25Ub01RX0RTeFVRaUp4UXg4TWZETEF3?oc=5",
+      "publisher": "EUROMETAL",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
     },
     {
       "title": "Section 232 U.S. steel & aluminum tariffs: What exporters need to know - Export Development Canada (EDC)",
@@ -382,7 +392,7 @@
       {
         "source": "Import News RSS",
         "status": "ok",
-        "items": 13
+        "items": 14
       },
       {
         "source": "All Other Steel News RSS",
