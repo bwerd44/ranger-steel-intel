@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-22T13:06:55.002115+00:00",
+  "updated_at": "2026-11-23T13:32:09.321146+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-22T13:06:55.002115+00:00",
+    "generated_at": "2026-11-23T13:32:09.321146+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
+        "retrieved_at": "2026-11-23T13:32:09.321146+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-10-27 release reports total steel imports down 9.6% and finished steel imports down 13.8% year to date versus 2025, using preliminary Census data through September 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
+        "retrieved_at": "2026-11-23T13:32:09.321146+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,31 +171,31 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,886,000 net tons and capacity utilization at 81.7% for the week ending 2026-11-14. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-22T13:06:55.002115+00:00",
+        "retrieved_at": "2026-11-23T13:32:09.321146+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
   },
   "articles": [
     {
-      "title": "Britain imposes duties of up to 23.07% on steel from South Korea - Металлургпром",
-      "date": "2026-11-21",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWjRqS1dVdHZ4eW9mcjZ4d1JwanpBZUQwWnVaN2xMQ1NBYjdJRWFzRjluLUxpOGVJTmVSLU1BT0FfV2VvREtqOHBuaW1lVHVLOWxORXFWdVQyWHN3SVMzNXpGbGp3OVJrdUNpSk9XVFZIQmlwdzNfUEVSM2cySWdtYzlxWEZHNmNQMlVkeW1kc1A4NkN1YW9oLW16V1BBSjVGQVN6Nmt0d0w2ZTNwZm5hU1NzajPSAcYBQVVfeXFMTnhpZ3NCQmJNeGM3NF92dTYyRVBYSklfRlpfMkpxVTFrSld5ZTlqYXR2eHpSYlJwYUs2c0gtN2oyTlBDbzFsZFU1Sl9KLTloanR2RVJuMW5NWF9jdmV3REg3MnNvMWxNLVdkVmktVG1qWjVqMHFmVkZ6WXhibFFueFFqZW9YcEl4QzkyWDhQbkdPVWdyaVQ3WjBia21zZnFPNFdpNzR5ZkluOVdqblBnSFU4OEY5dEJLVHloQWU4cUtrdS1XZ1ZB?oc=5",
-      "publisher": "Металлургпром",
+      "title": "UK imposes duties on steel plates from South Korea - GMK Center",
+      "date": "2026-11-23",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb1lMU3lURFY2WWtvaHRsRHlnTTRuUWF4T2JYRUZyV1d4VFI5MTF1ZlVPanc2LXpXcGwwX0VZa2JEM0EtRXZnTWRqUWZTOEtqUGs3cFI4dUowUzBnUnFndG04eGk5QmhVODVYQmdnWFRBSTJ4TmRWWVBnVklremMyUm5aYkxXU2swc3fSAYoBQVVfeXFMUG9ZTFN5VERWNllrb2h0bER5Z000blFheE9iWEVGcldXeFRSOTExdWZVT2p3Ni16V3BsMF9FWWtiRDNBLUV2Z01kalFmUzhLalBrN3BSOHVKMFMwZ1JxZ3RtOHhpOUJoVTg1WEJnZ1hUQUkyeE5kVllQZ1ZJa3pjMlJuWmJMV1NrMHN3?oc=5",
+      "publisher": "GMK Center",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "Import News"
     },
     {
-      "title": "Latin America Steel Imports Up 46.1% to 72 Mt as Chinese Share Reaches 39% - News and Statistics - IndexBox",
-      "date": "2026-11-20",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeUtaN3BiZ1RkY2NWTTJ3WmlRZ0R3Smk4Qzd1bGQtVFNMbjl1T2YxVjZodVB2Ymw4cXczRGQ0NTdMdzFjVXVYcTRiWlFkTVdPUUlJMTRoZnFtRUhaWWVGNm9sbzFjSGZkOEdZOTcwakVYbGtXV3NlRUZ2dF9jS2lCVW1UaXRqZlRYd01mSHF2LTkxY05aMWE3anpXV1VBaXRRTTQ3a1d3?oc=5",
-      "publisher": "IndexBox",
+      "title": "UK imposes anti-dumping duty on steel plate from South Korea - EUROMETAL",
+      "date": "2026-11-21",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdXhMUDZOT1A0MlZuQzZDNG5BRF91eGlyODFIbjFCSWliaUJMV2JSNFdKZ1c0MlotWGt6ZXdUSm1JTjhRdVhhbVI1T1RJS2Q2alQwZEkybkMwVHNEODh2eWh6Y0R6bkpxNUtVM29DQTE3djBPdzN2NlNibTdsX3ZSV2UtcklTZGlGUTZz?oc=5",
+      "publisher": "EUROMETAL",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
+      "category": "All Other Steel News"
     },
     {
       "title": "Are Chinese steel imports a threat to India’s hopes for industrial expansion? - Global Times",
@@ -230,7 +230,7 @@
     {
       "title": "Here's Why You Should Retain Steel Dynamics Stock in Your Portfolio - TradingView",
       "date": "2026-11-19",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRFdLUWRtQ3FwWmFEVE96OXdSUEotRmU2eUI2bUVQQkc0Z1J5bnBRV2RqOWxaSmpwTUFLLTRXbGhzeWNZMUdmZFNSRWwyU1d6d2ZoZ3F5c1lwYWJCb21GQnlnYzlhS2ZhdE9xd1dwSlFGRi1CeFUzazhfaElQRkFvODV0M1J5QUlCYXh5X1B3UGRyWWRnV1ZvQjBueGg4dWtydHByQ1dSUmtUR0hzeVhwbXJpYjdHaGtPY1NiZVhXTQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQjI0YXExZFl0RUN6RVdYUjNBbmp1Nm9wcm9JM3dMMG83eWg5SmYxaTduRW9FUmpJekt6X3dnaURkUUdRNEV0OWE4b1lsT05rUjRyYTlLTG9oUlo4RWh1RXRYellRSzFlRy1GQ01VbGV0S0MxT09RQVBCY0ktTFlWQlNRbjZ2T0hUeDUtY0lOSjdGM1kyWGlHMFZzOEJ4ODRLMHAtS2lpN0hjS0xrR3pFTy0xVzBNblBjcUtmcFBYWEM?oc=5",
       "publisher": "TradingView",
       "topic": "All Other Steel News",
       "verification": "Headline only; underlying article not independently verified.",
@@ -252,6 +252,26 @@
       "date": "2026-11-18",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdGpNd2JRYjFYdGpQdHk2cE1PVkxUZGNNaU9pa2NJT3hTQ3VMenZQWWViZW9UNXh5UTdTb2JZRHVuVVJ3MVc2VG0tQk9SRHBxcjJLblNuNTNJbENMYkxIb2dHRmM5bUpEZDlwZzNCUkxETWNWSTNQYVZiWHBjZ1RPNWgwZTVvQmRMdFQxcnBlSm5yeHR0cjNJMm5VcW9LS25YNmhVLWFLZHoxSkHSAbIBQVVfeXFMTWo2X1NtV3liZVRWb0ZqVHIzSldGclgtaWdFT24tUEI0T0tOR1NuLWJ0RVlPTjFEcXZqUV8wYUxqejhxRUVxRnhoSTFlRHE4ZV9MeUdPcE8ybzRXemRTMU1rNlZVeVc5S08zc0JFcXJpaVdSaUhaWXNpampJRVlpVVpUampZS1ZRc3RpcEtLOGM3SEZaS1lDRGk3dDA3aWMyLUF5OHA0OXpEMnExWGM0R2o5dw?oc=5",
       "publisher": "The Financial Express",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "Import News"
+    },
+    {
+      "title": "AD/CVD News: Aluminum Foil, Amine Compounds, Steel Bar, Threaded Rod, Truck Bed Covers - Sandler, Travis & Rosenberg, P.A.",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPbVV1MFBIWlBPeDRvTmZSbXFueVlJcU9sU0xNTWlkWmlxeldpR3RMc3NUdF9ZYzQza0tCSWc1WGZ3WGhjUkdlcjZyWmNHaHREVzY0VkhKcTlkOEVoRDNKc3l6Mm9pN1ZwUW5HZWdUd3JxbW10ak1LVXpFWUZXMnJoUFBldUpvWEQzS0tTdFl3SkVjZW9pbmtMTVg4UGZtYTZndTJfdjBFZHh0SjVLZ3pXT3FPWFhoREd5bDNXNWpVczFKWmJ2WXRfSEg2Nk9pUWZuVDQwNjRqczRFV2JaT3NCYVNiNDRnSXhi?oc=5",
+      "publisher": "Sandler, Travis & Rosenberg, P.A.",
+      "topic": "Import News",
+      "verification": "Headline only; underlying article not independently verified.",
+      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
+      "category": "All Other Steel News"
+    },
+    {
+      "title": "Steel Stocks After a Trade Duty: Act or Wait? A 4-Step Framework - Value Research",
+      "date": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNW9JVGdfeWtpMW81SlJ2bUM3SEIxdTByTmEwcDlJc2pKalRvT3VaUHVFMkR1VlNhNXlaUnppN0RPZFlpZXdtaWR5SWNUbmdzakU0U3g4bDhhS1RiMW5saUdIcmx6NDR4UDdHS2MwQUZTR3VGR0E2OXl4bHhBeEk1U2Fob1hWMU95YmN6MU9jTkRaX21SUVRNam5zUFJieFpfeXdid3pNLS1mOERDOUpRZE5TbllQRVNi?oc=5",
+      "publisher": "Value Research",
       "topic": "Import News",
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
@@ -346,16 +366,6 @@
       "verification": "Headline only; underlying article not independently verified.",
       "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
       "category": "All Other Steel News"
-    },
-    {
-      "title": "Canada amends, extends tariff relief program beyond U.S. steel imports - CTV News",
-      "date": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaHZoaXdtWE1oR2xSOWtoLUV0V2NFeHFjNlp4dzVkRkh0YjQzcUd5S0MwRm1NSlpUREpFMXkybGgyeHk4UDdCTVMzWVdOWDhzUl9FdURXU1lnaWJ0Z0JGaXlXNXU5REFTaExaSlZqckdoTWowdXZxR1FhTXRGM2NJbG1TeElRQ0hxNWhCdEJadk9pTHVyZXFnNFByMXpmZXdpWUpOX3BmSEg3TjNlSzVFOW9fajR3bDBLSzNNdQ?oc=5",
-      "publisher": "CTV News",
-      "topic": "Import News",
-      "verification": "Headline only; underlying article not independently verified.",
-      "ranger_note": "Discovered through Google News RSS. The headline alone does not establish plate pricing, mill allocations, lead times or current availability.",
-      "category": "Import News"
     }
   ],
   "collection": {
@@ -381,8 +391,8 @@
       },
       {
         "source": "Domestic Mill News RSS",
-        "status": "ok",
-        "items": 0
+        "status": "unavailable",
+        "reason": "HTTPError"
       },
       {
         "source": "Import News RSS",
@@ -392,7 +402,7 @@
       {
         "source": "Import News RSS",
         "status": "ok",
-        "items": 14
+        "items": 15
       },
       {
         "source": "All Other Steel News RSS",
