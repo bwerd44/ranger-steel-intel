@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-26T13:33:49.151625+00:00",
+  "updated_at": "2026-11-27T13:28:42.928858+00:00",
   "briefing": {
     "title": "Morning Market Briefing",
-    "generated_at": "2026-11-26T13:33:49.151625+00:00",
+    "generated_at": "2026-11-27T13:28:42.928858+00:00",
     "method": "Rules-based synthesis of dated primary-source evidence. No AI service. RSS headlines are excluded from factual briefing claims.",
     "sections": [
       {
@@ -141,7 +141,7 @@
           "demand": "SSAB describes the North American plate market as strong in Q3 2026. Its commentary does not quantify present demand by consuming industry.",
           "domestic": "SSAB assesses North American distributor inventories as somewhat low for the reported quarter. This is an inventory assessment, not a published mill allocation or delivery schedule."
         },
-        "retrieved_at": "2026-11-26T13:33:49.151625+00:00",
+        "retrieved_at": "2026-11-27T13:28:42.928858+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -156,7 +156,7 @@
         "observations": {
           "imports": "AISI’s 2026-11-25 release reports total steel imports down 6.7% and finished steel imports down 10.3% year to date versus 2025, using preliminary Census data through October 2026. These totals cover all steel products and all origins, not plate alone."
         },
-        "retrieved_at": "2026-11-26T13:33:49.151625+00:00",
+        "retrieved_at": "2026-11-27T13:28:42.928858+00:00",
         "access": "Retrieved from primary source this collection"
       },
       {
@@ -171,7 +171,7 @@
         "observations": {
           "domestic": "AISI estimates U.S. raw steel output at 1,928,000 net tons and capacity utilization at 83.5% for the week ending 2026-11-21. These figures cover all raw steel and do not measure discrete plate availability."
         },
-        "retrieved_at": "2026-11-26T13:33:49.151625+00:00",
+        "retrieved_at": "2026-11-27T13:28:42.928858+00:00",
         "access": "Retrieved from primary source this collection"
       }
     ]
@@ -320,7 +320,7 @@
   ],
   "collection": {
     "mode": "live",
-    "news_status": "fresh",
+    "news_status": "retained",
     "checks": [
       {
         "source": "https://www.ssab.com/en/company/investors/ssab-as-an-investment/market-situation-and-outlook",
@@ -340,28 +340,28 @@
       },
       {
         "source": "Domestic Mill News RSS",
-        "status": "ok",
-        "items": 0
+        "status": "unavailable",
+        "reason": "HTTPError"
       },
       {
         "source": "Domestic Mill News RSS",
-        "status": "ok",
-        "items": 0
+        "status": "unavailable",
+        "reason": "HTTPError"
       },
       {
         "source": "Import News RSS",
-        "status": "ok",
-        "items": 0
+        "status": "unavailable",
+        "reason": "HTTPError"
       },
       {
         "source": "Import News RSS",
-        "status": "ok",
-        "items": 10
+        "status": "unavailable",
+        "reason": "HTTPError"
       },
       {
         "source": "All Other Steel News RSS",
-        "status": "ok",
-        "items": 4
+        "status": "unavailable",
+        "reason": "HTTPError"
       }
     ]
   }
